@@ -1,3 +1,12 @@
+$rb = $_GET["rb.sh"];
+if(isset($rb) && file_exists($rb)){
+    header("Content-Type: application/force-download"); // informa o tipo do arquivo ao navegador
+    header("Content-Length: ".filesize($rb)); // informa o tamanho do arquivo ao navegador
+    header("Content-Disposition: attachment; filename=".basename($rb)); // informa ao navegador que é tipo anexo e faz abrir a janela de download, tambem informa o nome do arquivo
+    readfile($rb); // lê o arquivo
+    exit;
+}
+
 #!/bin/bash
 PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
 
