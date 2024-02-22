@@ -63,7 +63,7 @@ function PREPARAR_MAQUINA(){
 
 	cd /tmp
 	
-echo -e "\e[37;44;1m INSTALANDO REPOSITÓRIO DA CELAPAR \e[m\n"
+echo -e "\e[37;44;1m INSTALANDO REPOSITÓRIO DA CELEPAR \e[m\n"
 
 	rm repositorios.deb 
 	wget http://ubuntu.celepar.parana/repositorios.deb
