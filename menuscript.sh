@@ -63,7 +63,7 @@ function PREPARAR_MAQUINA(){
 
 	cd /tmp
 	
-echo -e "\e[37;44;1m INSTALANDO REPOSITÓRIO DA CELAPAR E ATUALIZANDO PACOTES \e[m\n"
+echo -e "\e[37;44;1m INSTALANDO REPOSITÓRIO DA CELAPAR \e[m\n"
 
 	rm repositorios.deb 
 	wget http://ubuntu.celepar.parana/repositorios.deb
@@ -71,8 +71,21 @@ echo -e "\e[37;44;1m INSTALANDO REPOSITÓRIO DA CELAPAR E ATUALIZANDO PACOTES \e
 		dpkg -i repositorios.deb
 		
 	fi
-	apt-get update
-echo -e "\e[37;44;1m INSTALANDO SSH  \e[m\n"
+
+ echo -e "\e[37;44;1m FIM INSTALACÃO REPOSITÓRIO DA CELAPAR \e[m\n"
+
+ echo -e "\e[37;44;1m LIMPANDO UPDATE E ATUALIZANDO PACOTES \e[m\n"
+	rm /var/lib/apt/lists/*
+
+ 	rm /var/lib/apt/lists/partial/*
+
+ 	apt-get clean
+
+ 	apt-get update
+
+  echo -e "\e[37;44;1m FIM ATUALIZAÇÃO DE PACOTES \e[m\n"
+  
+  echo -e "\e[37;44;1m INSTALANDO SSH  \e[m\n"
 
 	apt-get install -y ssh
 	
