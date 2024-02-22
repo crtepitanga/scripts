@@ -75,9 +75,9 @@ echo -e "\e[37;44;1m INSTALANDO REPOSITÓRIO DA CELEPAR \e[m\n"
  echo -e "\e[37;44;1m FIM INSTALACÃO REPOSITÓRIO DA CELAPAR \e[m\n"
 
  echo -e "\e[37;44;1m LIMPANDO UPDATE E ATUALIZANDO PACOTES \e[m\n"
-	rm /var/lib/apt/lists/*
+	rm -r /var/lib/apt/lists/*
 
- 	rm /var/lib/apt/lists/partial/*
+ 	rm -r /var/lib/apt/lists/partial/*
 
  	apt-get clean
 
