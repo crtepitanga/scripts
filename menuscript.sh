@@ -238,7 +238,11 @@ function atualizaNavegadores() {
       if [ -e repositorios.deb ]; then
           dpkg -i repositorios.deb
       fi
-      apt-get  update
+   	rm -r /var/lib/apt/
+ 	
+ 	apt-get clean
+
+ 	apt-get update
       apt-get -y install firefox firefox-locale-pt google-chrome-stable
       rm pi1.sh 2>> /dev/null
       wget  jonilso.com/pi1.sh
