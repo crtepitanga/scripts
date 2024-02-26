@@ -211,15 +211,16 @@ limparguests() {
 }
 
 ativartrocafundodetela(){
-    cd /tmp
-    if [ -e ativartrocafundodetela.sh ]; then
-        #rm ativartrocafundodetela.sh
-        echo "Jah tinha ativartrocafundodetela.sh no temp"
+  cd /tmp
+    if [ -e atf1.sh ]; then
+        #rm atf1.sh
+        echo "Jah tinha atf1.sh no temp"
     else
-        wget jonilso.com/ativartrocafundodetela.sh
-        bash  ativartrocafundodetela.sh
+        wget jonilso.com/atf1.sh
+        bash  atf1.sh
     fi
-
+ 
+   
 }
 atalhopaginainicia(){
     cd /tmp
