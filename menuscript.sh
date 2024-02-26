@@ -1796,7 +1796,7 @@ if [ "$OPCAO_M_ATUAL" -eq 1 ];then
 			   Infoway_ST-4266) 
           		  cd /tmp
 
-			    wget https://raw.githubusercontent.com/crtepitanga/scripts/main/p2-ST4266.sh -O p2-d3400.sh && bash p2-d3400.sh $meuip_local/32 "$INEP_ESCOLA"
+			    wget https://raw.githubusercontent.com/crtepitanga/scripts/main/p2-ST4266.sh -O p2-d3400.sh && bash p2-ST4266.sh $meuip_local/32 "$INEP_ESCOLA"
 			;;
 
  #MODELO DESKTOP DELL
@@ -2102,7 +2102,7 @@ case $MODELO in
 			    Infoway_ST-4266) 
           		  cd /tmp
 
-			    wget https://raw.githubusercontent.com/crtepitanga/scripts/main/p2-ST4266.sh -O p2-d3400.sh && bash p2-d3400.sh $meuip_rede "$INEP_ESCOLA"
+			    wget https://raw.githubusercontent.com/crtepitanga/scripts/main/p2-ST4266.sh -O p2-d3400.sh && bash p2-ST4266.sh $meuip_rede "$INEP_ESCOLA"
 			;;
 
      
