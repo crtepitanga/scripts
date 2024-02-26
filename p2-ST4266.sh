@@ -304,7 +304,7 @@ case "\$TIPO" in
     date
     instalascratch
     bloquearaplicativos
-
+   ;;
 
   *C1300*)
     exit
