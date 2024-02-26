@@ -1793,10 +1793,10 @@ if [ "$OPCAO_M_ATUAL" -eq 1 ];then
 			    wget https://raw.githubusercontent.com/crtepitanga/scripts/main/p2-d3400.sh -O p2-d3400.sh && bash p2-d3400.sh $meuip_local/32 "$INEP_ESCOLA"
 			;;
 #MODELO DESKTOP ITAUTEC Infoway ST-4266
-			Infoway ST-4266) 
+			   ST-4266) 
           		  cd /tmp
 
-			    wget https://raw.githubusercontent.com/crtepitanga/scripts/main/p2-d3400.sh -O p2-d3400.sh && bash p2-d3400.sh $meuip_local/32 "$INEP_ESCOLA"
+			    wget https://raw.githubusercontent.com/crtepitanga/scripts/main/p2-ST4266.sh -O p2-d3400.sh && bash p2-d3400.sh $meuip_local/32 "$INEP_ESCOLA"
 			;;
 
  #MODELO DESKTOP DELL
@@ -2099,10 +2099,10 @@ case $MODELO in
 			    wget https://raw.githubusercontent.com/crtepitanga/scripts/main/p2-dell.sh -O p2-dell.sh && bash p2-dell.sh $meuip_rede "$INEP_ESCOLA"
 			;;
 #MODELO DESKTOP ITAUTEC Infoway ST-4266
-			Infoway ST-4266) 
+			    ST-4266) 
           		  cd /tmp
 
-			    wget https://raw.githubusercontent.com/crtepitanga/scripts/main/p2-d3400.sh -O p2-d3400.sh && bash p2-d3400.sh $meuip_rede "$INEP_ESCOLA"
+			    wget https://raw.githubusercontent.com/crtepitanga/scripts/main/p2-ST4266.sh -O p2-d3400.sh && bash p2-d3400.sh $meuip_rede "$INEP_ESCOLA"
 			;;
 
      
