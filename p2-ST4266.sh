@@ -275,7 +275,7 @@ case "\$TIPO" in
     exit
 
   ;;
-    ST-4266) 
+    Infoway_ST-4266) 
     PREFIXO='e'
     echo -e "\e[46m ITAUTEC ST-4266 SALA DE RECURSOS \e[0m "
     echo "encontrado ITAUTEC ST-4266 aqui"
