@@ -136,7 +136,7 @@ case $MODELO in
 			 PREFIXO='e'
 			;;
 #MODELO DESKTOP ITAUTEC INFOWAY ST-4266
-			Infoway_ST-4266) 
+			ST-4266) 
           		  PREFIXO='e'
 			;;
 #MODELO DESKTOP DELL
