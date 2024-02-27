@@ -278,8 +278,8 @@ case "\$TIPO" in
   ;;
     CU-7592) 
     PREFIXO='e'
-    echo -e "\e[46m ITAUTEC ST-4266 SALA DE RECURSOS \e[0m "
-    echo "encontrado ITAUTEC ST-4266 aqui"
+    echo -e "\e[46m CCE PREGÃO 71/2010 \e[0m "
+    echo "encontrado CCE PREGÃO 71/2010 aqui"
     if [ ! -e "/usr/bin/atom" ] || [ ! -e "/usr/share/code/code" ]; then
         if [ ! -e "/usr/bin/atom" ] ; then
            echo "SEM ATOMM"
