@@ -139,6 +139,10 @@ case $MODELO in
 			Infoway_ST-4266) 
           		  PREFIXO='e'
 			;;
+#MODELO DESKTOP CCE PREGÃO 71/2010 CU-7592 
+			CU-7592) 
+          		  PREFIXO='e'
+			;;   
 #MODELO DESKTOP DELL
 			OptiPlex*) 
            		 PREFIXO='d'
@@ -1798,7 +1802,12 @@ if [ "$OPCAO_M_ATUAL" -eq 1 ];then
 
 			    wget https://raw.githubusercontent.com/crtepitanga/scripts/main/p2-ST4266.sh -O p2-ST4266.sh && bash p2-ST4266.sh $meuip_local/32 "$INEP_ESCOLA"
 			;;
+#MODELO DESKTOP CCE PREGÃO 71/2010 CU-7592
+			   CU-7592) 
+          		  cd /tmp
 
+			    wget https://raw.githubusercontent.com/crtepitanga/scripts/main/p2-cce2010.sh -O p2-cce2010.sh && bash p2-cce2010.sh $meuip_local/32 "$INEP_ESCOLA"
+			;; 
  #MODELO DESKTOP DELL
 			OptiPlex*) 
            		 cd /tmp
@@ -2105,7 +2114,13 @@ case $MODELO in
 			    wget https://raw.githubusercontent.com/crtepitanga/scripts/main/p2-ST4266.sh -O p2-ST4266.sh && bash p2-ST4266.sh $meuip_rede "$INEP_ESCOLA"
 			;;
 
-     
+   #MODELO CCE PREGÃO 71/2010 CU-7592
+			    CU-7592) 
+          		  cd /tmp
+
+			    wget https://raw.githubusercontent.com/crtepitanga/scripts/main/p2-cce2010.sh -O p2-cce2010.sh && bash p2-cce2010.sh $meuip_rede "$INEP_ESCOLA"
+			;;
+    
 #MODELO EDUCATRON
 		    *C1300*)
          	cd /tmp
