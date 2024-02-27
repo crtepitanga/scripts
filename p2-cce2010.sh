@@ -634,7 +634,7 @@ while read dados; do
                       export qtD3400=$((qtD3400+1))
                     elif [ "$(grep "encontrado ITAUTEC Infoway ST-4266 aqui" "/tmp/.resultado.txt.$$" | wc -l)" -gt 0 ]; then
                       export qtST4266=$((qtST4266+1))   
-                    elif [ "$(grep "encontrado CCE Pregão 71/2010 aqui" "/tmp/.resultado.txt.$$" | wc -l)" -gt 0 ]; then
+                    elif [ "$(grep "encontrado CCE PREGÃO 71/2010 aqui" "/tmp/.resultado.txt.$$" | wc -l)" -gt 0 ]; then
                       export qtCU7592=$((qtCU7592+1))                                           
                    elif [ "$(grep "Acesso Linux nao identificado ainda" "/tmp/.resultado.txt.$$" | wc -l)" -gt 0 ]; then
                       export qtOutros=$((qtOutros+1))
