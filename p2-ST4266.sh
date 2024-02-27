@@ -627,8 +627,8 @@ while read dados; do
                       export qtEduc=$((qtEduc+1))
                    elif [ "$(grep "encontrado Positivo D3400 aqui" "/tmp/.resultado.txt.$$" | wc -l)" -gt 0 ]; then
                       export qtD3400=$((qtD3400+1))
-                      elif [ "$(grep "encontrado ITAUTEC Infoway ST-4266 aqui" "/tmp/.resultado.txt.$$" | wc -l)" -gt 0 ]; then
-                      export qtST4266=$((qtST4266+1))                      
+                   elif [ "$(grep "encontrado ITAUTEC ST-4266 aqui" "/tmp/.resultado.txt.$$" | wc -l)" -gt 0 ]; then
+                     export qtST4266=$((qtST4266+1))                                      
                    elif [ "$(grep "Acesso Linux nao identificado ainda" "/tmp/.resultado.txt.$$" | wc -l)" -gt 0 ]; then
                       export qtOutros=$((qtOutros+1))
                    fi
