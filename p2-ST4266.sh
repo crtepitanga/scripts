@@ -276,9 +276,6 @@ modokiosk(){
 		fi
 }
 
-
-
-
 PREFIXO='e'
 TIPO=\$( dmidecode -t system | grep 'Product Name: ' | cut -d':' -f2 | sed -e s/'^ '// -e s/' '/'_'/g )
 case "\$TIPO" in
