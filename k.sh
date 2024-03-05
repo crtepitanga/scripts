@@ -23,4 +23,4 @@ sudo apt-get update
 
 sudo apt-get -y install kiosk-mode-xfce4
 
-enable-kiosk-mode
+
