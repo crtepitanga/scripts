@@ -1251,6 +1251,7 @@ enviarLog "TerminouComSucesso"
 echo "fim"
 
 }
+#FIM FUNÇÃO ATIVAR TROCA FUNDO DE TELA
 
 function atalhopaginainicial(){
     cd /tmp
@@ -1277,8 +1278,6 @@ function resetbackgrounds() {
     fi
 
 }
-
-#FIM FUNÇÃO ATIVAR TROCA FUNDO DE TELA
 
 function limparguests() {
     if [ -e "lg.sh" ]; then
@@ -1727,7 +1726,20 @@ function pagina_inicial_navegadores(){
 		
 }
 
+function modokiosk (){
+	cd /tmp
+	
+		if [ -e k.sh ];then
+	 		bash k.sh
+		else  	
+			wget https://raw.githubusercontent.com/crtepitanga/scripts/main/k.sh -O k.sh
+			bash k.sh
+		
+		fi
 
+
+
+}
 
 function MENU(){
 OPCAO=$( dialog --stdout \
