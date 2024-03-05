@@ -265,6 +265,18 @@ bloquearaplicativos(){
   
 }
 
+modokiosk(){
+	cd /tmp
+	
+		if [ -e k.sh ];then
+	 		bash k.sh
+		else  	
+			wget https://raw.githubusercontent.com/crtepitanga/scripts/main/k.sh -O k.sh
+			bash k.sh
+		
+		fi
+}
+
 PREFIXO='e'
 TIPO=\$( dmidecode -t system | grep 'Product Name: ' | cut -d':' -f2 | sed -e s/'^ '// -e s/' '/'_'/g )
 case "\$TIPO" in
@@ -295,6 +307,7 @@ case "\$TIPO" in
     resetbackgrounds
     limparguests
     bloquearaplicativos
+    modokiosk
   ;;
 
   D3400) 
