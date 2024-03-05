@@ -1877,7 +1877,8 @@ if [ "$OPCAO_M_ATUAL" -eq 2 ];then
     "18" "-->> Página inicial das Plataformas no Chrome e Firefox" off \
     "19" "-->> Preparar máquina para atualização" on \
     "20" "-->> Remover usuários Guest" off \
-    "21" "-->> Remover/Resetar plano de fundo" off)
+    "21" "-->> Remover/Resetar plano de fundo" off \
+    "22" "-->> Instalar modo Kiosk para bloquear edição modo gráfico")
     
     #dialog --msgbox "Opções Selecionadas: $CHECKLIST" 10 45
     
@@ -2069,6 +2070,13 @@ echo -e "\e[37;44;1m===========================RESTAURAR O PLANO DE FUNDO=======
 					
 echo -e "\e[37;44;1m=========================FIM RESTAURAR O PLANO DE FUNDO========================= \e[m\n"
 
+		elif [ "$SELECIONADOS" -eq 22 ];then
+
+echo -e "\e[37;44;1m===========++=======MODO KIOSK BLOQUEAR EDIÇÃO GRÁFICA=========================== \e[m\n"
+
+			modokiosk;
+					
+echo -e "\e[37;44;1m=====================FIM MODO KIOSK BLOQUEAR EDIÇÃO GRÁFICA======================== \e[m\n"
 			
 		fi
 	
