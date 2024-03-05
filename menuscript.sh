@@ -1878,7 +1878,7 @@ if [ "$OPCAO_M_ATUAL" -eq 2 ];then
     "19" "-->> Preparar máquina para atualização" on \
     "20" "-->> Remover usuários Guest" off \
     "21" "-->> Remover/Resetar plano de fundo" off \
-    "22" "-->> Instalar modo Kiosk para bloquear edição modo gráfico")
+    "22" "-->> Instalar modo Kiosk para bloquear edição modo gráfico" off)
     
     #dialog --msgbox "Opções Selecionadas: $CHECKLIST" 10 45
     
