@@ -366,7 +366,7 @@ case "\$TIPO" in
     instalascratch
     bloquearaplicativos
     modokiosk
-  ;;
+;;
 
   POS-EIB75CO)
    exit
