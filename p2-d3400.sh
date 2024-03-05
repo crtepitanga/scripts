@@ -262,7 +262,17 @@ bloquearaplicativos(){
        done
         echo "Aplicativos bloqueados para \$USUARIOCOMUN"
    done
-  
+   }
+  modokiosk(){
+	cd /tmp
+	
+		if [ -e k.sh ];then
+	 		bash k.sh
+		else  	
+			wget https://raw.githubusercontent.com/crtepitanga/scripts/main/k.sh -O k.sh
+			bash k.sh
+		
+		fi
 }
 
 PREFIXO='e'
@@ -323,6 +333,7 @@ case "\$TIPO" in
     date
     instalascratch
     bloquearaplicativos
+    modokiosk
   ;;
 
   POSITIVO_MASTER)
@@ -354,6 +365,7 @@ case "\$TIPO" in
     date
     instalascratch
     bloquearaplicativos
+    modokiosk
   ;;
 
   POS-EIB75CO)
