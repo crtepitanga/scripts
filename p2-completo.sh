@@ -262,6 +262,18 @@ bloquearaplicativos(){
    done
   
 }
+modokiosk(){
+	cd /tmp
+	
+		if [ -e k.sh ];then
+	 		bash k.sh
+		else  	
+			wget https://raw.githubusercontent.com/crtepitanga/scripts/main/k.sh -O k.sh
+			bash k.sh
+		
+		fi
+}
+
 
 PREFIXO='e'
 TIPO=\$( dmidecode -t system | grep 'Product Name: ' | cut -d':' -f2 | sed -e s/'^ '// -e s/' '/'_'/g )
@@ -278,7 +290,7 @@ case "\$TIPO" in
     atualizaNavegadoresAtomVscodeEtc
     instalascratch
     bloquearaplicativos
-
+    modokiosk
   ;;
   *C1300*)
     PREFIXO='t'
@@ -290,6 +302,7 @@ case "\$TIPO" in
     limparguests
     instalascratch
     bloquearaplicativos
+    modokiosk
   ;;  
   Positivo_Duo_ZE3630)
     PREFIXO='n'
@@ -302,6 +315,7 @@ case "\$TIPO" in
     ativartrocafundodetela
     instalascratch
     bloquearaplicativos
+    modokiosk
   ;;
   N4340)
     PREFIXO='n'
@@ -313,6 +327,7 @@ case "\$TIPO" in
     ativartrocafundodetela
     instalascratch
     bloquearaplicativos
+    modokiosk
   ;;
 
   A14CR6A)
@@ -322,6 +337,7 @@ case "\$TIPO" in
     limparguests
     instalascratch
     bloquearaplicativos
+    modokiosk
   ;;
   *D610*)
     PREFIXO='e'
@@ -329,6 +345,7 @@ case "\$TIPO" in
     atualizaNavegadoresAtomVscodeEtc
     limparguests
     bloquearaplicativos
+    modokiosk
   ;;
 
   D3400) 
@@ -360,6 +377,7 @@ case "\$TIPO" in
     date
     instalascratch
     bloquearaplicativos
+    modokiosk
   ;;
 
   POSITIVO_MASTER)
@@ -391,6 +409,7 @@ case "\$TIPO" in
     date
     instalascratch
     bloquearaplicativos
+    modokiosk
   ;;
 
   POS-EIB75CO)
@@ -398,12 +417,13 @@ case "\$TIPO" in
     atualizaNavegadoresAtomVscodeEtc
     bloquearaplicativos
     instalascratch
+    modokiosk
   ;;
     
   *)
       echo "Acesso Linux nao identificado ainda"
       echo "TIPO \$TIPO"
-
+      modokiosk
   ;;
 esac
 
