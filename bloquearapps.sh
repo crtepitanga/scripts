@@ -13,7 +13,8 @@ for USUARIO in "${USUARIOS[@]}" ; do
          /bin/setfacl -m u:${USUARIO}:--- "$APLICATIVO"
       fi  
    done
-echo "Aplicativos bloqueados para $USUARIO"
+echo "Aplicativos alterar usuario e senha bloqueados para $USUARIO"
+echo "Aplicativo Aparencia bloqueado para $USUARIO"
 done
 
 
