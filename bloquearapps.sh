@@ -1,7 +1,7 @@
 #!/bin/bash
 # Desativar acesso aos usuarios nos aplicativos a seguir:
 USUARIOS=( "professor" "escola" "Aluno" "aluno" "alunos" )
-APLICATIVOS=( "/usr/bin/users-admin" "/usr/bin/mugshot" "/usr/bin/mate-about-me" )
+APLICATIVOS=( "/usr/bin/xfce4-appearance-settings" "/usr/bin/users-admin" "/usr/bin/mugshot" "/usr/bin/mate-about-me" )
 
 for USUARIO in "${USUARIOS[@]}" ; do
    if [ $(grep "^${USUARIO}:" /etc/passwd | wc -l) -eq 0 ]; then
