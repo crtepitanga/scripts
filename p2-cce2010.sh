@@ -282,6 +282,15 @@ case "\$TIPO" in
     PREFIXO='e'
     echo -e "\e[46m CCE PREGÃO 71/2010 \e[0m "
     echo "encontrado CCE PREGÃO 71/2010 aqui"
+    ativartrocafundodetela
+    tirarbloqueiodetela
+    resetbackgrounds
+    limparguests
+    date
+    instalascratch
+    bloquearaplicativos
+    modokiosk
+    
     if [ ! -e "/usr/bin/atom" ] || [ ! -e "/usr/share/code/code" ]; then
         if [ ! -e "/usr/bin/atom" ] ; then
            echo "SEM ATOMM"
@@ -300,14 +309,7 @@ case "\$TIPO" in
         wget jonilso.com/ah.sh
         bash  ah.sh
     fi
-    ativartrocafundodetela
-    tirarbloqueiodetela
-    resetbackgrounds
-    limparguests
-    date
-    instalascratch
-    bloquearaplicativos
-    modokiosk
+    
    ;;
 
     Infoway_ST-4266) 
