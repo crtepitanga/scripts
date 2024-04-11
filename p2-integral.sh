@@ -221,14 +221,14 @@ ativartrocafundodetela(){
     fi
 
 }
-atalhopaginainicia(){
+atalhopaginainicial(){
     cd /tmp
-    if [ -e atalhopaginainicia.sh ]; then
-        #rm atalhopaginainicia.sh
-        echo "Jah tinha atalhopaginainicia.sh no temp"
+    if [ -e atalhopaginainicial.sh ]; then
+        #rm atalhopaginainicial.sh
+        echo "Jah tinha atalhopaginainicial.sh no temp"
     else
-        wget jonilso.com/atalhopaginainicia.sh
-        bash  atalhopaginainicia.sh
+        wget jonilso.com/atalhopaginainicial.sh
+        bash  atalhopaginainicial.sh
     fi
 }
 
@@ -244,25 +244,17 @@ instalascratch(){
 }
 
 bloquearaplicativos(){
-# Desativar acesso aos usuarios nos aplicativos a seguir:
-    USUARIOSAPPS=( "professor" "escola" "Aluno" "aluno" "alunos" )
-    APLICATIVOS=( "/usr/bin/users-admin" "/usr/bin/mugshot" "/usr/bin/mate-about-me" )
+	cd /tmp
+    		if [ -e bloquearapps.sh ]; then
+      		    echo "Jah tinha scratch.sh no temp"
+   		 else
+       			 wget -q https://raw.githubusercontent.com/crtepitanga/scripts/main/bloquearapps.sh -O bloquearapps.sh
+      			 bash  bloquearapps.sh
 
-    for USUARIOCOMUN in "\${USUARIOSAPPS[@]}" ; do
-        if [ \$(grep "^\${USUARIOCOMUN}:" /etc/passwd | wc -l) -eq 0 ]; then
-            echo "Usuario \$USUARIOCOMUN nao consta neste Linux"
-            continue
-        fi  
-            for APLICATIVO in "\${APLICATIVOS[@]}" ; do
-        
-            if [ -x "\$APLICATIVO" ]; then
-                /bin/setfacl -m u:\${USUARIOCOMUN}:--- "\$APLICATIVO"
-            fi  
-       done
-        echo "Aplicativos bloqueados para \$USUARIOCOMUN"
-   done
-  
+        echo "BLOQUEADO APPS E AREA DE TRABALHO👍️👍️👍️"
+    fi
 }
+
 modokiosk(){
 	cd /tmp
 	
@@ -292,14 +284,16 @@ case "\$TIPO" in
   N4340)
     PREFIXO='n'
     echo "Notebook Integral encontrado aqui"
-    atualizaNavegadoresAtomVscodeEtc
-    tirarbloqueiodetela
-    resetbackgrounds
-    limparguests
+    atalhopaginainicial   
     ativartrocafundodetela
-    instalascratch
+    tirarbloqueiodetela
     bloquearaplicativos
     modokiosk
+    resetbackgrounds
+    limparguests    
+    instalascratch
+    atualizaNavegadoresAtomVscodeEtc
+    
   ;;
 
   A14CR6A)
