@@ -1756,8 +1756,6 @@ OPCAO_M_ATUAL=$( dialog --stdout \
 clear
 } 
 
-
-
 if [ "$OPCAO" -eq 1 ]; then
 #CHAMA MENU DE OPÇÕES MAQUINA ATUAL 	
     
@@ -1854,7 +1852,7 @@ if [ "$OPCAO_M_ATUAL" -eq 2 ];then
     "2" "-->> Ativar plano de fundo padrão do Estado" off \
     "3" "-->> Ativar TAP do Touchpad Notebooks ED. Integral" off \
     "4" "-->> Atualizar chrome e firefox" off \
-    "5" "-->> Bloquear opção alterar usuário/senha" off \
+    "5" "-->> Bloquear opção alterar usuário/senha, Aparencia e Area de Trabalho" off \
     "6" "-->> Criar atalho Plataformas Educacionais area de trabalho" off \
     "7" "-->> Desabilitar proxy dos navegadores no Linux Mint" off \
     "8" "-->> Desativar bloqueio de tela" off \
