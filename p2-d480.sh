@@ -220,7 +220,7 @@ ativartrocafundodetela(){
         bash  atf1.sh
     fi
 }
-atalhopaginainicia(){
+atalhopaginainicial(){
     cd /tmp
     if [ -e atalhopaginainicia.sh ]; then
         #rm atalhopaginainicia.sh
@@ -297,15 +297,15 @@ POS-EIB85CZ)
     PREFIXO='e'
     echo ""
     echo -e "\e[43m ------ POSITIVO D480 ------ \e[0m  POSITIVO D480 ENCONTRADO AQUI"
-    atualizaNavegadoresAtomVscodeEtc
-    atalhopaginainicia
+    atalhopaginainicial
     ativartrocafundodetela
     tirarbloqueiodetela
+    bloquearaplicativos
+    modokiosk
     resetbackgrounds
     limparguests
     instalascratch
-    bloquearaplicativos
-    modokiosk
+    atualizaNavegadoresAtomVscodeEtc
   ;;  
   Positivo_Duo_ZE3630)
     exit
