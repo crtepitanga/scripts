@@ -285,11 +285,11 @@ case "\$TIPO" in
     ativartrocafundodetela
     tirarbloqueiodetela
     resetbackgrounds
-    limparguests
-    date
-    instalascratch
     bloquearaplicativos
     modokiosk
+    limparguests
+    date
+    instalascratch  
     
     if [ ! -e "/usr/bin/atom" ] || [ ! -e "/usr/share/code/code" ]; then
         if [ ! -e "/usr/bin/atom" ] ; then
