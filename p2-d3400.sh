@@ -300,17 +300,7 @@ case "\$TIPO" in
     PREFIXO='e'
     echo -e "\e[46m Positivo D3400 \e[0m "
     echo "encontrado Positivo D3400 aqui"
-    if [ ! -e "/usr/bin/atom" ] || [ ! -e "/usr/share/code/code" ]; then
-        if [ ! -e "/usr/bin/atom" ] ; then
-           echo "SEM ATOMM"
-       else
-           echo "SEM VSCODE"
-        fi
-    else
-       echo "jah tinha atom e vscode ebaaa"
-    fi
-    atualizaNavegadoresAtomVscodeEtc
-    cd /tmp
+     cd /tmp
     if [ -e ah.sh ]; then
         #rm ah.sh
         echo "Jah tinha ah.sh no temp"
@@ -321,11 +311,23 @@ case "\$TIPO" in
     ativartrocafundodetela
     tirarbloqueiodetela
     resetbackgrounds
-    limparguests
-    date
-    instalascratch
     bloquearaplicativos
     modokiosk
+    limparguests
+    date
+    instalascratch    
+    if [ ! -e "/usr/bin/atom" ] || [ ! -e "/usr/share/code/code" ]; then
+        if [ ! -e "/usr/bin/atom" ] ; then
+           echo "SEM ATOMM"
+       else
+           echo "SEM VSCODE"
+        fi
+    else
+       echo "jah tinha atom e vscode ebaaa"
+    fi
+   
+    atualizaNavegadoresAtomVscodeEtc
+
   ;;
 
   POSITIVO_MASTER)
