@@ -12,6 +12,10 @@ BLOQUEAR OPÇÃO ALTERAR USUÁRIO/SENHA:
 https://raw.githubusercontent.com/crtepitanga/scripts/main/bloquearapps.sh
 https://seulink.net/bloquear-apps
 
+DESBLOQUEAR OPÇÃO ALTERAR USUÁRIO/SENHA:
+https://raw.githubusercontent.com/crtepitanga/scripts/main/desbloquearapps.sh
+https://seulink.net/desbloquear-apps
+
 DESATIVAR TOUCHSCREEN NETBOOKS VERDINHOS:
 https://raw.githubusercontent.com/crtepitanga/scripts/main/dt.sh
 https://seulink.net/desativar-touch
@@ -19,10 +23,6 @@ https://seulink.net/desativar-touch
 DESABILITAR USUARIO CONVIDADO
 https://raw.githubusercontent.com/crtepitanga/scripts/main/semconvidado.sh
 https://seulink.net/excluir-convidado
-
-DESBLOQUEAR OPÇÃO ALTERAR USUÁRIO/SENHA:
-https://raw.githubusercontent.com/crtepitanga/scripts/main/desbloquearapps.sh
-https://seulink.net/desbloquear-apps
 
 INSTALAR MODO KIOSK:
 https://raw.githubusercontent.com/crtepitanga/scripts/main/k.sh
