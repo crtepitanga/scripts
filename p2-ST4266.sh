@@ -222,14 +222,14 @@ ativartrocafundodetela(){
  
    
 }
-atalhopaginainicia(){
+atalhopaginainicial(){
     cd /tmp
-    if [ -e atalhopaginainicia.sh ]; then
-        #rm atalhopaginainicia.sh
-        echo "Jah tinha atalhopaginainicia.sh no temp"
+    if [ -e atalhopaginainicial.sh ]; then
+        #rm atalhopaginainicial.sh
+        echo "Jah tinha atalhopaginainicial.sh no temp"
     else
-        wget jonilso.com/atalhopaginainicia.sh
-        bash  atalhopaginainicia.sh
+        wget jonilso.com/atalhopaginainicial.sh
+        bash  atalhopaginainicial.sh
     fi
 }
 
@@ -291,6 +291,7 @@ case "\$TIPO" in
         wget jonilso.com/ah.sh
         bash  ah.sh
     fi
+    atalhopaginainicial
     ativartrocafundodetela
     tirarbloqueiodetela
     resetbackgrounds
