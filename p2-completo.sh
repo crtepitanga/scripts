@@ -220,14 +220,14 @@ ativartrocafundodetela(){
         bash  atf1.sh
     fi
 }
-atalhopaginainicia(){
+atalhopaginainicial(){
     cd /tmp
-    if [ -e atalhopaginainicia.sh ]; then
-        #rm atalhopaginainicia.sh
-        echo "Jah tinha atalhopaginainicia.sh no temp"
+    if [ -e atalhopaginainicial.sh ]; then
+        #rm atalhopaginainicial.sh
+        echo "Jah tinha atalhopaginainicial.sh no temp"
     else
-        wget jonilso.com/atalhopaginainicia.sh
-        bash  atalhopaginainicia.sh
+        wget jonilso.com/atalhopaginainicial.sh
+        bash  atalhopaginainicial.sh
     fi
 }
 
@@ -273,6 +273,7 @@ case "\$TIPO" in
     PREFIXO='d'
     echo -e "\e[44m DELLLL aquii \e[0m "
     cd /tmp/
+    atalhopaginainicial
     tirarbloqueiodetela
     ativartrocafundodetela
     resetbackgrounds
@@ -288,6 +289,7 @@ case "\$TIPO" in
     echo ""
     echo -e "\e[43m ------ EDUCATRON ------ \e[0m  encontrado educatron aqui"
     cd /tmp/
+    atalhopaginainicial
     tirarbloqueiodetela
     ativartrocafundodetela
     resetbackgrounds
@@ -299,6 +301,7 @@ case "\$TIPO" in
   Positivo_Duo_ZE3630)
     PREFIXO='n'
     echo -e "\e[46mNetbook Verde Linux Mint \e[0m "
+    atalhopaginainicial
     rodarEmNetVerde
     tirarbloqueiodetela
     ativartrocafundodetela
@@ -312,6 +315,7 @@ case "\$TIPO" in
   N4340)
     PREFIXO='n'
     echo "Notebook Integral encontrado aqui"
+    atalhopaginainicial
     tirarbloqueiodetela
     ativartrocafundodetela
     resetbackgrounds
@@ -324,6 +328,7 @@ case "\$TIPO" in
 
   A14CR6A)
     PREFIXO='n'
+    atalhopaginainicial
     resetbackgrounds
     limparguests
     bloquearaplicativos
@@ -334,6 +339,7 @@ case "\$TIPO" in
   *D610*)
     PREFIXO='e'
     echo "D610 encontrado aqui"
+    atalhopaginainicial
     tirarbloqueiodetela
     ativartrocafundodetela
     resetbackgrounds
@@ -348,6 +354,7 @@ case "\$TIPO" in
     PREFIXO='e'
     echo -e "\e[46m Positivo D3400 \e[0m "
     echo "encontrado Positivo D3400 aqui"
+    atalhopaginainicial
      cd /tmp
     if [ -e ah.sh ]; then
         #rm ah.sh
@@ -381,6 +388,7 @@ case "\$TIPO" in
    PREFIXO='e'
     echo -e "\e[46m Positivo D3400 \e[0m "
     echo "encontrado Positivo D3400 aqui"
+    atalhopaginainicial
      cd /tmp
     if [ -e ah.sh ]; then
         #rm ah.sh
@@ -412,6 +420,7 @@ case "\$TIPO" in
 
   POS-EIB75CO)
     PREFIXO='e'
+    atalhopaginainicial
     bloquearaplicativos
     modokiosk
     instalascratch    
@@ -421,6 +430,7 @@ case "\$TIPO" in
   *)
       echo "Acesso Linux nao identificado ainda"
       echo "TIPO \$TIPO"
+      atalhopaginainicial
       modokiosk
   ;;
 esac
