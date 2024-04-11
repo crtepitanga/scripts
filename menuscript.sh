@@ -1666,7 +1666,6 @@ fi
 sudo x11vnc -storepasswd /root/.vncpasswd >> /dev/null 2>> /dev/null << ENDDOC
 $SENHAVNC
 $SENHAVNC
-y
 ENDDOC
 
 echo "..."
@@ -1874,23 +1873,24 @@ if [ "$OPCAO_M_ATUAL" -eq 2 ];then
     "3" "-->> Ativar TAP do Touchpad Notebooks ED. Integral" off \
     "4" "-->> Atualizar chrome e firefox" off \
     "5" "-->> Bloquear opção alterar usuário/senha, Aparencia e Area de Trabalho" off \
-    "6" "-->> Criar atalho Plataformas Educacionais area de trabalho" off \
-    "7" "-->> Desabilitar proxy dos navegadores no Linux Mint" off \
-    "8" "-->> Desativar bloqueio de tela" off \
-    "9" "-->> Desativar Touchscreen Netbooks Verdes" off \
-    "10" "-->> Desativar usuário convidado" off \
-    "11" "-->> Instalar ATOM e VSCODE" off \
-    "12" "-->> Instalar Certificado" off \
-    "13" "-->> Instalar driver do Mblock" off \
-    "14" "-->> Instalar Medidor" off \
-    "15" "-->> Instalar Scratch" off \
-    "16" "-->> Instalar VNC no Linux" off \
-    "17" "-->> Limpar o UPDATE" off \
-    "18" "-->> Página inicial das Plataformas no Chrome e Firefox" off \
-    "19" "-->> Preparar máquina para atualização" on \
-    "20" "-->> Remover usuários Guest" off \
-    "21" "-->> Remover/Resetar plano de fundo" off \
-    "22" "-->> Instalar modo Kiosk para bloquear edição modo gráfico" off)
+    "6" "-->> Desbloquear opção alterar usuário/senha" off \
+    "7" "-->> Criar atalho Plataformas Educacionais area de trabalho" off \
+    "8" "-->> Desabilitar proxy dos navegadores no Linux Mint" off \
+    "9" "-->> Desativar bloqueio de tela" off \
+    "10" "-->> Desativar Touchscreen Netbooks Verdes" off \
+    "11" "-->> Desativar usuário convidado" off \
+    "12" "-->> Instalar ATOM e VSCODE" off \
+    "13" "-->> Instalar Certificado" off \
+    "14" "-->> Instalar driver do Mblock" off \
+    "15" "-->> Instalar Medidor" off \
+    "16" "-->> Instalar Scratch" off \
+    "17" "-->> Instalar VNC no Linux" off \
+    "18" "-->> Limpar o UPDATE" off \
+    "19" "-->> Página inicial das Plataformas no Chrome e Firefox" off \
+    "20" "-->> Preparar máquina para atualização" on \
+    "21" "-->> Remover usuários Guest" off \
+    "22" "-->> Remover/Resetar plano de fundo" off \
+    "23" "-->> Instalar modo Kiosk para bloquear edição modo gráfico" off)
     
     #dialog --msgbox "Opções Selecionadas: $CHECKLIST" 10 45
     
@@ -1949,10 +1949,18 @@ echo -e "\e[37;44;1m======================BLOQUEAR OPÇÃO ALTERAR USUÁRIO/SENH
 			
 			bloquearaplicativos;
 
-echo -e "\e[37;44;1m====================FIM BLOQUEAR OPÇÃO ALTERAR USUÁRIO/SENHA==================== \e[m\n"	
+echo -e "\e[37;44;1m====================FIM BLOQUEAR OPÇÃO ALTERAR USUÁRIO/SENHA==================== \e[m\n"
+
+   		elif [ "$SELECIONADOS" -eq 6 ];then
+
+echo -e "\e[37;44;1m======================DESBLOQUEAR OPÇÃO ALTERAR USUÁRIO/SENHA====================== \e[m\n"
+			
+			desbloquearaplicativos;
+
+echo -e "\e[37;44;1m====================FIM DESBLOQUEAR OPÇÃO ALTERAR USUÁRIO/SENHA==================== \e[m\n"	
 
 
-		elif [ "$SELECIONADOS" -eq 6 ];then
+		elif [ "$SELECIONADOS" -eq 7 ];then
 		
 echo -e "\e[37;44;1m=================INSERIR ATALHO PLATAFORMAS NA AREA DE TRABALHO================= \e[m\n"
 
@@ -1960,7 +1968,7 @@ echo -e "\e[37;44;1m=================INSERIR ATALHO PLATAFORMAS NA AREA DE TRABA
 		
 echo -e "\e[37;44;1m===============FIM INSERIR ATALHO PLATAFORMAS NA AREA DE TRABALHO=============== \e[m\n"
 
-		elif [ "$SELECIONADOS" -eq 7 ];then
+		elif [ "$SELECIONADOS" -eq 8 ];then
 
 echo -e "\e[37;44;1m======================DESABILITANDO PROXY NAVEGADORES=========================== \e[m\n"
 
@@ -1968,7 +1976,7 @@ echo -e "\e[37;44;1m======================DESABILITANDO PROXY NAVEGADORES=======
 					
 echo -e "\e[37;44;1m====================FIM DESABILITANDO PROXY NAVEGADORES========================== \e[m\n"
 		
-		elif [ "$SELECIONADOS" -eq 8 ];then
+		elif [ "$SELECIONADOS" -eq 9 ];then
 
 echo -e "\e[37;44;1m============================DESATIVAR BLOQUEIO DE TELA============================ \e[m\n"
 
@@ -1976,7 +1984,7 @@ echo -e "\e[37;44;1m============================DESATIVAR BLOQUEIO DE TELA======
 					
 echo -e "\e[37;44;1m==========================FIM DESATIVAR BLOQUEIO DE TELA========================== \e[m\n"
 					
-		elif [ "$SELECIONADOS" -eq 9 ];then    		
+		elif [ "$SELECIONADOS" -eq 10 ];then    		
 
 echo -e "\e[37;44;1m==================DESATIVAR TOUCHSCREEN NETBOOKS VERDINHOS====================== \e[m\n"
 		 	
@@ -1984,7 +1992,7 @@ echo -e "\e[37;44;1m==================DESATIVAR TOUCHSCREEN NETBOOKS VERDINHOS==
 		 	
 echo -e "\e[37;44;1m===============FIM DESATIVAR TOUCHSCREEN NETBOOKS VERDINHOS==================== \e[m\n"
 
-		elif [ "$SELECIONADOS" -eq 10 ];then    		
+		elif [ "$SELECIONADOS" -eq 11 ];then    		
 
 echo -e "\e[37;44;1m==========================DESATIVAR USUÁRIO CONVIDADO========================== \e[m\n"
 		 	
@@ -1992,7 +2000,7 @@ echo -e "\e[37;44;1m==========================DESATIVAR USUÁRIO CONVIDADO======
 		 	
 echo -e "\e[37;44;1m=======================FIM DESATIVAR USUÁRIO CONVIDADO========================= \e[m\n"
 	
-		elif [ "$SELECIONADOS" -eq 11 ];then
+		elif [ "$SELECIONADOS" -eq 12 ];then
 
 echo -e "\e[37;44;1m============================INSTALAR ATOM E VSCODE================================ \e[m\n"
 
@@ -2000,7 +2008,7 @@ echo -e "\e[37;44;1m============================INSTALAR ATOM E VSCODE==========
 
 echo -e "\e[37;44;1m==========================FIM INSTALAR ATOM E VSCODE============================== \e[m\n"
 
-		elif [ "$SELECIONADOS" -eq 12 ];then
+		elif [ "$SELECIONADOS" -eq 13 ];then
 
 echo -e "\e[37;44;1m============================INSTALAR CERTIFICADO================================ \e[m\n"
 
@@ -2008,7 +2016,7 @@ echo -e "\e[37;44;1m============================INSTALAR CERTIFICADO============
 
 echo -e "\e[37;44;1m==========================FIM INSTALAR CERTIFICADO============================== \e[m\n"
 
-		elif [ "$SELECIONADOS" -eq 13 ];then
+		elif [ "$SELECIONADOS" -eq 14 ];then
 
 echo -e "\e[37;44;1m============================INSTALAR DRIVER MBLOCK================================ \e[m\n"
 
@@ -2016,7 +2024,7 @@ echo -e "\e[37;44;1m============================INSTALAR DRIVER MBLOCK==========
 
 echo -e "\e[37;44;1m==========================FIM INSTALAR DRIVER MBLOCK============================== \e[m\n"
 
-		elif [ "$SELECIONADOS" -eq 14 ];then
+		elif [ "$SELECIONADOS" -eq 15 ];then
 
 echo -e "\e[37;44;1m============================INSTALANDO MEDIDOR MEC================================ \e[m\n"
 
@@ -2025,7 +2033,7 @@ echo -e "\e[37;44;1m============================INSTALANDO MEDIDOR MEC==========
 echo -e "\e[37;44;1m==========================FIM INSTALANDO MEDIDOR MEC============================== \e[m\n"
 
 
-    		elif [ "$SELECIONADOS" -eq 15 ];then
+    		elif [ "$SELECIONADOS" -eq 16 ];then
 
 echo -e "\e[37;44;1m==============================INSTALAR SCRATCH================================== \e[m\n"
 
@@ -2034,7 +2042,7 @@ echo -e "\e[37;44;1m==============================INSTALAR SCRATCH==============
 echo -e "\e[37;44;1m============================FIM INSTALAR SCRATCH================================ \e[m\n"
 
 
-		elif [ "$SELECIONADOS" -eq 16 ];then
+		elif [ "$SELECIONADOS" -eq 17 ];then
 
 echo -e "\e[37;44;1m================================INSTALANDO VNC==================================== \e[m\n"
 
@@ -2042,7 +2050,7 @@ echo -e "\e[37;44;1m================================INSTALANDO VNC==============
 
 echo -e "\e[37;44;1m==============================FIM INSTALANDO VNC================================== \e[m\n"
     	
-    		elif [ "$SELECIONADOS" -eq 17 ];then
+    		elif [ "$SELECIONADOS" -eq 18 ];then
 
 echo -e "\e[37;44;1m===========================LIMPANDO O APT-GET UPDATE============================== \e[m\n"
 
@@ -2050,7 +2058,7 @@ echo -e "\e[37;44;1m===========================LIMPANDO O APT-GET UPDATE========
 
 echo -e "\e[37;44;1m=========================FIM LIMPANDO O APT-GET UPDATE============================ \e[m\n"
 
-			elif [ "$SELECIONADOS" -eq 18 ];then
+			elif [ "$SELECIONADOS" -eq 19 ];then
 
 echo -e "\e[37;44;1m==============ADICIONAR PAGINA INICIAL PLATAFORMAS NOS NAVEGADORES================ \e[m\n"
 
@@ -2058,7 +2066,7 @@ echo -e "\e[37;44;1m==============ADICIONAR PAGINA INICIAL PLATAFORMAS NOS NAVEG
 
 echo -e "\e[37;44;1m=============FIM ADICIONAR PAGINA INICIAL PLATAFORMAS NOS NAVEGADORES============= \e[m\n"
 
-			elif [ "$SELECIONADOS" -eq 19 ];then    		
+			elif [ "$SELECIONADOS" -eq 20 ];then    		
 
 echo -e "\e[37;44;1m==============INSTALAR REPOSITÓRIO DA CELAPAR E ATUALIZAR PACOTES============== \e[m\n"
 		 	
@@ -2066,7 +2074,7 @@ echo -e "\e[37;44;1m==============INSTALAR REPOSITÓRIO DA CELAPAR E ATUALIZAR P
 		 	
 echo -e "\e[37;44;1m==========================FIM DA PREPARAÇÃO MÁQUINA============================ \e[m\n"					
 	
-			elif [ "$SELECIONADOS" -eq 20 ];then
+			elif [ "$SELECIONADOS" -eq 21 ];then
 
 echo -e "\e[37;44;1m=============================EXCLUIR USUARIOS GUEST============================= \e[m\n"
 
@@ -2074,7 +2082,7 @@ echo -e "\e[37;44;1m=============================EXCLUIR USUARIOS GUEST=========
 			
 echo -e "\e[37;44;1m===========================FIM EXCLUIR USUARIOS GUEST=========================== \e[m\n"
 				
-		elif [ "$SELECIONADOS" -eq 21 ];then
+		elif [ "$SELECIONADOS" -eq 22 ];then
 
 echo -e "\e[37;44;1m===========================RESTAURAR O PLANO DE FUNDO=========================== \e[m\n"
 
@@ -2082,7 +2090,7 @@ echo -e "\e[37;44;1m===========================RESTAURAR O PLANO DE FUNDO=======
 					
 echo -e "\e[37;44;1m=========================FIM RESTAURAR O PLANO DE FUNDO========================= \e[m\n"
 
-		elif [ "$SELECIONADOS" -eq 22 ];then
+		elif [ "$SELECIONADOS" -eq 23 ];then
 
 echo -e "\e[37;44;1m===========++=======MODO KIOSK BLOQUEAR EDIÇÃO GRÁFICA=========================== \e[m\n"
 
