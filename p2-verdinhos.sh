@@ -283,12 +283,12 @@ case "\$TIPO" in
     PREFIXO='n'
     echo -e "\e[46mNetbook Verde Linux Mint \e[0m "
     atalhopaginainicial
+    modokiosk
+    bloquearaplicativos    
     rodarEmNetVerde
     tirarbloqueiodetela
     ativartrocafundodetela
-    resetbackgrounds
-    bloquearaplicativos
-    modokiosk
+    resetbackgrounds    
     limparguests
     instalascratch    
     atualizaNavegadoresAtomVscodeEtc
