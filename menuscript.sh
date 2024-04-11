@@ -1308,6 +1308,18 @@ function instalascratch(){
 }
 
 function bloquearaplicativos(){
+	cd /tmp
+    		if [ -e bloquearapps.sh ]; then
+      		    echo "Jah tinha scratch.sh no temp"
+   		 else
+       			 wget -q https://raw.githubusercontent.com/crtepitanga/scripts/main/bloquearapps.sh -O bloquearapps.sh
+      			 bash  bloquearapps.sh
+
+        echo "BLOQUEADO APPS E AREA DE TRABALHO👍️👍️👍️"
+    fi
+}
+
+
 USUARIOS=( "professor" "escola" "Aluno" "aluno" "alunos" )
 APLICATIVOS=( "/usr/bin/xfce4-appearance-settings" "/usr/bin/users-admin" "/usr/bin/mugshot" "/usr/bin/mate-about-me" )
 
