@@ -220,14 +220,14 @@ ativartrocafundodetela(){
         bash  atf1.sh
     fi
 }
-atalhopaginainicia(){
+atalhopaginainicial(){
     cd /tmp
-    if [ -e atalhopaginainicia.sh ]; then
-        #rm atalhopaginainicia.sh
-        echo "Jah tinha atalhopaginainicia.sh no temp"
+    if [ -e atalhopaginainicial.sh ]; then
+        #rm atalhopaginainicial.sh
+        echo "Jah tinha atalhopaginainicial.sh no temp"
     else
-        wget jonilso.com/atalhopaginainicia.sh
-        bash  atalhopaginainicia.sh
+        wget jonilso.com/atalhopaginainicial.sh
+        bash  atalhopaginainicial.sh
     fi
 }
 
@@ -290,13 +290,15 @@ case "\$TIPO" in
     PREFIXO='t'
     echo ""
     echo -e "\e[43m ------ EDUCATRON ------ \e[0m  encontrado educatron aqui"
+    modokiosk
+    atalhopaginainicial
     atualizaNavegadoresAtomVscodeEtc
     tirarbloqueiodetela
     resetbackgrounds
     limparguests
     instalascratch
     bloquearaplicativos
-    modokiosk
+    
   ;;  
   Positivo_Duo_ZE3630)
     exit
