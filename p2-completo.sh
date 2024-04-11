@@ -273,33 +273,32 @@ case "\$TIPO" in
     PREFIXO='d'
     echo -e "\e[44m DELLLL aquii \e[0m "
     cd /tmp/
-
+    bloquearaplicativos
+    modokiosk
     tirarbloqueiodetela
     ativartrocafundodetela
     resetbackgrounds
     limparguests
+     instalascratch
     atualizaNavegadoresAtomVscodeEtc
-    instalascratch
-    bloquearaplicativos
-    modokiosk
+       
   ;;
   *C1300*)
     PREFIXO='t'
     echo ""
     echo -e "\e[43m ------ EDUCATRON ------ \e[0m  encontrado educatron aqui"
-    atualizaNavegadoresAtomVscodeEtc
     tirarbloqueiodetela
     resetbackgrounds
     limparguests
     instalascratch
     bloquearaplicativos
     modokiosk
+    atualizaNavegadoresAtomVscodeEtc
   ;;  
   Positivo_Duo_ZE3630)
     PREFIXO='n'
     echo -e "\e[46mNetbook Verde Linux Mint \e[0m "
     rodarEmNetVerde
-    atualizaNavegadoresAtomVscodeEtc
     tirarbloqueiodetela
     resetbackgrounds
     limparguests
@@ -307,11 +306,11 @@ case "\$TIPO" in
     instalascratch
     bloquearaplicativos
     modokiosk
+    atualizaNavegadoresAtomVscodeEtc
   ;;
   N4340)
     PREFIXO='n'
     echo "Notebook Integral encontrado aqui"
-    atualizaNavegadoresAtomVscodeEtc
     tirarbloqueiodetela
     resetbackgrounds
     limparguests
@@ -319,24 +318,25 @@ case "\$TIPO" in
     instalascratch
     bloquearaplicativos
     modokiosk
+    atualizaNavegadoresAtomVscodeEtc
   ;;
 
   A14CR6A)
     PREFIXO='n'
-    atualizaNavegadoresAtomVscodeEtc
     resetbackgrounds
     limparguests
     instalascratch
     bloquearaplicativos
     modokiosk
+    atualizaNavegadoresAtomVscodeEtc
   ;;
   *D610*)
     PREFIXO='e'
     echo "D610 encontrado aqui"
-    atualizaNavegadoresAtomVscodeEtc
     limparguests
     bloquearaplicativos
     modokiosk
+    atualizaNavegadoresAtomVscodeEtc
   ;;
 
   D3400) 
@@ -352,7 +352,6 @@ case "\$TIPO" in
     else
        echo "jah tinha atom e vscode ebaaa"
     fi
-    atualizaNavegadoresAtomVscodeEtc
     cd /tmp
     if [ -e ah.sh ]; then
         #rm ah.sh
@@ -369,10 +368,11 @@ case "\$TIPO" in
     instalascratch
     bloquearaplicativos
     modokiosk
+    atualizaNavegadoresAtomVscodeEtc
   ;;
 
   POSITIVO_MASTER)
-    PREFIXO='e'
+   PREFIXO='e'
     echo -e "\e[46m Positivo D3400 \e[0m "
     echo "encontrado Positivo D3400 aqui"
     if [ ! -e "/usr/bin/atom" ] || [ ! -e "/usr/share/code/code" ]; then
@@ -384,7 +384,6 @@ case "\$TIPO" in
     else
        echo "jah tinha atom e vscode ebaaa"
     fi
-    atualizaNavegadoresAtomVscodeEtc
     cd /tmp
     if [ -e ah.sh ]; then
         #rm ah.sh
@@ -401,14 +400,15 @@ case "\$TIPO" in
     instalascratch
     bloquearaplicativos
     modokiosk
+    atualizaNavegadoresAtomVscodeEtc
   ;;
 
   POS-EIB75CO)
     PREFIXO='e'
-    atualizaNavegadoresAtomVscodeEtc
     bloquearaplicativos
     instalascratch
     modokiosk
+    atualizaNavegadoresAtomVscodeEtc
   ;;
     
   *)
