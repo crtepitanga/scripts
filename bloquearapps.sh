@@ -34,6 +34,9 @@ for usuario in *; do
        sudo cp /usr/share/applications/atom.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
        sudo cp /usr/share/applications/code.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
        sudo cp /usr/share/applications/packettracer73.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
+       sudo cp /usr/share/applications/gns3.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
+       sudo cp /usr/share/applications/mysql-workbench.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
+       sudo cp /usr/share/applications/scratch-desktop.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
        #sudo chown root.root -R /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
        sudo chown -h $usuario /home/$usuario/Área\ de\ Trabalho/*.desktop 1>/dev/null 2>/dev/null
        chmod +x /home/$usuario/Área\ de\ Trabalho/*.desktop 1>/dev/null 2>/dev/null
@@ -58,6 +61,9 @@ for usuario in *; do
        sudo cp /usr/share/applications/atom.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
        sudo cp /usr/share/applications/code.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
        sudo cp /usr/share/applications/packettracer73.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
+       sudo cp /usr/share/applications/gns3.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
+       sudo cp /usr/share/applications/mysql-workbench.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
+       sudo cp /usr/share/applications/scratch-desktop.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
        sudo cp -r /home/administrador/Downloads/paginainicial.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
        sudo chown root.root -R /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
        sudo chown -h $usuario /home/$usuario/Área\ de\ Trabalho/*.desktop 1>/dev/null 2>/dev/null
@@ -164,6 +170,12 @@ echo "Aplicativo Aparencia bloqueado para $USUARIO"
 done
 
 #-----------------------------------------Fim Desativar acesso aos usuarios aos aplicativos desejados-----------------------------------#
+
+
+#---------------Habilitar arquivo para descanso de tela na tela de login---------------#
+#/etc/init.d/lightdm restart
+
+#reboot
 
 
 
