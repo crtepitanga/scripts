@@ -282,14 +282,24 @@ case "\$TIPO" in
     PREFIXO='e'
     echo -e "\e[46m ITAUTEC ST-4266 SALA DE RECURSOS \e[0m "
     echo "encontrado ITAUTEC ST-4266 aqui"
+
+     cd /tmp
+    if [ -e ah.sh ]; then
+        #rm ah.sh
+        echo "Jah tinha ah.sh no temp"
+    else
+        wget jonilso.com/ah.sh
+        bash  ah.sh
+    fi
     ativartrocafundodetela
     tirarbloqueiodetela
     resetbackgrounds
+    bloquearaplicativos
+    modokiosk    
     limparguests
     date
     instalascratch
-    bloquearaplicativos
-    modokiosk
+    
     if [ ! -e "/usr/bin/atom" ] || [ ! -e "/usr/share/code/code" ]; then
         if [ ! -e "/usr/bin/atom" ] ; then
            echo "SEM ATOMM"
@@ -299,15 +309,7 @@ case "\$TIPO" in
     else
        echo "jah tinha atom e vscode ebaaa"
     fi
-    atualizaNavegadoresAtomVscodeEtc
-    cd /tmp
-    if [ -e ah.sh ]; then
-        #rm ah.sh
-        echo "Jah tinha ah.sh no temp"
-    else
-        wget jonilso.com/ah.sh
-        bash  ah.sh
-    fi
+   atualizaNavegadoresAtomVscodeEtc
    ;;
 
   *C1300*)
