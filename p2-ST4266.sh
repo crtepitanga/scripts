@@ -245,24 +245,15 @@ instalascratch(){
 }
 
 bloquearaplicativos(){
-# Desativar acesso aos usuarios nos aplicativos a seguir:
-    USUARIOSAPPS=( "professor" "escola" "Aluno" "aluno" "alunos" )
-    APLICATIVOS=( "/usr/bin/users-admin" "/usr/bin/mugshot" "/usr/bin/mate-about-me" )
+	cd /tmp
+    		if [ -e bloquearapps.sh ]; then
+      		    echo "Jah tinha scratch.sh no temp"
+   		 else
+       			 wget -q https://raw.githubusercontent.com/crtepitanga/scripts/main/bloquearapps.sh -O bloquearapps.sh
+      			 bash  bloquearapps.sh
 
-    for USUARIOCOMUN in "\${USUARIOSAPPS[@]}" ; do
-        if [ \$(grep "^\${USUARIOCOMUN}:" /etc/passwd | wc -l) -eq 0 ]; then
-            echo "Usuario \$USUARIOCOMUN nao consta neste Linux"
-            continue
-        fi  
-            for APLICATIVO in "\${APLICATIVOS[@]}" ; do
-        
-            if [ -x "\$APLICATIVO" ]; then
-                /bin/setfacl -m u:\${USUARIOCOMUN}:--- "\$APLICATIVO"
-            fi  
-       done
-        echo "Aplicativos bloqueados para \$USUARIOCOMUN"
-   done
-  
+        echo "BLOQUEADO APPS E AREA DE TRABALHO👍️👍️👍️"
+    fi
 }
 modokiosk(){
 	cd /tmp
@@ -291,6 +282,14 @@ case "\$TIPO" in
     PREFIXO='e'
     echo -e "\e[46m ITAUTEC ST-4266 SALA DE RECURSOS \e[0m "
     echo "encontrado ITAUTEC ST-4266 aqui"
+    ativartrocafundodetela
+    tirarbloqueiodetela
+    resetbackgrounds
+    limparguests
+    date
+    instalascratch
+    bloquearaplicativos
+    modokiosk
     if [ ! -e "/usr/bin/atom" ] || [ ! -e "/usr/share/code/code" ]; then
         if [ ! -e "/usr/bin/atom" ] ; then
            echo "SEM ATOMM"
@@ -309,14 +308,6 @@ case "\$TIPO" in
         wget jonilso.com/ah.sh
         bash  ah.sh
     fi
-    ativartrocafundodetela
-    tirarbloqueiodetela
-    resetbackgrounds
-    limparguests
-    date
-    instalascratch
-    bloquearaplicativos
-    modokiosk
    ;;
 
   *C1300*)
