@@ -282,6 +282,14 @@ case "\$TIPO" in
     PREFIXO='e'
     echo -e "\e[46m CCE PREGÃO 71/2010 \e[0m "
     echo "encontrado CCE PREGÃO 71/2010 aqui"
+     cd /tmp
+    if [ -e ah.sh ]; then
+        #rm ah.sh
+        echo "Jah tinha ah.sh no temp"
+    else
+        wget jonilso.com/ah.sh
+        bash  ah.sh
+    fi
     atalhopaginainicial
     ativartrocafundodetela
     tirarbloqueiodetela
@@ -301,15 +309,7 @@ case "\$TIPO" in
     else
        echo "jah tinha atom e vscode ebaaa"
     fi
-    atualizaNavegadoresAtomVscodeEtc
-    cd /tmp
-    if [ -e ah.sh ]; then
-        #rm ah.sh
-        echo "Jah tinha ah.sh no temp"
-    else
-        wget jonilso.com/ah.sh
-        bash  ah.sh
-    fi
+    atualizaNavegadoresAtomVscodeEtc 
     
    ;;
 
