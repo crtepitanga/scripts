@@ -282,17 +282,25 @@ case "\$TIPO" in
   Positivo_Duo_ZE3630)
     PREFIXO='n'
     echo -e "\e[46mNetbook Verde Linux Mint \e[0m "
+   	 echo -e "\e[46mInserindo atalho Página Inicial na Área de Trabalho  \e[0m "
     atalhopaginainicial
-    modokiosk
-    bloquearaplicativos    
+    	echo -e "\e[46mInstalando Modo Kiosk\e[0m "
+    modokiosk   
     rodarEmNetVerde
+    	echo -e "\e[46mDesabilitando Bloqueio de Tela \e[0m "
     tirarbloqueiodetela
+   	 echo -e "\e[46mAtivando Plano de Fundo Padrão\e[0m "
     ativartrocafundodetela
+    	echo -e "\e[46mResetando Plano de Fundo \e[0m "
     resetbackgrounds    
+    	echo -e "\e[46mLimpando usuários Guest \e[0m "
     limparguests
-    instalascratch    
+    	echo -e "\e[46mInstalando Scratch \e[0m "
+    instalascratch   
+    	echo -e "\e[46mAtualizando os Navegadores\e[0m "
     atualizaNavegadoresAtomVscodeEtc
-
+	echo -e "\e[46mBloqueando Aplicativos e Área de Trabalho \e[0m "
+    bloquearaplicativos
   ;;
   
   N4340)
