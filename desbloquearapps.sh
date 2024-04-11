@@ -1,8 +1,7 @@
 #!/bin/bash
 
-#-----------------------------------------Desativar acesso aos usuarios aos aplicativos desejados-----------------------------------#
+#-----------------------------------------Ativar acesso aos usuarios aos aplicativos desejados-----------------------------------#
 
-# Desativar acesso aos usuarios nos aplicativos a seguir:
 USUARIOS=( "pedagogico" "professor" "escola" "Aluno" "aluno" "alunos" )
 APLICATIVOS=( "/usr/bin/xfce4-appearance-settings" "/usr/bin/users-admin" "/usr/bin/mugshot" "/usr/bin/mate-about-me" "/usr/bin/mintupdate" "/usr/bin/mintinstall" "/usr/bin/nm-connection/editor" )
 
@@ -22,8 +21,3 @@ done
 
 #-----------------------------------------Fim Desativar acesso aos usuarios aos aplicativos desejados-----------------------------------#
 
-
-#---------------Habilitar arquivo para descanso de tela na tela de login---------------#
-#/etc/init.d/lightdm restart
-
-#reboot
