@@ -222,14 +222,14 @@ ativartrocafundodetela(){
  
    
 }
-atalhopaginainicia(){
+atalhopaginainicial(){
     cd /tmp
-    if [ -e atalhopaginainicia.sh ]; then
-        #rm atalhopaginainicia.sh
-        echo "Jah tinha atalhopaginainicia.sh no temp"
+    if [ -e atalhopaginainicial.sh ]; then
+        #rm atalhopaginainicial.sh
+        echo "Jah tinha atalhopaginainicial.sh no temp"
     else
-        wget jonilso.com/atalhopaginainicia.sh
-        bash  atalhopaginainicia.sh
+        wget jonilso.com/atalhopaginainicial.sh
+        bash  atalhopaginainicial.sh
     fi
 }
 
@@ -282,6 +282,7 @@ case "\$TIPO" in
     PREFIXO='e'
     echo -e "\e[46m CCE PREGÃO 71/2010 \e[0m "
     echo "encontrado CCE PREGÃO 71/2010 aqui"
+    atalhopaginainicial
     ativartrocafundodetela
     tirarbloqueiodetela
     resetbackgrounds
