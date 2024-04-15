@@ -272,14 +272,32 @@ case "\$TIPO" in
     PREFIXO='d'
     echo -e "\e[44m DELLLL aquii \e[0m "
     cd /tmp/
+    	echo -e "\e[44m XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX \e[0m "
+    		echo -e "\e[44m ATALHO PÁGINA INICIAL NA ÁREA DE TRABALHO \e[0m "
     atalhopaginainicial
-    tirarbloqueiodetela
-    ativartrocafundodetela
-    resetbackgrounds
-    bloquearaplicativos
+    	echo -e "\e[44m XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX \e[0m "
+    		echo -e "\e[44m INSTALAR MODO KIOSK \e[0m "
     modokiosk
+    	echo -e "\e[44m XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX \e[0m "
+   		echo -e "\e[44m DESABILITANDO BLOQUEIO DE TELA \e[0m "
+    tirarbloqueiodetela
+    	echo -e "\e[44m XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX \e[0m "
+   		echo -e "\e[44m PLANO DE FUNDO PADRÃO DO ESTADO \e[0m "
+    ativartrocafundodetela
+    	echo -e "\e[44m XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX \e[0m "
+   		echo -e "\e[44m RESETANDO PLANO DE FUNDO \e[0m "
+    resetbackgrounds
+    	echo -e "\e[44m XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX \e[0m "
+    		echo -e "\e[44m BLOQUEAR APLICATIVOS E ÁREA DE TRABALHO \e[0m "
+    bloquearaplicativos
+    	echo -e "\e[44m XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX \e[0m "
+    		echo -e "\e[44m LIMPANDO USUÁRIOS GUEST \e[0m "
     limparguests
+    	echo -e "\e[44m XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX \e[0m "
+    		echo -e "\e[44m INSTALANDO SCRATCH \e[0m "
     instalascratch
+    	echo -e "\e[44m XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX \e[0m "
+  		echo -e "\e[44m ATUALIZANDO NAVEGADORES \e[0m "
     atualizaNavegadoresAtomVscodeEtc
     
   ;;
