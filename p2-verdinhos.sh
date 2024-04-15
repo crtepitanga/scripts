@@ -289,8 +289,6 @@ case "\$TIPO" in
     	echo -e "\e[46mInstalando Modo Kiosk\e[0m "
     modokiosk   
      echo "########################################################################"
-    rodarEmNetVerde
-     echo "########################################################################"
     	echo -e "\e[46mDesabilitando Bloqueio de Tela \e[0m "
     tirarbloqueiodetela
      echo "########################################################################"
@@ -306,6 +304,7 @@ case "\$TIPO" in
     	echo -e "\e[46mInstalando Scratch \e[0m "
     instalascratch   
      echo "########################################################################"
+    rodarEmNetVerde
     	echo -e "\e[46mAtualizando os Navegadores\e[0m "
     atualizaNavegadoresAtomVscodeEtc
      echo "########################################################################"
