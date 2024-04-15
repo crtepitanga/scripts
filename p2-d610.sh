@@ -292,14 +292,27 @@ case "\$TIPO" in
   *D610*)
     PREFIXO='e'
     echo "D610 encontrado aqui"
-    atalhopaginainicial
-    ativartrocafundodetela
-    atualizaNavegadoresAtomVscodeEtc
-    tirarbloqueiodetela
-    resetbackgrounds
-    limparguests
-    bloquearaplicativos
+    	echo "INSTALAR MODO KIOSK"
+    		echo "(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((("
     modokiosk
+    echo "ATALHO PAGINA INICIAL"
+    		echo "(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((("
+        atalhopaginainicial
+	 echo "PLANO DE FUNDO PADRÃO DO ESTADO"
+    		echo "(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((("
+    ativartrocafundodetela    
+     echo "DESABILITAR BLOQUEIO DE TELA"
+    		echo "(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((("
+    tirarbloqueiodetela
+     echo "RESETAR PLANO DE FUNDO"
+    		echo "(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((("
+    resetbackgrounds
+     echo "LIMPAR USUPARIOS GUEST"
+    		echo "(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((("
+    limparguests    
+     echo "ATUALIZAR NAVEGADORES"
+    		echo "(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((("
+    atualizaNavegadoresAtomVscodeEtc    
   ;;
 
   D3400) 
