@@ -289,14 +289,32 @@ POS-EIB85CZ)
     PREFIXO='e'
     echo ""
     echo -e "\e[43m ------ POSITIVO D480 ------ \e[0m  POSITIVO D480 ENCONTRADO AQUI"
+	echo -e "\e[43m ------ ATALHO PÁGINA INICIAL NA ÁREA DE TRABALHO ------ \e[0m  "
+ 		 echo -e "\e[43m************************************************************************  \e[0m "
     atalhopaginainicial
-    ativartrocafundodetela
-    tirarbloqueiodetela
-    bloquearaplicativos
+    echo -e "\e[43m ------ INSTALAR MODO KIOSKI------ \e[0m  "
+ 		 echo -e "\e[43m************************************************************************  \e[0m "
     modokiosk
+    echo -e "\e[43m ------ PLANO DE FUNDO PADRÃO DO ESTADO ------ \e[0m  "
+ 		 echo -e "\e[43m************************************************************************  \e[0m "
+    ativartrocafundodetela
+    echo -e "\e[43m ------ DESATIVAR BLOQUEIO DE TELA ------ \e[0m  "
+ 		 echo -e "\e[43m************************************************************************  \e[0m "
+    tirarbloqueiodetela
+    echo -e "\e[43m ------ BLOQUEAR APLICATIVOS E ÁREA DE TRABALHO ------ \e[0m  "
+ 		 echo -e "\e[43m************************************************************************  \e[0m "
+    bloquearaplicativos
+    echo -e "\e[43m ------ RESETAR PLANO DE FUNDO------ \e[0m  "
+ 		 echo -e "\e[43m************************************************************************  \e[0m "
     resetbackgrounds
+    echo -e "\e[43m ------ LIMPAR USUÁRIOS GUEST ------ \e[0m  "
+ 		 echo -e "\e[43m************************************************************************  \e[0m "
     limparguests
+    echo -e "\e[43m ------ INSTALAR SCRATCH ------ \e[0m  "
+ 		 echo -e "\e[43m************************************************************************  \e[0m "
     instalascratch
+    echo -e "\e[43m ------ ATUALIZAR NAVEGADORES ------ \e[0m  "
+ 		 echo -e "\e[43m************************************************************************  \e[0m "
     atualizaNavegadoresAtomVscodeEtc
   ;;  
   Positivo_Duo_ZE3630)
