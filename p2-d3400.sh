@@ -300,6 +300,7 @@ case "\$TIPO" in
     PREFIXO='e'
     echo -e "\e[46m Positivo D3400 \e[0m "
     echo "encontrado Positivo D3400 aqui"
+    modokiosk
      cd /tmp
     if [ -e ah.sh ]; then
         #rm ah.sh
@@ -312,8 +313,7 @@ case "\$TIPO" in
     ativartrocafundodetela
     tirarbloqueiodetela
     resetbackgrounds
-    bloquearaplicativos
-    modokiosk
+    bloquearaplicativos    
     limparguests
     date
     instalascratch    
