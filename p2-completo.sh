@@ -348,12 +348,69 @@ case "\$TIPO" in
     instalascratch    
     atualizaNavegadoresAtomVscodeEtc
   ;;
+  
+  D3400)
+  PREFIXO='e'
+    echo -e "\e[46m Positivo D3400 \e[0m "
+    echo "encontrado Positivo D3400 aqui"
+    	echo -e "\e[46m ***************************************************************************** \e[0m "
+    		echo -e "\e[46m INSTALAR MODO KIOSK \e[0m "
+    modokiosk
+    echo -e "\e[46m ***************************************************************************** \e[0m "
+    		echo -e "\e[46m AJUSTAR HORA E DATA \e[0m "
+     cd /tmp
+    if [ -e ah.sh ]; then
+        #rm ah.sh
+        echo "Jah tinha ah.sh no temp"
+    else
+        wget jonilso.com/ah.sh
+        bash  ah.sh
+    fi
+    echo -e "\e[46m ***************************************************************************** \e[0m "
+    		echo -e "\e[46m ATALHO PAGINA INICIAL NA ÁREA DE TRABALHO \e[0m "
+    atalhopaginainicial
+    echo -e "\e[46m ***************************************************************************** \e[0m "
+    		echo -e "\e[46m PLANO DE FUNDO PADRÃO DO ESTADO \e[0m "
+    ativartrocafundodetela
+    echo -e "\e[46m ***************************************************************************** \e[0m "
+    		echo -e "\e[46m DESBLOQUEAR TELA \e[0m "
+    tirarbloqueiodetela
+    echo -e "\e[46m ***************************************************************************** \e[0m "
+    		echo -e "\e[46m RESETAR PLANO DE FUNDO \e[0m "
+    resetbackgrounds
+    echo -e "\e[46m ***************************************************************************** \e[0m "
+    		echo -e "\e[46m BLOQUEAR APPS E ÁREA DE TRABALHO \e[0m "
+    bloquearaplicativos    
+    echo -e "\e[46m ***************************************************************************** \e[0m "
+    		echo -e "\e[46m LIMPAR USUÁRIOS GUEST \e[0m "
+    limparguests
+    echo -e "\e[46m ***************************************************************************** \e[0m "
+    		echo -e "\e[46m INSTALAR SCRATCH \e[0m "  
+    instalascratch  
+    echo -e "\e[46m ***************************************************************************** \e[0m "
+    		echo -e "\e[46m ATUALIZAR NAVEGADORES \e[0m "
+    if [ ! -e "/usr/bin/atom" ] || [ ! -e "/usr/share/code/code" ]; then
+        if [ ! -e "/usr/bin/atom" ] ; then
+           echo "SEM ATOMM"
+       else
+           echo "SEM VSCODE"
+        fi
+    else
+       echo "jah tinha atom e vscode ebaaa"
+    fi
+   
+    atualizaNavegadoresAtomVscodeEtc
 
-  D3400) 
+;;
+  POSITIVO_MASTER)
     PREFIXO='e'
     echo -e "\e[46m Positivo D3400 \e[0m "
     echo "encontrado Positivo D3400 aqui"
-    atalhopaginainicial
+    	echo -e "\e[46m ***************************************************************************** \e[0m "
+    		echo -e "\e[46m INSTALAR MODO KIOSK \e[0m "
+    modokiosk
+    echo -e "\e[46m ***************************************************************************** \e[0m "
+    		echo -e "\e[46m AJUSTAR HORA E DATA \e[0m "
      cd /tmp
     if [ -e ah.sh ]; then
         #rm ah.sh
@@ -362,14 +419,29 @@ case "\$TIPO" in
         wget jonilso.com/ah.sh
         bash  ah.sh
     fi
+    echo -e "\e[46m ***************************************************************************** \e[0m "
+    		echo -e "\e[46m ATALHO PAGINA INICIAL NA ÁREA DE TRABALHO \e[0m "
+    atalhopaginainicial
+    echo -e "\e[46m ***************************************************************************** \e[0m "
+    		echo -e "\e[46m PLANO DE FUNDO PADRÃO DO ESTADO \e[0m "
     ativartrocafundodetela
+    echo -e "\e[46m ***************************************************************************** \e[0m "
+    		echo -e "\e[46m DESBLOQUEAR TELA \e[0m "
     tirarbloqueiodetela
+    echo -e "\e[46m ***************************************************************************** \e[0m "
+    		echo -e "\e[46m RESETAR PLANO DE FUNDO \e[0m "
     resetbackgrounds
-    bloquearaplicativos
-    modokiosk
+    echo -e "\e[46m ***************************************************************************** \e[0m "
+    		echo -e "\e[46m BLOQUEAR APPS E ÁREA DE TRABALHO \e[0m "
+    bloquearaplicativos    
+    echo -e "\e[46m ***************************************************************************** \e[0m "
+    		echo -e "\e[46m LIMPAR USUÁRIOS GUEST \e[0m "
     limparguests
-    date
-    instalascratch    
+    echo -e "\e[46m ***************************************************************************** \e[0m "
+    		echo -e "\e[46m INSTALAR SCRATCH \e[0m "  
+    instalascratch  
+    echo -e "\e[46m ***************************************************************************** \e[0m "
+    		echo -e "\e[46m ATUALIZAR NAVEGADORES \e[0m "
     if [ ! -e "/usr/bin/atom" ] || [ ! -e "/usr/share/code/code" ]; then
         if [ ! -e "/usr/bin/atom" ] ; then
            echo "SEM ATOMM"
@@ -381,40 +453,7 @@ case "\$TIPO" in
     fi
    
     atualizaNavegadoresAtomVscodeEtc
-  ;;
 
-  POSITIVO_MASTER)
-   PREFIXO='e'
-    echo -e "\e[46m Positivo D3400 \e[0m "
-    echo "encontrado Positivo D3400 aqui"
-    atalhopaginainicial
-     cd /tmp
-    if [ -e ah.sh ]; then
-        #rm ah.sh
-        echo "Jah tinha ah.sh no temp"
-    else
-        wget jonilso.com/ah.sh
-        bash  ah.sh
-    fi
-    ativartrocafundodetela
-    tirarbloqueiodetela
-    resetbackgrounds
-    bloquearaplicativos
-    modokiosk
-    limparguests
-    date
-    instalascratch    
-    if [ ! -e "/usr/bin/atom" ] || [ ! -e "/usr/share/code/code" ]; then
-        if [ ! -e "/usr/bin/atom" ] ; then
-           echo "SEM ATOMM"
-       else
-           echo "SEM VSCODE"
-        fi
-    else
-       echo "jah tinha atom e vscode ebaaa"
-    fi
-   
-    atualizaNavegadoresAtomVscodeEtc
   ;;
 
   POS-EIB75CO)
