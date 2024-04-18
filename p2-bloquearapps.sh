@@ -233,8 +233,7 @@ atalhopaginainicia(){
 bloquearaplicativos(){
 	cd /tmp
     		if [ -e bloquearapps.sh ]; then
-      		    echo "Jah tinha scratch.sh no temp"
-   		 else
+      		   	 rm bloquearapps.sh
        			 wget -q https://raw.githubusercontent.com/crtepitanga/scripts/main/bloquearapps.sh -O bloquearapps.sh
       			 bash  bloquearapps.sh
 
