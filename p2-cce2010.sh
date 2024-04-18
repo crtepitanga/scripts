@@ -283,33 +283,7 @@ case "\$TIPO" in
     echo -e "\e[46m CCE PREGÃO 71/2010 \e[0m "
     echo "encontrado CCE PREGÃO 71/2010 aqui"
      cd /tmp
-    if [ -e ah.sh ]; then
-        #rm ah.sh
-        echo "Jah tinha ah.sh no temp"
-    else
-        wget jonilso.com/ah.sh
-        bash  ah.sh
-    fi
-    atalhopaginainicial
-    ativartrocafundodetela
-    tirarbloqueiodetela
-    resetbackgrounds
-    bloquearaplicativos
-    modokiosk
-    limparguests
-    date
-    instalascratch  
-    
-    if [ ! -e "/usr/bin/atom" ] || [ ! -e "/usr/share/code/code" ]; then
-        if [ ! -e "/usr/bin/atom" ] ; then
-           echo "SEM ATOMM"
-       else
-           echo "SEM VSCODE"
-        fi
-    else
-       echo "jah tinha atom e vscode ebaaa"
-    fi
-    atualizaNavegadoresAtomVscodeEtc 
+   
     
    ;;
 
