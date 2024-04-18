@@ -432,10 +432,32 @@ case "\$TIPO" in
     instalascratch    
     atualizaNavegadoresAtomVscodeEtc
   ;;
-  *D610*)
-    
+   *D610*)
+    PREFIXO='e'
+    echo "D610 encontrado aqui"
+    	echo "INSTALAR MODO KIOSK"
+    		echo "(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((("
+    modokiosk
+    echo "ATALHO PAGINA INICIAL"
+    		echo "(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((("
+        atalhopaginainicial
+	 echo "PLANO DE FUNDO PADRÃO DO ESTADO"
+    		echo "(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((("
+    ativartrocafundodetela    
+     echo "DESABILITAR BLOQUEIO DE TELA"
+    		echo "(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((("
+    tirarbloqueiodetela
+     echo "RESETAR PLANO DE FUNDO"
+    		echo "(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((("
+    resetbackgrounds
+     echo "LIMPAR USUPARIOS GUEST"
+    		echo "(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((("
+    limparguests    
+     echo "ATUALIZAR NAVEGADORES"
+    		echo "(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((("
+    atualizaNavegadoresAtomVscodeEtc    
   ;;
-  
+
   D3400)
   PREFIXO='e'
     echo -e "\e[46m Positivo D3400 \e[0m "
