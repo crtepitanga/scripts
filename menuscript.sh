@@ -1310,8 +1310,7 @@ function instalascratch(){
 function bloquearaplicativos(){
 	cd /tmp
     		if [ -e bloquearapps.sh ]; then
-      		    echo "Já👍️ tinha bloquearapps.sh no temp"
-   		 else
+      		   	rm  bloquearapps.sh
        			 wget -q https://raw.githubusercontent.com/crtepitanga/scripts/main/bloquearapps.sh -O bloquearapps.sh
       			 bash  bloquearapps.sh
 
@@ -1322,8 +1321,7 @@ function desbloquearaplicativos(){
 #-----------------------------------------Ativar acesso aos usuarios aos aplicativos desejados-----------------------------------#
 	cd /tmp
     		if [ -e desbloquearapps.sh ]; then
-      		    echo "Já👍️ tinha desbloquearapps.sh no temp"
-   		 else
+      		    	rm desbloquearapps.sh
        			 wget -q https://raw.githubusercontent.com/crtepitanga/scripts/main/desbloquearapps.sh -O desbloquearapps.sh
       			 bash  desbloquearapps.sh
 
