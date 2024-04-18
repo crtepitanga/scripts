@@ -444,9 +444,38 @@ case "\$TIPO" in
   Positivo_Duo_ZE3630)
    
   ;;
-  N4340)
-   
-  ;;
+ N4340)
+    PREFIXO='n'
+    echo "Notebook Integral encontrado aqui"
+    echo "/////////////////////////////////////////////////////////////////////////"
+    echo -e "\e[41m ATALHO PÁGINA INICIAL NA ÁREA DE TRABALHO \e[0m "
+    atalhopaginainicial   
+     echo "/////////////////////////////////////////////////////////////////////////"
+      echo -e "\e[41m INSTALANDO MODO KIOSK \e[0m "
+    modokiosk
+     echo "/////////////////////////////////////////////////////////////////////////"
+      echo -e "\e[41m PLANO DE FUNDO PADRÃO DO ESTADO \e[0m "
+    ativartrocafundodetela
+     echo "/////////////////////////////////////////////////////////////////////////"
+      echo -e "\e[41m TIRANDO BLOQUEIO DE TELA \e[0m "
+    tirarbloqueiodetela    
+     echo "/////////////////////////////////////////////////////////////////////////"
+      echo -e "\e[41m RESETANDO BACKGROUND \e[0m "
+    resetbackgrounds
+     echo "/////////////////////////////////////////////////////////////////////////"
+      echo -e "\e[41m LIMPANDO USUÁRIOS GUEST \e[0m "
+    limparguests    
+     echo "/////////////////////////////////////////////////////////////////////////"
+      echo -e "\e[41m INSTALANDO SCRATCH \e[0m "
+    instalascratch
+     echo "/////////////////////////////////////////////////////////////////////////"
+      echo -e "\e[41m BLOQUEANDO APLICATIVOS E ÁREA DE TRABALHO  \e[0m "
+    bloquearaplicativos
+     echo "/////////////////////////////////////////////////////////////////////////"
+      echo -e "\e[41m ATUALIZANDO NAVEGADORES \e[0m "
+    atualizaNavegadoresAtomVscodeEtc
+     echo "/////////////////////////////////////////////////////////////////////////"
+;;
 
   A14CR6A)
     PREFIXO='n'
