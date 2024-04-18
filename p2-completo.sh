@@ -264,7 +264,6 @@ modokiosk(){
 		fi
 }
 
-
 PREFIXO='e'
 TIPO=\$( dmidecode -t system | grep 'Product Name: ' | cut -d':' -f2 | sed -e s/'^ '// -e s/' '/'_'/g )
 case "\$TIPO" in
@@ -272,57 +271,44 @@ case "\$TIPO" in
     PREFIXO='d'
     echo -e "\e[44m DELLLL aquii \e[0m "
     cd /tmp/
+    	echo -e "\e[44m XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX \e[0m "
+    		echo -e "\e[44m ATALHO PÁGINA INICIAL NA ÁREA DE TRABALHO \e[0m "
     atalhopaginainicial
-    tirarbloqueiodetela
-    ativartrocafundodetela
-    resetbackgrounds
-    bloquearaplicativos
+    	echo -e "\e[44m XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX \e[0m "
+    		echo -e "\e[44m INSTALAR MODO KIOSK \e[0m "
     modokiosk
+    	echo -e "\e[44m XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX \e[0m "
+   		echo -e "\e[44m DESABILITANDO BLOQUEIO DE TELA \e[0m "
+    tirarbloqueiodetela
+    	echo -e "\e[44m XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX \e[0m "
+   		echo -e "\e[44m PLANO DE FUNDO PADRÃO DO ESTADO \e[0m "
+    ativartrocafundodetela
+    	echo -e "\e[44m XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX \e[0m "
+   		echo -e "\e[44m RESETANDO PLANO DE FUNDO \e[0m "
+    resetbackgrounds
+    	echo -e "\e[44m XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX \e[0m "
+    		echo -e "\e[44m BLOQUEAR APLICATIVOS E ÁREA DE TRABALHO \e[0m "
+    bloquearaplicativos
+    	echo -e "\e[44m XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX \e[0m "
+    		echo -e "\e[44m LIMPANDO USUÁRIOS GUEST \e[0m "
     limparguests
-     instalascratch
+    	echo -e "\e[44m XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX \e[0m "
+    		echo -e "\e[44m INSTALANDO SCRATCH \e[0m "
+    instalascratch
+    	echo -e "\e[44m XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX \e[0m "
+  		echo -e "\e[44m ATUALIZANDO NAVEGADORES \e[0m "
     atualizaNavegadoresAtomVscodeEtc
        
   ;;
+  
   *C1300*)
-    PREFIXO='t'
-    echo ""
-    echo -e "\e[43m ------ EDUCATRON ------ \e[0m  encontrado educatron aqui"
-    cd /tmp/
-    atalhopaginainicial
-    tirarbloqueiodetela
-    ativartrocafundodetela
-    resetbackgrounds
-    bloquearaplicativos
-    modokiosk
-    limparguests
-    atualizaNavegadoresAtomVscodeEtc
+    
   ;;  
   Positivo_Duo_ZE3630)
-    PREFIXO='n'
-    echo -e "\e[46mNetbook Verde Linux Mint \e[0m "
-    atalhopaginainicial
-    rodarEmNetVerde
-    tirarbloqueiodetela
-    ativartrocafundodetela
-    resetbackgrounds
-    bloquearaplicativos
-    modokiosk
-    limparguests
-    instalascratch    
-    atualizaNavegadoresAtomVscodeEtc
+   
   ;;
   N4340)
-    PREFIXO='n'
-    echo "Notebook Integral encontrado aqui"
-    atalhopaginainicial
-    tirarbloqueiodetela
-    ativartrocafundodetela
-    resetbackgrounds
-    bloquearaplicativos
-    modokiosk
-    limparguests
-    instalascratch    
-    atualizaNavegadoresAtomVscodeEtc
+   
   ;;
 
   A14CR6A)
@@ -336,17 +322,7 @@ case "\$TIPO" in
     atualizaNavegadoresAtomVscodeEtc
   ;;
   *D610*)
-    PREFIXO='e'
-    echo "D610 encontrado aqui"
-    atalhopaginainicial
-    tirarbloqueiodetela
-    ativartrocafundodetela
-    resetbackgrounds
-    bloquearaplicativos
-    modokiosk
-    limparguests
-    instalascratch    
-    atualizaNavegadoresAtomVscodeEtc
+    
   ;;
   
   D3400)
