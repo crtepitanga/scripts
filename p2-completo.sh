@@ -410,10 +410,36 @@ case "\$TIPO" in
    
     atualizaNavegadoresAtomVscodeEtc
    ;;
-
+   
+ *C1300*)
+    PREFIXO='t'
+    echo ""
+    echo -e "\e[43m ------ EDUCATRON ------ \e[0m  encontrado educatron aqui"
+	echo -e "\e[43m @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ \e[0m "
+    echo -e "\e[43m ------ INSTALAR MODO KIOSK ------ \e[0m  "
+    modokiosk
+    	echo -e "\e[43m @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ \e[0m "
+    echo -e "\e[43m ------ PAGINA INICIAL NA ÁREA DE TRABALHO ------ \e[0m  "
+    atalhopaginainicial
+        echo -e "\e[43m @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ \e[0m "
+    echo -e "\e[43m ------ RESETAR PLANO DE FUNDO ------ \e[0m  "
+    resetbackgrounds
+    	echo -e "\e[43m @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ \e[0m "
+    echo -e "\e[43m ------ LIMPAR USUÁRIOS GUEST ------ \e[0m "
+    limparguests
+    	echo -e "\e[43m @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ \e[0m "
+    echo -e "\e[43m ------ INSTALAR SCRATCH ------ \e[0m "
+    instalascratch
+    	echo -e "\e[43m @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ \e[0m "
+    echo -e "\e[43m ------ BLOQUEAR APLICATIVOS ------ \e[0m "
+    bloquearaplicativos
+    	echo -e "\e[43m @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ \e[0m "
+    echo -e "\e[43m ------ ATUALIZAR NAVEGADORES ------ \e[0m  "
+    atualizaNavegadoresAtomVscodeEtc
+    	echo -e "\e[43m @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ \e[0m "
+    echo -e "\e[43m ------ DESABILITAR BLOQUEIO DE TELA ------ \e[0m "
+    tirarbloqueiodetela
   
-  *C1300*)
-    
   ;;  
   Positivo_Duo_ZE3630)
    
