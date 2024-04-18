@@ -1310,7 +1310,7 @@ function instalascratch(){
 function bloquearaplicativos(){
 	cd /tmp
     		if [ -e bloquearapps.sh ]; then
-      		    echo "Jah tinha scratch.sh no temp"
+      		    echo "Já👍️ tinha bloquearapps.sh no temp"
    		 else
        			 wget -q https://raw.githubusercontent.com/crtepitanga/scripts/main/bloquearapps.sh -O bloquearapps.sh
       			 bash  bloquearapps.sh
@@ -1320,25 +1320,17 @@ function bloquearaplicativos(){
 }
 function desbloquearaplicativos(){
 #-----------------------------------------Ativar acesso aos usuarios aos aplicativos desejados-----------------------------------#
+	cd /tmp
+    		if [ -e desbloquearapps.sh ]; then
+      		    echo "Já👍️ tinha desbloquearapps.sh no temp"
+   		 else
+       			 wget -q https://raw.githubusercontent.com/crtepitanga/scripts/main/desbloquearapps.sh -O desbloquearapps.sh
+      			 bash  desbloquearapps.sh
 
-USUARIOS=( "pedagogico" "professor" "escola" "Aluno" "aluno" "alunos" )
-APLICATIVOS=( "/usr/bin/xfce4-appearance-settings" "/usr/bin/users-admin" "/usr/bin/mugshot" "/usr/bin/mate-about-me" "/usr/bin/mintupdate" "/usr/bin/mintinstall" "/usr/bin/nm-connection/editor" )
+        echo "DESBLOQUEADO APPS E AREA DE TRABALHO👍️👍️👍️"
+    fi
 
-for USUARIO in "${USUARIOS[@]}" ; do 
-   if [ $(grep "^${USUARIO}:" /etc/passwd | wc -l) -eq 0 ]; then
-      echo "Usuario $USUARIO nao consta neste Linux"
-      continue
-   fi
-   for APLICATIVO in "${APLICATIVOS[@]}" ; do
-      if [ -x "$APLICATIVO" ]; then
-         /bin/setfacl -b "$APLICATIVO"
-      fi
-   done
-   echo "Aplicativos alterar usuario e senha desbloqueados para $USUARIO"
-echo "Aplicativo Aparencia desbloqueado para $USUARIO"
-done
-
-#-----------------------------------------Fim Desativar acesso aos usuarios aos aplicativos desejados-----------------------------------#
+#-----------------------------------------Fim Ativar acesso aos usuarios aos aplicativos desejados-----------------------------------#
 }
 function atualizahoraedata(){
 cd /tmp
