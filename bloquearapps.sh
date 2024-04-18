@@ -7,6 +7,7 @@
 # Versão 4 de 23/05/2023 - Script s.sh Instalação Scratch - 23/05/2023 - Colaboração: Jonilso - CRTE/NRE de Guarapuava
 # Versão 5 de 29/05/2023 - Script Icones-Area-de-Trabalho.sh - 29/05/2023 - Sequência Ícones Área de Trabalho
 # Versão 6 de 30/05/2023 - Script bloquearapps.sh Desativar acesso aos usuarios aos aplicativos desejados - 30/05/2023 - Colaboração: Jonilso - CRTE/NRE de Guarapuava
+# Versão 7 de 18/04/2024 - Script bloquearapps.sh Acrescentado usuário Pedagógico para não bloquear, Alterado as propriedades dos arquivos de bechup na pasta Documentos do usuário para o mesmo poder editar - 18/04/2024 - José Divonei Ribeiro CRTE/NRE PITANGA - Colaboração: Jonilso - CRTE/NRE de Guarapuava
 
 if [ ! $(/usr/bin/whoami) = 'root' ]; then
    echo "Por favor execute com SuperUsuário root!"
@@ -22,9 +23,7 @@ usuario=/home/.usuarios.txt
 for usuario in *; do
    if [ $usuario  =  'pedagogico' ] || [ $usuario = 'administrador' ] || [[ $usuario = *"lost"* ]]; then
 
-       ##sudo cp -r /home/$usuario/Área\ de\ Trabalho/* /home/$usuario/Documentos/ 1>/dev/null 2>/dev/null
-       ##sudo rm -rf /home/$usuario/Documentos/*.desktop 1>/dev/null 2>/dev/null
-       ##sudo rm -rf /home/$usuario/Área\ de\ Trabalho/* 1>/dev/null 2>/dev/null
+     
        sudo cp /usr/share/applications/thunar.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
        sudo cp /usr/share/applications/google-chrome.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
        sudo cp /usr/share/applications/firefox.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
@@ -50,7 +49,9 @@ for usuario in *; do
        fi
        sudo cp -r /home/escola/Área\ de\ Trabalho/paginainicial.desktop /home/administrador/Downloads/ 1>/dev/null 2>/dev/null
        sudo cp -r /home/$usuario/Área\ de\ Trabalho/* /home/$usuario/Documentos/ 1>/dev/null 2>/dev/null
-       sudo rm -rf /home/$usuario/Documentos/*.desktop 1>/dev/null 2>/dev/null
+       sudo chown $usuario.$usuario -R /home/$usuario/Documentos/ 1>/dev/null 2>/dev/null
+       chmod -R 775 /home/$usuario/Documentos/ 1>/dev/null 2>/dev/null
+       sudo rm -rf /home/$usuario/Documentos/*.desktop 1>/dev/null 2>/dev/null       
        sudo rm -rf /home/$usuario/Área\ de\ Trabalho/* 1>/dev/null 2>/dev/null
        sudo cp /usr/share/applications/thunar.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
        sudo cp /usr/share/applications/google-chrome.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
