@@ -1309,17 +1309,22 @@ function instalascratch(){
     fi
 }
 
-function bloquearaplicativos(){
+function bloquearapps(){
+
 	cd /tmp
-    		if [ -e "bloquearapps.sh" ]; then
-      		   	rm  bloquearapps.sh
-       			 wget -q https://raw.githubusercontent.com/crtepitanga/scripts/main/bloquearapps.sh -O bloquearapps.sh
-      			 bash  bloquearapps.sh
+    		if [ -e bloquearapps.sh ]; then
+      		   	rm bloquearapps.sh
+	    			 wget -q https://raw.githubusercontent.com/crtepitanga/scripts/main/bloquearapps.sh -O bloquearapps.sh
+      				 bash  bloquearapps.sh
+
+ 		else
+       				 wget -q https://raw.githubusercontent.com/crtepitanga/scripts/main/bloquearapps.sh -O bloquearapps.sh
+      			 	 bash  bloquearapps.sh
 
         echo "BLOQUEADO APPS E AREA DE TRABALHO👍️👍️👍️"
     fi
 }
-function desbloquearaplicativos(){
+function desbloquearapps(){
 #-----------------------------------------Ativar acesso aos usuarios aos aplicativos desejados-----------------------------------#
 	cd /tmp
     		if [ -e "desbloquearapps.sh" ]; then
@@ -1863,8 +1868,8 @@ if [ "$OPCAO_M_ATUAL" -eq 2 ];then
     "2" "-->> Ativar plano de fundo padrão do Estado" off \
     "3" "-->> Ativar TAP do Touchpad Notebooks ED. Integral" off \
     "4" "-->> Atualizar chrome e firefox" off \
-    "5" "-->> Bloquear opção alterar usuário/senha, Aparencia e Area de Trabalho" off \
-    "6" "-->> Desbloquear opção alterar usuário/senha" off \
+    "5" "-->> Bloquear Aplicativos e Area de Trabalho" off \
+    "6" "-->> Desbloquear Aplicativos e Área de Trabalho" off \
     "7" "-->> Criar atalho Plataformas Educacionais area de trabalho" off \
     "8" "-->> Desabilitar proxy dos navegadores no Linux Mint" off \
     "9" "-->> Desativar bloqueio de tela" off \
@@ -1936,19 +1941,19 @@ echo -e "\e[37;44;1m=======================FIM ATUALIZAÇÃO DE NAVEGADORES=====
 
 		elif [ "$SELECIONADOS" -eq 5 ];then
 
-echo -e "\e[37;44;1m======================BLOQUEAR OPÇÃO ALTERAR USUÁRIO/SENHA====================== \e[m\n"
+echo -e "\e[37;44;1m======================BLOQUEAR APLICATIVOS E ÁREA DE TRABALHO====================== \e[m\n"
 			
-			bloquearaplicativos;
+			bloquearapps;
 
-echo -e "\e[37;44;1m====================FIM BLOQUEAR OPÇÃO ALTERAR USUÁRIO/SENHA==================== \e[m\n"
+echo -e "\e[37;44;1m====================FIM BLOQUEAR APLICATIVOS E ÁREA DE TRABALHO==================== \e[m\n"
 
    		elif [ "$SELECIONADOS" -eq 6 ];then
 
-echo -e "\e[37;44;1m======================DESBLOQUEAR OPÇÃO ALTERAR USUÁRIO/SENHA====================== \e[m\n"
+echo -e "\e[37;44;1m======================DESBLOQUEAR APLICATIVOS E ÁREA DE TRABALHO====================== \e[m\n"
 			
-			desbloquearaplicativos;
+			desbloquearapps;
 
-echo -e "\e[37;44;1m====================FIM DESBLOQUEAR OPÇÃO ALTERAR USUÁRIO/SENHA==================== \e[m\n"	
+echo -e "\e[37;44;1m====================FIM DESBLOQUEAR APLICATIVOS E ÁREA DE TRABALHO==================== \e[m\n"	
 
 
 		elif [ "$SELECIONADOS" -eq 7 ];then
