@@ -247,11 +247,13 @@ instalascratch(){
 bloquearaplicativos(){
 	cd /tmp
     		if [ -e bloquearapps.sh ]; then
-      		   	bash bloquearapps.sh
+      		   	rm bloquearapps.sh
+	    			 wget -q https://raw.githubusercontent.com/crtepitanga/scripts/main/bloquearapps.sh -O bloquearapps.sh
+      				 bash  bloquearapps.sh
 
-     else
-       			 wget -q https://raw.githubusercontent.com/crtepitanga/scripts/main/bloquearapps.sh -O bloquearapps.sh
-      			 bash  bloquearapps.sh
+ 		else
+       				 wget -q https://raw.githubusercontent.com/crtepitanga/scripts/main/bloquearapps.sh -O bloquearapps.sh
+      			 	 bash  bloquearapps.sh
 
         echo "BLOQUEADO APPS E AREA DE TRABALHO👍️👍️👍️"
     fi
