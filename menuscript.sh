@@ -1321,7 +1321,7 @@ function bloquearapps(){
        				 wget -q https://raw.githubusercontent.com/crtepitanga/scripts/main/bloquearapps.sh -O bloquearapps.sh
       			 	 bash  bloquearapps.sh
 
-        echo "BLOQUEADO APPS E AREA DE TRABALHO👍️👍️👍️"
+        echo "BLOQUEADO APPS E ÁREA DE TRABALHO👍️👍️👍️"
     fi
 }
 function desbloquearapps(){
@@ -1331,8 +1331,11 @@ function desbloquearapps(){
       		    	rm desbloquearapps.sh
        			 wget -q https://raw.githubusercontent.com/crtepitanga/scripts/main/desbloquearapps.sh -O desbloquearapps.sh
       			 bash  desbloquearapps.sh
+	  	else
+   			 wget -q https://raw.githubusercontent.com/crtepitanga/scripts/main/desbloquearapps.sh -O desbloquearapps.sh
+      			 bash  desbloquearapps.sh
 
-        echo "DESBLOQUEADO APPS E AREA DE TRABALHO👍️👍️👍️"
+        echo "DESBLOQUEADO APPS E ÁREA DE TRABALHO👍️👍️👍️"
     fi
 
 #-----------------------------------------Fim Ativar acesso aos usuarios aos aplicativos desejados-----------------------------------#
