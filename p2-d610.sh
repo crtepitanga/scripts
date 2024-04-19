@@ -211,22 +211,23 @@ limparguests() {
 }
 
 ativartrocafundodetela(){
- cd /tmp
+    cd /tmp
     if [ -e atf1.sh ]; then
-        #rm atf1.sh
-        echo "Jah tinha atf1.sh no temp"
+        rm atf1.sh
+	wget jonilso.com/atf1.sh
+        bash  atf1.sh
     else
         wget jonilso.com/atf1.sh
         bash  atf1.sh
     fi
-   
-}
 
+}
 atalhopaginainicial(){
     cd /tmp
     if [ -e atalhopaginainicial.sh ]; then
-        #rm atalhopaginainicial.sh
-        echo "Jah tinha atalhopaginainicial.sh no temp"
+        rm atalhopaginainicial.sh
+        wget jonilso.com/atalhopaginainicial.sh
+        bash  atalhopaginainicial.sh
     else
         wget jonilso.com/atalhopaginainicial.sh
         bash  atalhopaginainicial.sh
@@ -236,8 +237,9 @@ atalhopaginainicial(){
 instalascratch(){
     cd /tmp
     if [ -e s.sh ]; then
-        #rm s.sh
-        echo "Jah tinha s.sh no temp"
+        rm s.sh
+         wget -q jonilso.com/s.sh
+        bash  s.sh
     else
         wget -q jonilso.com/s.sh
         bash  s.sh
@@ -248,8 +250,12 @@ bloquearaplicativos(){
 	cd /tmp
     		if [ -e bloquearapps.sh ]; then
       		   	rm bloquearapps.sh
-       			  wget -q https://raw.githubusercontent.com/crtepitanga/scripts/main/bloquearapps.sh -O bloquearapps.sh
-      			  bash  bloquearapps.sh
+	    			 wget -q https://raw.githubusercontent.com/crtepitanga/scripts/main/bloquearapps.sh -O bloquearapps.sh
+      				 bash  bloquearapps.sh
+
+ 		else
+       				 wget -q https://raw.githubusercontent.com/crtepitanga/scripts/main/bloquearapps.sh -O bloquearapps.sh
+      			 	 bash  bloquearapps.sh
 
         echo "BLOQUEADO APPS E AREA DE TRABALHO👍️👍️👍️"
     fi
