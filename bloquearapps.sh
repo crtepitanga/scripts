@@ -21,7 +21,7 @@ ls /home/ >> /home/.usuarios.txt
 usuario=/home/.usuarios.txt
 
 for usuario in *; do
-   if [ $usuario  =  'pedagogico' ] || [ $usuario = 'administrador' ] || [[ $usuario = *"lost"* ]]; then
+   if [ $usuario  =  'pedagogico' ] || [ $usuario = 'administrador' ] || [ $usuario = 'admin' ] || [[ $usuario = *"lost"* ]]; then
 
      
        sudo cp /usr/share/applications/thunar.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
