@@ -1255,7 +1255,7 @@ echo "fim"
 
 function atalhopaginainicial(){
     cd /tmp
-    if [ -e atalhopaginainicial.sh ]; then
+    if [ -e "atalhopaginainicial.sh" ]; then
         #rm atalhopaginainicial.sh
         echo "Jah tinha atalhopaginainicial.sh no temp"
     else
@@ -1265,6 +1265,7 @@ function atalhopaginainicial(){
 }
 
 function resetbackgrounds() {
+    cd /tmp
     if [ -e "rb.sh" ]; then
         rm rb.sh
     fi
@@ -1280,6 +1281,7 @@ function resetbackgrounds() {
 }
 
 function limparguests() {
+    cd /tmp
     if [ -e "lg.sh" ]; then
         rm lg.sh
     fi
@@ -1296,7 +1298,7 @@ function limparguests() {
 
 function instalascratch(){
     cd /tmp
-    if [ -e scratch.sh ]; then
+    if [ -e "scratch.sh" ]; then
         #rm s.sh
         echo "Jah tinha scratch.sh no temp"
     else
@@ -1309,7 +1311,7 @@ function instalascratch(){
 
 function bloquearaplicativos(){
 	cd /tmp
-    		if [ -e bloquearapps.sh ]; then
+    		if [ -e "bloquearapps.sh" ]; then
       		   	rm  bloquearapps.sh
        			 wget -q https://raw.githubusercontent.com/crtepitanga/scripts/main/bloquearapps.sh -O bloquearapps.sh
       			 bash  bloquearapps.sh
@@ -1320,7 +1322,7 @@ function bloquearaplicativos(){
 function desbloquearaplicativos(){
 #-----------------------------------------Ativar acesso aos usuarios aos aplicativos desejados-----------------------------------#
 	cd /tmp
-    		if [ -e desbloquearapps.sh ]; then
+    		if [ -e "desbloquearapps.sh" ]; then
       		    	rm desbloquearapps.sh
        			 wget -q https://raw.githubusercontent.com/crtepitanga/scripts/main/desbloquearapps.sh -O desbloquearapps.sh
       			 bash  desbloquearapps.sh
@@ -1332,7 +1334,7 @@ function desbloquearaplicativos(){
 }
 function atualizahoraedata(){
 cd /tmp
-    if [ -e ah.sh ]; then
+    if [ -e "ah.sh" ]; then
         #rm ah.sh
         echo "Jah tinha ah.sh no temp"
     else
@@ -1345,8 +1347,7 @@ cd /tmp
 
 function instalacertificado(){
 	cd /tmp
-	
-	if [ -e cert.sh ];then
+		if [ -e "cert.sh" ];then
 	 	bash cert.sh
 	else  	
 		wget https://raw.githubusercontent.com/crtepitanga/scripts/main/cert.sh -O cert.sh
@@ -1436,7 +1437,7 @@ function ativartap(){
 function desabilitar_proxy(){
 	cd /tmp
 	
-		if [ -e tpm.sh ];then
+		if [ -e "tpm.sh" ];then
 	 		bash tpm.sh
 		else  	
 			wget https://raw.githubusercontent.com/crtepitanga/scripts/main/tpm.sh -O tmp.sh
@@ -1450,7 +1451,7 @@ function desabilitar_proxy(){
 function desbloquea_tela(){
 	cd /tmp
 	
-		if [ -e tb.sh ];then
+		if [ -e "tb.sh" ];then
 	 		bash tb.sh
 		else  	
 			wget https://raw.githubusercontent.com/crtepitanga/scripts/main/tb.sh -O tb.sh
@@ -1467,7 +1468,7 @@ function desativa_touch(){
 
 #MODELO NETBOOKS VERDINHOS			
              Positivo_Duo_ZE3630)
-			if [ -e dt.sh ];then
+			if [ -e "dt.sh" ];then
 	 			bash dt.sh
 			else  	
 				wget https://raw.githubusercontent.com/crtepitanga/scripts/main/dt.sh -O dt.sh
@@ -1493,7 +1494,7 @@ function desativa_touch(){
 function desativa_convidado(){
 	cd /tmp
 	
-		if [ -e semconvidado.sh ];then
+		if [ -e "semconvidado.sh" ];then
 	 		bash semconvidado.sh
 		else  	
 			wget https://raw.githubusercontent.com/crtepitanga/scripts/main/semconvidado.sh -O semconvidado.sh
@@ -1507,7 +1508,7 @@ function desativa_convidado(){
 function driver_mblock(){
 	cd /tmp
 	
-		if [ -e mlink.sh ];then
+		if [ -e "mlink.sh" ];then
 	 		bash mlink.sh
 		else  	
 			wget https://raw.githubusercontent.com/crtepitanga/scripts/main/mlink.sh -O mlink.sh
@@ -1520,7 +1521,7 @@ function driver_mblock(){
 function medidor_mec(){
 	cd /tmp
 	
-		if [ -e medidor.sh ];then
+		if [ -e "medidor.sh" ];then
 	 		bash medidor.sh
 		else  	
 			wget https://raw.githubusercontent.com/crtepitanga/scripts/main/medidor.sh -O medidor.sh
@@ -1704,7 +1705,7 @@ echo -e "Vnc parece tudo ok.\e[1;92m Por favor testar!\e[0m"
 function limpar_update(){
 	cd /tmp
 	
-		if [ -e j.sh ];then
+		if [ -e "j.sh" ];then
 	 		bash j.sh
 		else  	
 			wget https://raw.githubusercontent.com/crtepitanga/scripts/main/j.sh -0 j.sh
@@ -1718,7 +1719,7 @@ function limpar_update(){
 function pagina_inicial_navegadores(){
 	cd /tmp
 	
-		if [ -e pi1.sh ];then
+		if [ -e "pi1.sh" ];then
 	 		bash pi1.sh
 		else  	
 			wget https://raw.githubusercontent.com/crtepitanga/scripts/main/pi1.sh -O pi1.sh
@@ -1732,7 +1733,7 @@ function pagina_inicial_navegadores(){
 function modokiosk (){
 	cd /tmp
 	
-		if [ -e k.sh ];then
+		if [ -e "k.sh" ];then
 	 		bash k.sh
 		else  	
 			wget https://raw.githubusercontent.com/crtepitanga/scripts/main/k.sh -O k.sh
