@@ -1327,7 +1327,7 @@ function bloquearapps(){
 function desbloquearapps(){
 #-----------------------------------------Ativar acesso aos usuarios aos aplicativos desejados-----------------------------------#
 	cd /tmp
-    		if [ -e "desbloquearapps.sh" ]; then
+    		if [ -e desbloquearapps.sh ]; then
       		    	rm desbloquearapps.sh
        			 wget -q https://raw.githubusercontent.com/crtepitanga/scripts/main/desbloquearapps.sh -O desbloquearapps.sh
       			 bash  desbloquearapps.sh
