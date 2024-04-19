@@ -1303,7 +1303,7 @@ function instalascratch(){
         wget -q https://raw.githubusercontent.com/crtepitanga/scripts/main/scratch.sh -O scratch.sh
         bash  scratch.sh
 
-        echo "SCRATCH STALADO 👍️👍️👍️"
+        echo "SCRATCH INSTALADO 👍️👍️👍️"
     fi
 }
 
