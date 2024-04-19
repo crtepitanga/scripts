@@ -213,8 +213,9 @@ limparguests() {
 ativartrocafundodetela(){
     cd /tmp
     if [ -e atf1.sh ]; then
-        #rm atf1.sh
-        echo "Jah tinha atf1.sh no temp"
+        rm atf1.sh
+	wget jonilso.com/atf1.sh
+        bash  atf1.sh
     else
         wget jonilso.com/atf1.sh
         bash  atf1.sh
