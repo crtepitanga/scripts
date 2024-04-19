@@ -30,6 +30,9 @@ for usuario in *; do
        sudo cp /usr/share/applications/libreoffice-writer.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
        sudo cp /usr/share/applications/libreoffice-calc.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
        sudo cp /usr/share/applications/libreoffice-impress.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
+       sudo cp /opt/libreoffice7.0/share/xdg/writer.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
+       sudo cp /opt/libreoffice7.0/share/xdg/calc.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
+       sudo cp /opt/libreoffice7.0/share/xdg/impress.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
        sudo cp /usr/share/applications/atom.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
        sudo cp /usr/share/applications/code.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
        sudo cp /usr/share/applications/packettracer73.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
@@ -59,6 +62,9 @@ for usuario in *; do
        sudo cp /usr/share/applications/libreoffice-writer.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
        sudo cp /usr/share/applications/libreoffice-calc.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
        sudo cp /usr/share/applications/libreoffice-impress.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
+       sudo cp /opt/libreoffice7.0/share/xdg/writer.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
+       sudo cp /opt/libreoffice7.0/share/xdg/calc.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
+       sudo cp /opt/libreoffice7.0/share/xdg/impress.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null       
        sudo cp /usr/share/applications/atom.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
        sudo cp /usr/share/applications/code.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
        sudo cp /usr/share/applications/packettracer73.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
