@@ -1298,7 +1298,7 @@ function limparguests() {
 
 function instalascratch(){
     cd /tmp
-    if [ -e "scratch.sh" ]; then
+    if [ -e scratch.sh ]; then
         bash scratch.sh
       	echo "SCRATCH INSTALADO 👍️👍️👍️"
     else
