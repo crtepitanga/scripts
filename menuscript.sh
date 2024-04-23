@@ -1299,7 +1299,7 @@ function limparguests() {
 function instalascratch(){
     cd /tmp
     if [ -e "scratch.sh" ]; then
-        bash s.sh
+        bash scratch.sh
       	echo "SCRATCH INSTALADO 👍️👍️👍️"
     else
         wget -q https://raw.githubusercontent.com/crtepitanga/scripts/main/scratch.sh -O scratch.sh
