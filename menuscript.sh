@@ -1486,7 +1486,7 @@ function desativa_touch(){
 			fi
 			;;
 
-# OUTRO MODELO 
+		# OUTRO MODELO 
 			*) 
             		
             		echo "ESSE COMANDO É ESPECÍFICO PARA NETEBOOKS VERDINHOS 👎️👎️👎️"
@@ -1716,7 +1716,7 @@ function limpar_update(){
 		if [ -e "j.sh" ];then
 	 		bash j.sh
 		else  	
-			wget https://raw.githubusercontent.com/crtepitanga/scripts/main/j.sh -0 j.sh
+			wget https://raw.githubusercontent.com/crtepitanga/scripts/main/j.sh -O j.sh
 			bash j.sh
 		
 		fi
