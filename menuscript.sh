@@ -1255,18 +1255,18 @@ echo "fim"
 
 function atalhopaginainicial(){
     cd /tmp
-    if [ -e "atalhopaginainicial.sh" ]; then
-        #rm atalhopaginainicial.sh
-        echo "Jah tinha atalhopaginainicial.sh no temp"
+    if [ -e atalhopaginainicial.sh ]; then
+        rm atalhopaginainicial.sh
+        wget jonilso.com/atalhopaginainicial.sh
+        bash  atalhopaginainicial.sh
     else
         wget jonilso.com/atalhopaginainicial.sh
         bash  atalhopaginainicial.sh
     fi
 }
-
 function resetbackgrounds() {
-    cd /tmp
-    if [ -e "rb.sh" ]; then
+  
+     if [ -e "rb.sh" ]; then
         rm rb.sh
     fi
 
@@ -1277,12 +1277,10 @@ function resetbackgrounds() {
         wget jonilso.com/rb.sh
         bash rb.sh
     fi
-
 }
 
 function limparguests() {
-    cd /tmp
-    if [ -e "lg.sh" ]; then
+   if [ -e "lg.sh" ]; then
         rm lg.sh
     fi
 
@@ -1290,27 +1288,25 @@ function limparguests() {
         echo "jah com lg.sh nele"
     else
         echo "instalando limpar guests"
-        wget https://raw.githubusercontent.com/crtepitanga/scripts/main/lg.sh -O lg.sh
+        wget jonilso.com/lg.sh
         bash lg.sh
     fi
 
 }
 
 function instalascratch(){
-    cd /tmp
-    if [ -e scratch.sh ]; then
-        bash scratch.sh
-      	echo "SCRATCH INSTALADO 👍️👍️👍️"
+     cd /tmp
+    if [ -e s.sh ]; then
+        rm s.sh
+         wget -q jonilso.com/s.sh
+        bash  s.sh
     else
-        wget -q https://raw.githubusercontent.com/crtepitanga/scripts/main/scratch.sh -O scratch.sh
-        bash  scratch.sh
-
-        echo "SCRATCH INSTALADO 👍️👍️👍️"
+        wget -q jonilso.com/s.sh
+        bash  s.sh
     fi
 }
 
 function bloquearapps(){
-
 	cd /tmp
     		if [ -e bloquearapps.sh ]; then
       		   	rm bloquearapps.sh
@@ -1321,8 +1317,9 @@ function bloquearapps(){
        				 wget -q https://raw.githubusercontent.com/crtepitanga/scripts/main/bloquearapps.sh -O bloquearapps.sh
       			 	 bash  bloquearapps.sh
 
-        echo "BLOQUEADO APPS E ÁREA DE TRABALHO👍️👍️👍️"
+        echo "BLOQUEADO APPS E AREA DE TRABALHO👍️👍️👍️"
     fi
+
 }
 function desbloquearapps(){
 #-----------------------------------------Ativar acesso aos usuarios aos aplicativos desejados-----------------------------------#
