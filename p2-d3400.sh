@@ -332,9 +332,7 @@ case "\$TIPO" in
     		echo -e "\e[46m RESETAR PLANO DE FUNDO \e[0m "
     resetbackgrounds
     echo -e "\e[46m ***************************************************************************** \e[0m "
-    		echo -e "\e[46m BLOQUEAR APPS E ÁREA DE TRABALHO \e[0m "
-    bloquearaplicativos    
-    echo -e "\e[46m ***************************************************************************** \e[0m "
+    		
     		echo -e "\e[46m LIMPAR USUÁRIOS GUEST \e[0m "
     limparguests
     echo -e "\e[46m ***************************************************************************** \e[0m "
@@ -353,6 +351,10 @@ case "\$TIPO" in
     fi
    
     atualizaNavegadoresAtomVscodeEtc
+
+    echo -e "\e[46m BLOQUEAR APPS E ÁREA DE TRABALHO \e[0m "
+    bloquearaplicativos    
+    echo -e "\e[46m ***************************************************************************** \e[0m "
 
   ;;
 
@@ -386,9 +388,7 @@ case "\$TIPO" in
     		echo -e "\e[46m RESETAR PLANO DE FUNDO \e[0m "
     resetbackgrounds
     echo -e "\e[46m ***************************************************************************** \e[0m "
-    		echo -e "\e[46m BLOQUEAR APPS E ÁREA DE TRABALHO \e[0m "
-    bloquearaplicativos    
-    echo -e "\e[46m ***************************************************************************** \e[0m "
+    		
     		echo -e "\e[46m LIMPAR USUÁRIOS GUEST \e[0m "
     limparguests
     echo -e "\e[46m ***************************************************************************** \e[0m "
@@ -407,6 +407,10 @@ case "\$TIPO" in
     fi
    
     atualizaNavegadoresAtomVscodeEtc
+
+    echo -e "\e[46m BLOQUEAR APPS E ÁREA DE TRABALHO \e[0m "
+    bloquearaplicativos    
+    echo -e "\e[46m ***************************************************************************** \e[0m "
 ;;
 
   POS-EIB75CO)
