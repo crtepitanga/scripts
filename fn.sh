@@ -13,7 +13,7 @@ echo "Iniciando, aguarde ..."
 # Desabiliar a função fn do teclado do Netbook
 ################################################################################
  
- echo -e "\e[43m########################### DESABILITAR A FUNÇÃO FN DO TECLADO DO NETBOOK ############################ \e[0m "
+ echo -e "\e[43m#################### DESABILITAR A FUNÇÃO FN DO TECLADO DO NETBOOK ###################### \e[0m "
    cd /home/administrador/.config/xfce4/xfconf/xfce-perchannel-xml && sed -i 's/value="true"/value="false"/' keyboards.xml
    cat keyboards.xml
    echo -e "\e[46m============ Desabilitado a função fn do teclado do usuário administrador ================= \e[0m "
@@ -33,7 +33,7 @@ echo "Iniciando, aguarde ..."
    echo ""
    echo ""
    
- echo -e "\e[43m########################### FIM DESABILITAR A FUNÇÃO FN DO TECLADO DO NETBOOK ############################ \e[0m "
+ echo -e "\e[43m################## FIM DESABILITAR A FUNÇÃO FN DO TECLADO DO NETBOOK ####################### \e[0m "
  
    
    
