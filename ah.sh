@@ -235,6 +235,5 @@ else
 
    echo "finalizou as $(date)" >> "$arqLogDisto"
 fi
-remover_script_do_home
 echo "Fim em $(date)"
-
+remover_script_do_home
