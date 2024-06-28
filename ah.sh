@@ -9,7 +9,7 @@ me=`basename "$0"`
 DIR=$( cd $(dirname $0) ; pwd )
 me="$DIR/$me"
 
-remover_script_do_home() {
+function remover_script_do_home() {
    # Ou remover do /tmp tambem
    tmpH=$(echo "$me" | sed 's#/home##' | sed 's#/tmp##')
    if [[ "$tmpH" = "$me" ]]; then
