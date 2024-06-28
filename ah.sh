@@ -1,5 +1,16 @@
 #!/bin/bash
 
+remover_script_do_home() {
+   # Ou remover do /tmp tambem
+   tmpH=$(echo "$me" | sed 's#/home##' | sed 's#/tmp##')
+   if [[ "$tmpH" = "$me" ]]; then
+      return
+   fi
+   rm -- "$0"
+   echo -e "\e[1;31mscript removido! Se precisar pfv baixar novamente\e[0m"
+
+}
+
 
 if [ ! $(/usr/bin/whoami) = 'root' ]; then
    echo "Por favor execute com SuperUsuário root"
@@ -221,3 +232,4 @@ else
 
 fi
 echo "Fim em $(date)"
+remover_script_do_home
