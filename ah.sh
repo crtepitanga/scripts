@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [ ! $(/usr/bin/whoami) = 'root' ]; then
+   echo "Por favor execute com SuperUsuário root"
+   exit 1
+fi
+
 me=`basename "$0"`
 DIR=$( cd $(dirname $0) ; pwd )
 me="$DIR/$me"
@@ -16,10 +21,6 @@ remover_script_do_home() {
 }
 
 
-if [ ! $(/usr/bin/whoami) = 'root' ]; then
-   echo "Por favor execute com SuperUsuário root"
-   exit 1
-fi
 arqLogDisto="/var/tmp/run-ah-sh.log"
 
 export deuRedePrdSerah=''
@@ -234,6 +235,6 @@ else
 
    echo "finalizou as $(date)" >> "$arqLogDisto"
 fi
-remover_script_do_home;
+remover_script_do_home
 echo "Fim em $(date)"
 
