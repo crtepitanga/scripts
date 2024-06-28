@@ -661,4 +661,5 @@ echo "Acessados $qtD3400 ips de Positivo D3400"
 echo "Acessados $qtOutros ips de outros Linux"
 echo -e "\e[43m   ++++   +++++++++   ++++   \e[0m "
 echo ""
+rm menuv01
 
