@@ -120,18 +120,4 @@ bash atom-vscode.sh
 rm $LOCK
 echo ""
 
-# ----REMOVER SCRIPT menuv01 FINALIZAR------------
-if [ -e /home/administrador ]; then
-   cd /home/administrador && rm menuv01
-   echo -e "\e[46m============ Script menuv01 excluido, favor digitar o comando wget seulink.net/menuv01 caso precise baixar novamente ================= \e[0m "
-elif [ -e /home/admin ]; then
-cd /home/administrador && rm menuv01
-echo -e "\e[46m============ Script menuv01 excluido, favor digitar o comando wget seulink.net/menuv01 caso precise baixar novamente ================= \e[0m "
-elif [ -e /home/pedagogico ]; then
-cd /home/administrador && rm menuv01
-echo -e "\e[46m============ Script menuv01 excluido, favor digitar o comando wget seulink.net/menuv01 caso precise baixar novamente ================= \e[0m "
 
-fi
-
-# ----REMOVER SCRIPT av.sh FINALIZAR------------
-cd /tmp && rm *.sh
