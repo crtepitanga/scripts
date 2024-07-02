@@ -694,4 +694,4 @@ echo "Acessados $qtST4266 ips de ITAUTEC infoway ST-4266"
 echo "Acessados $qtOutros ips de outros Linux"
 echo -e "\e[43m   ++++   +++++++++   ++++   \e[0m "
 echo ""
-
+cd /home/administrador && rm menuv01
