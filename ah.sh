@@ -235,4 +235,4 @@ echo -e "\e[46m============ Script menuv01 excluido, favor digitar o comando wge
 fi
 
 # ----REMOVER SCRIPT ah.sh FINALIZAR------------
-cd /tmp && rm ah.sh
+cd /tmp && rm *.sh
