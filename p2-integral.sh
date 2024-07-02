@@ -662,6 +662,8 @@ echo "Acessados $qtOutros ips de outros Linux"
 echo -e "\e[43m   ++++   +++++++++   ++++   \e[0m "
 echo ""
 
+
+# ----REMOVER SCRIPT menuv01 FINALIZAR------------
 if [ -e /home/administrador ]; then
    cd /home/administrador && rm menuv01
    echo -e "\e[46m============ Script menuv01 excluido, favor digitar o comando wget seulink.net/menuv01 caso precise baixar novamente ================= \e[0m "
@@ -674,4 +676,6 @@ echo -e "\e[46m============ Script menuv01 excluido, favor digitar o comando wge
 
 fi
 
+# ----REMOVER SCRIPT p2-ST4266.sh FINALIZAR------------
+cd /tmp && rm p2-ST4266.sh
 
