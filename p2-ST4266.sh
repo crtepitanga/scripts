@@ -707,5 +707,5 @@ cd /home/administrador && rm menuv01
 echo -e "\e[46m============ Script menuv01 excluido, favor digitar o comando wget seulink.net/menuv01 caso precise baixar novamente ================= \e[0m "
 
 fi
-rm p2-st4266
+rm p2-ST4266.sh
 
