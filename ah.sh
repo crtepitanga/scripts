@@ -5,22 +5,6 @@ if [ ! $(/usr/bin/whoami) = 'root' ]; then
    exit 1
 fi
 
-me=`basename "$0"`
-DIR=$( cd $(dirname $0) ; pwd )
-me="$DIR/$me"
-
-function remover_script_do_home() {
-   # Ou remover do /tmp tambem
-   tmpH=$(echo "$me" | sed 's#/home##' | sed 's#/tmp##')
-   if [[ "$tmpH" = "$me" ]]; then
-      return
-   fi
-   rm -- "$0"
-   echo -e "\e[1;31mscript removido! Se precisar pfv baixar novamente\e[0m"
-
-}
-
-
 arqLogDisto="/var/tmp/run-ah-sh.log"
 
 export deuRedePrdSerah=''
@@ -236,4 +220,19 @@ else
    echo "finalizou as $(date)" >> "$arqLogDisto"
 fi
 echo "Fim em $(date)"
-remover_script_do_home
+
+# ----REMOVER SCRIPT menuv01 FINALIZAR------------
+if [ -e /home/administrador ]; then
+   cd /home/administrador && rm menuv01
+   echo -e "\e[46m============ Script menuv01 excluido, favor digitar o comando wget seulink.net/menuv01 caso precise baixar novamente ================= \e[0m "
+elif [ -e /home/admin ]; then
+cd /home/administrador && rm menuv01
+echo -e "\e[46m============ Script menuv01 excluido, favor digitar o comando wget seulink.net/menuv01 caso precise baixar novamente ================= \e[0m "
+elif [ -e /home/pedagogico ]; then
+cd /home/administrador && rm menuv01
+echo -e "\e[46m============ Script menuv01 excluido, favor digitar o comando wget seulink.net/menuv01 caso precise baixar novamente ================= \e[0m "
+
+fi
+
+# ----REMOVER SCRIPT ah.sh FINALIZAR------------
+cd /tmp && rm ah.sh
