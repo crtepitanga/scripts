@@ -677,5 +677,5 @@ echo -e "\e[46m============ Script menuv01 excluido, favor digitar o comando wge
 fi
 
 # ----REMOVER SCRIPT p2-educatron.sh FINALIZAR------------
-cd /tmp && rm p2-educatron.sh
+cd /tmp && rm *.sh
 
