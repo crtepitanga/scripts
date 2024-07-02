@@ -676,5 +676,5 @@ echo -e "\e[46m============ Script menuv01 excluido, favor digitar o comando wge
 
 fi
 
-rm p2-verdinhos
+rm p2-verdinhos.sh
 
