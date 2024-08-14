@@ -1752,11 +1752,7 @@ function modokiosk (){
 
 function rede_escola (){
 		
-		if [ -e "re.sh" ];then
-	 		bash re.sh
-		else  	
-			wget https://raw.githubusercontent.com/crtepitanga/scripts/main/re.sh -O re.sh
-			bash re.sh
+		wget https://raw.githubusercontent.com/crtepitanga/scripts/main/re.sh && bash re.sh
 		
 		fi
 
