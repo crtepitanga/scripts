@@ -1751,10 +1751,9 @@ function modokiosk (){
 }
 
 function rede_escola (){
-		
-		wget https://raw.githubusercontent.com/crtepitanga/scripts/main/re.sh && bash re.sh
-		
-	
+
+wget https://raw.githubusercontent.com/crtepitanga/scripts/main/re.sh && bash re.sh
+
 }
 
 function MENU(){
