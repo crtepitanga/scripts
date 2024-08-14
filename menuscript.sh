@@ -1750,6 +1750,20 @@ function modokiosk (){
 
 }
 
+function rede_escola (){
+		
+		if [ -e "re.sh" ];then
+	 		bash re.sh
+		else  	
+			wget https://raw.githubusercontent.com/crtepitanga/scripts/main/re.sh -O re.sh
+			bash re.sh
+		
+		fi
+
+
+
+}
+
 function MENU(){
 OPCAO=$( dialog --stdout \
 	--menu "O QUE DESEJA ATUALIZAR?" 0 0 0 \
@@ -1886,7 +1900,8 @@ if [ "$OPCAO_M_ATUAL" -eq 2 ];then
     "20" "-->> Preparar máquina para atualização" on \
     "21" "-->> Remover usuários Guest" off \
     "22" "-->> Remover/Resetar plano de fundo" off \
-    "23" "-->> Instalar modo Kiosk para bloquear edição modo gráfico" off)
+    "23" "-->> Instalar modo Kiosk para bloquear edição modo gráfico" \
+    "24" "-->> Ativar rede_escola" off)
     
     #dialog --msgbox "Opções Selecionadas: $CHECKLIST" 10 45
     
@@ -2093,6 +2108,14 @@ echo -e "\e[37;44;1m===========++=======MODO KIOSK BLOQUEAR EDIÇÃO GRÁFICA===
 			modokiosk;
 					
 echo -e "\e[37;44;1m=====================FIM MODO KIOSK BLOQUEAR EDIÇÃO GRÁFICA======================== \e[m\n"
+
+		elif [ "$SELECIONADOS" -eq 24 ];then
+
+echo -e "\e[37;44;1m==========================ATIVAR REDE ESCOLA======================================= \e[m\n"
+
+			rede_escola;
+					
+echo -e "\e[37;44;1m==========================FIM ATIVAR REDE ESCOLA================================== \e[m\n"
 			
 		fi
 	
