@@ -164,6 +164,11 @@ case $MODELO in
   			A14CR6A)
     			PREFIXO='n'
   			;;	
+
+  #MODELO POSITIVO MASTER C4400
+  			C4400)
+     			PREFIXO='n'
+			;;
   			
   			*)
      			 echo "Acesso Linux nao identificado ainda"
@@ -1426,7 +1431,11 @@ function ativartap(){
 			
 			A14CR6A)
     			echo "ESSE COMANDO É ESPECÍFICO PARA NOTEBOOKS POSITIVO DA EDUCAÇÃO INTEGRAL.👎️👎️👎️"
-  			;;	
+  			;;
+
+   			C4400)
+    			echo "ESSE COMANDO É ESPECÍFICO PARA NOTEBOOKS POSITIVO DA EDUCAÇÃO INTEGRAL.👎️👎️👎️"
+  			;;
   			
   			*)
      			 echo "Acesso Linux nao identificado ainda"
@@ -1851,9 +1860,9 @@ if [ "$OPCAO_M_ATUAL" -eq 1 ];then
 			;;
 #MODELO DESKTOP POSITIVO MASTER C4400 
    
-			C4400 ROHS)
+			C4400)
 			cd /tmp
-			   	wget https://raw.githubusercontent.com/crtepitanga/scripts/main/p2-c4400.sh -O p2-c4400.sh && bash p2-c4400.sh $meuip_local/32 "$INEP_ESCOLA"
+			   	wget https://raw.githubusercontent.com/crtepitanga/scripts/refs/heads/main/p2-c4400.sh -O p2-c4400.sh && bash p2-c4400.sh $meuip_local/32 "$INEP_ESCOLA"
 			;;   
 			
 			*)
@@ -2206,9 +2215,9 @@ case $MODELO in
 			;;
 #MODELO DESKTOP POSITIVO MASTER C4400 
    
-			C4400 ROHS)
+			C4400)
 			cd /tmp
-			   	wget https://raw.githubusercontent.com/crtepitanga/scripts/main/p2-c4400.sh -O p2-c4400.sh && bash p2-c4400.sh $meuip_rede "$INEP_ESCOLA"
+			   	wget https://raw.githubusercontent.com/crtepitanga/scripts/refs/heads/main/p2-c4400.sh -O p2-c4400.sh && bash p2-c4400.sh $meuip_rede "$INEP_ESCOLA"
 			;;  
 			
 			*)
