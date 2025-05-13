@@ -273,6 +273,13 @@ bloquearaplicativos(){
 		fi
 }
 
+rede_escola (){
+
+wget https://raw.githubusercontent.com/crtepitanga/scripts/main/re.sh && bash re.sh
+
+}
+
+
 PREFIXO='e'
 TIPO=\$( dmidecode -t system | grep 'Product Name: ' | cut -d':' -f2 | sed -e s/'^ '// -e s/' '/'_'/g )
 case "\$TIPO" in
@@ -362,6 +369,9 @@ C4400)
 
     echo -e "\e[46m BLOQUEAR APPS E ÁREA DE TRABALHO \e[0m "
     bloquearaplicativos    
+    echo -e "\e[46m ***************************************************************************** \e[0m "
+    echo -e "\e[46m ATIVAR REDE_ESCOLA \e[0m "
+    rede_escola
     echo -e "\e[46m ***************************************************************************** \e[0m "
 ;;
 
