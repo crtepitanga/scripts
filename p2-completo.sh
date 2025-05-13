@@ -272,6 +272,11 @@ modokiosk(){
 		
 		fi
 }
+rede_escola (){
+
+wget https://raw.githubusercontent.com/crtepitanga/scripts/main/re.sh && bash re.sh
+
+}
 
 PREFIXO='e'
 TIPO=\$( dmidecode -t system | grep 'Product Name: ' | cut -d':' -f2 | sed -e s/'^ '// -e s/' '/'_'/g )
@@ -448,6 +453,9 @@ case "\$TIPO" in
     	echo -e "\e[43m @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ \e[0m "
     echo -e "\e[43m ------ DESABILITAR BLOQUEIO DE TELA ------ \e[0m "
     tirarbloqueiodetela
+     echo -e "\e[43m ------ ATIVAR REDE_ESCOLA ------ \e[0m  "
+	    rede_escola
+    	echo -e "\e[43m @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ \e[0m "
   
   ;;  
   Positivo_Duo_ZE3630)
@@ -482,6 +490,9 @@ case "\$TIPO" in
 	echo -e "\e[46mBloqueando Aplicativos e Área de Trabalho \e[0m "
     bloquearaplicativos
      echo "########################################################################"
+     echo -e "\e[46m Ativar rede_escola \e[0m "
+    rede_escola
+     echo "########################################################################"
   ;;
   
  N4340)
@@ -514,6 +525,9 @@ case "\$TIPO" in
      echo "/////////////////////////////////////////////////////////////////////////"
       echo -e "\e[41m ATUALIZANDO NAVEGADORES \e[0m "
     atualizaNavegadoresAtomVscodeEtc
+     echo "/////////////////////////////////////////////////////////////////////////"
+      echo -e "\e[41m ATIVAR REDE_ESCOLA \e[0m "
+    	rede_escola
      echo "/////////////////////////////////////////////////////////////////////////"
 ;;
 
@@ -604,6 +618,9 @@ case "\$TIPO" in
     fi
    
     atualizaNavegadoresAtomVscodeEtc
+    echo -e "\e[46m ATIVAR REDE_ESCOLA \e[0m "  
+    rede_escola 
+    echo -e "\e[46m ***************************************************************************** \e[0m "
 
 ;;
   POSITIVO_MASTER)
@@ -657,6 +674,9 @@ case "\$TIPO" in
     fi
    
     atualizaNavegadoresAtomVscodeEtc
+     echo -e "\e[46m ATIVAR REDE_ESCOLA \e[0m "  
+    rede_escola 
+    echo -e "\e[46m ***************************************************************************** \e[0m "
 
   ;;
 
