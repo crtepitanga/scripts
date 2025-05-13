@@ -1849,6 +1849,12 @@ if [ "$OPCAO_M_ATUAL" -eq 1 ];then
 			cd /tmp
 			   	wget https://raw.githubusercontent.com/crtepitanga/scripts/main/p2-integral.sh -O p2-integral.sh && bash p2-integral.sh $meuip_local/32 "$INEP_ESCOLA"
 			;;
+#MODELO DESKTOP POSITIVO MASTER C4400 
+   
+			C4400 ROHS)
+			cd /tmp
+			   	wget https://raw.githubusercontent.com/crtepitanga/scripts/main/p2-c4400.sh -O p2-c4400.sh && bash p2-c4400.sh $meuip_local/32 "$INEP_ESCOLA"
+			;;   
 			
 			*)
      			 echo "Acesso Linux nao identificado ainda"
@@ -2198,6 +2204,12 @@ case $MODELO in
 			cd /tmp
 			   	wget https://raw.githubusercontent.com/crtepitanga/scripts/main/p2-integral.sh -O p2-integral.sh && bash p2-integral.sh $meuip_rede "$INEP_ESCOLA"
 			;;
+#MODELO DESKTOP POSITIVO MASTER C4400 
+   
+			C4400 ROHS)
+			cd /tmp
+			   	wget https://raw.githubusercontent.com/crtepitanga/scripts/main/p2-c4400.sh -O p2-c4400.sh && bash p2-c4400.sh $meuip_rede "$INEP_ESCOLA"
+			;;  
 			
 			*)
      			 echo "Acesso Linux nao identificado ainda"
