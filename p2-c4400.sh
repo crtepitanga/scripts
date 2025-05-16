@@ -615,6 +615,7 @@ qtNotIntegral=0
 qtDdd=0
 qtEduc=0
 qtD3400=0
+qtC4400=0
 qtOutros=0
 while read dados; do
 {
@@ -668,6 +669,8 @@ while read dados; do
                       export qtEduc=$((qtEduc+1))
                    elif [ "$(grep "encontrado Positivo D3400 aqui" "/tmp/.resultado.txt.$$" | wc -l)" -gt 0 ]; then
                       export qtD3400=$((qtD3400+1))
+		   elif [ "$(grep "encontrado Positivo C4400 aqui" "/tmp/.resultado.txt.$$" | wc -l)" -gt 0 ]; then
+                      export qtC4400=$((qtC4400+1))
                    elif [ "$(grep "Acesso Linux nao identificado ainda" "/tmp/.resultado.txt.$$" | wc -l)" -gt 0 ]; then
                       export qtOutros=$((qtOutros+1))
                    fi
@@ -697,6 +700,7 @@ echo "Acessados $qtNotIntegral ips de Notebook Integral"
 echo "Acessados $qtDdd ips de computadores D610"
 echo "Acessados $qtEduc ips de Educatrons"
 echo "Acessados $qtD3400 ips de Positivo D3400"
+echo "Acessados $qtC4400 ips de Positivo C4400"
 echo "Acessados $qtOutros ips de outros Linux"
 echo -e "\e[43m   ++++   +++++++++   ++++   \e[0m "
 echo ""
