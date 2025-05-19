@@ -318,7 +318,7 @@ case "\$TIPO" in
 ;;
 
 C4400)
-    PREFIXO='e'
+    PREFIXO='d'
     echo -e "\e[46m Positivo C4400 \e[0m "
     echo "encontrado Positivo C4400 aqui"
     	echo -e "\e[46m ***************************************************************************** \e[0m "
