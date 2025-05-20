@@ -754,4 +754,3 @@ fi
 
 # ----REMOVER SCRIPT p2-d3400.sh FINALIZAR------------
 cd /tmp && rm *.sh
-
