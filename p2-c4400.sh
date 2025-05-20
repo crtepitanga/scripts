@@ -719,4 +719,4 @@ echo -e "\e[46m============ Script menuv01 excluido, favor digitar o comando wge
 fi
 
 # ----REMOVER SCRIPT p2-d3400.sh FINALIZAR------------
-cd /tmp && rm *.sh
+#cd /tmp && rm *.sh
