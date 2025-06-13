@@ -24,24 +24,24 @@ for usuario in *; do
    if [ $usuario  =  'pedagogico' ] || [ $usuario = 'administrador' ] || [ $usuario = 'admin' ] || [[ $usuario = *"lost"* ]]; then
 
      
-       sudo cp /usr/share/applications/thunar.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
-       sudo cp /usr/share/applications/google-chrome.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
-       sudo cp /usr/share/applications/firefox.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
-       sudo cp /usr/share/applications/libreoffice-writer.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
-       sudo cp /usr/share/applications/libreoffice-calc.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
-       sudo cp /usr/share/applications/libreoffice-impress.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
-       sudo cp /opt/libreoffice7.0/share/xdg/writer.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
-       sudo cp /opt/libreoffice7.0/share/xdg/calc.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
-       sudo cp /opt/libreoffice7.0/share/xdg/impress.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
-       sudo cp /usr/share/applications/atom.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
-       sudo cp /usr/share/applications/code.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
-       sudo cp /usr/share/applications/packettracer73.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
-       sudo cp /usr/share/applications/gns3.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
-       sudo cp /usr/share/applications/mysql-workbench.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
-       sudo cp /usr/share/applications/scratch-desktop.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
+       sudo cp /usr/share/applications/thunar.desktop /home/$usuario/Área\ de\ trabalho/ 1>/dev/null 2>/dev/null
+       sudo cp /usr/share/applications/google-chrome.desktop /home/$usuario/Área\ de\ trabalho/ 1>/dev/null 2>/dev/null
+       sudo cp /usr/share/applications/firefox.desktop /home/$usuario/Área\ de\ trabalho/ 1>/dev/null 2>/dev/null
+       sudo cp /usr/share/applications/libreoffice-writer.desktop /home/$usuario/Área\ de\ trabalho/ 1>/dev/null 2>/dev/null
+       sudo cp /usr/share/applications/libreoffice-calc.desktop /home/$usuario/Área\ de\ trabalho/ 1>/dev/null 2>/dev/null
+       sudo cp /usr/share/applications/libreoffice-impress.desktop /home/$usuario/Área\ de\ trabalho/ 1>/dev/null 2>/dev/null
+       sudo cp /opt/libreoffice7.0/share/xdg/writer.desktop /home/$usuario/Área\ de\ trabalho/ 1>/dev/null 2>/dev/null
+       sudo cp /opt/libreoffice7.0/share/xdg/calc.desktop /home/$usuario/Área\ de\ trabalho/ 1>/dev/null 2>/dev/null
+       sudo cp /opt/libreoffice7.0/share/xdg/impress.desktop /home/$usuario/Área\ de\ trabalho/ 1>/dev/null 2>/dev/null
+       sudo cp /usr/share/applications/atom.desktop /home/$usuario/Área\ de\ trabalho/ 1>/dev/null 2>/dev/null
+       sudo cp /usr/share/applications/code.desktop /home/$usuario/Área\ de\ trabalho/ 1>/dev/null 2>/dev/null
+       sudo cp /usr/share/applications/packettracer73.desktop /home/$usuario/Área\ de\ trabalho/ 1>/dev/null 2>/dev/null
+       sudo cp /usr/share/applications/gns3.desktop /home/$usuario/Área\ de\ trabalho/ 1>/dev/null 2>/dev/null
+       sudo cp /usr/share/applications/mysql-workbench.desktop /home/$usuario/Área\ de\ trabalho/ 1>/dev/null 2>/dev/null
+       sudo cp /usr/share/applications/scratch-desktop.desktop /home/$usuario/Área\ de\ trabalho/ 1>/dev/null 2>/dev/null
        #sudo chown root.root -R /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
-       sudo chown -h $usuario /home/$usuario/Área\ de\ Trabalho/*.desktop 1>/dev/null 2>/dev/null
-       chmod +x /home/$usuario/Área\ de\ Trabalho/*.desktop 1>/dev/null 2>/dev/null
+       sudo chown -h $usuario /home/$usuario/Área\ de\ trabalho/*.desktop 1>/dev/null 2>/dev/null
+       chmod +x /home/$usuario/Área\ de\ trabalho/*.desktop 1>/dev/null 2>/dev/null
        ##sudo rm -Rf /home/$usuario/.config/google-chrome/
        ##sudo rm -Rf /home/$usuario/.mozilla/
        echo -e "\e[44mPermissões criadas para o usuário $usuario\e[0m "
@@ -50,32 +50,32 @@ for usuario in *; do
        #echo "Não foram realizadas alterações para o usuário $usuario "
        continue
        fi
-       sudo cp -r /home/escola/Área\ de\ Trabalho/paginainicial.desktop /home/administrador/Downloads/ 1>/dev/null 2>/dev/null
-       sudo cp -r /home/$usuario/Área\ de\ Trabalho/* /home/$usuario/Documentos/ 1>/dev/null 2>/dev/null
+       sudo cp -r /home/escola/Área\ de\ trabalho/paginainicial.desktop /home/administrador/Downloads/ 1>/dev/null 2>/dev/null
+       sudo cp -r /home/$usuario/Área\ de\ trabalho/* /home/$usuario/Documentos/ 1>/dev/null 2>/dev/null
        sudo chown $usuario.$usuario -R /home/$usuario/Documentos/ 1>/dev/null 2>/dev/null
        chmod -R 775 /home/$usuario/Documentos/ 1>/dev/null 2>/dev/null
        sudo rm -rf /home/$usuario/Documentos/*.desktop 1>/dev/null 2>/dev/null       
-       sudo rm -rf /home/$usuario/Área\ de\ Trabalho/* 1>/dev/null 2>/dev/null
-       sudo cp /usr/share/applications/thunar.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
-       sudo cp /usr/share/applications/google-chrome.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
-       sudo cp /usr/share/applications/firefox.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
-       sudo cp /usr/share/applications/libreoffice-writer.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
-       sudo cp /usr/share/applications/libreoffice-calc.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
-       sudo cp /usr/share/applications/libreoffice-impress.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
-       sudo cp /opt/libreoffice7.0/share/xdg/writer.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
-       sudo cp /opt/libreoffice7.0/share/xdg/calc.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
-       sudo cp /opt/libreoffice7.0/share/xdg/impress.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null       
-       sudo cp /usr/share/applications/atom.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
-       sudo cp /usr/share/applications/code.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
-       sudo cp /usr/share/applications/packettracer73.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
-       sudo cp /usr/share/applications/gns3.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
-       sudo cp /usr/share/applications/mysql-workbench.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
-       sudo cp /usr/share/applications/scratch-desktop.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
-       sudo cp -r /home/administrador/Downloads/paginainicial.desktop /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
-       sudo chown root.root -R /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
-       sudo chown -h $usuario /home/$usuario/Área\ de\ Trabalho/*.desktop 1>/dev/null 2>/dev/null
-       chmod +x /home/$usuario/Área\ de\ Trabalho/*.desktop 1>/dev/null 2>/dev/null
-       chmod 555 /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
+       sudo rm -rf /home/$usuario/Área\ de\ trabalho/* 1>/dev/null 2>/dev/null
+       sudo cp /usr/share/applications/thunar.desktop /home/$usuario/Área\ de\ trabalho/ 1>/dev/null 2>/dev/null
+       sudo cp /usr/share/applications/google-chrome.desktop /home/$usuario/Área\ de\ trabalho/ 1>/dev/null 2>/dev/null
+       sudo cp /usr/share/applications/firefox.desktop /home/$usuario/Área\ de\ trabalho/ 1>/dev/null 2>/dev/null
+       sudo cp /usr/share/applications/libreoffice-writer.desktop /home/$usuario/Área\ de\ trabalho/ 1>/dev/null 2>/dev/null
+       sudo cp /usr/share/applications/libreoffice-calc.desktop /home/$usuario/Área\ de\ trabalho/ 1>/dev/null 2>/dev/null
+       sudo cp /usr/share/applications/libreoffice-impress.desktop /home/$usuario/Área\ de\ trabalho/ 1>/dev/null 2>/dev/null
+       sudo cp /opt/libreoffice7.0/share/xdg/writer.desktop /home/$usuario/Área\ de\ trabalho/ 1>/dev/null 2>/dev/null
+       sudo cp /opt/libreoffice7.0/share/xdg/calc.desktop /home/$usuario/Área\ de\ trabalho/ 1>/dev/null 2>/dev/null
+       sudo cp /opt/libreoffice7.0/share/xdg/impress.desktop /home/$usuario/Área\ de\ trabalho/ 1>/dev/null 2>/dev/null       
+       sudo cp /usr/share/applications/atom.desktop /home/$usuario/Área\ de\ trabalho/ 1>/dev/null 2>/dev/null
+       sudo cp /usr/share/applications/code.desktop /home/$usuario/Área\ de\ trabalho/ 1>/dev/null 2>/dev/null
+       sudo cp /usr/share/applications/packettracer73.desktop /home/$usuario/Área\ de\ trabalho/ 1>/dev/null 2>/dev/null
+       sudo cp /usr/share/applications/gns3.desktop /home/$usuario/Área\ de\ trabalho/ 1>/dev/null 2>/dev/null
+       sudo cp /usr/share/applications/mysql-workbench.desktop /home/$usuario/Área\ de\ trabalho/ 1>/dev/null 2>/dev/null
+       sudo cp /usr/share/applications/scratch-desktop.desktop /home/$usuario/Área\ de\ trabalho/ 1>/dev/null 2>/dev/null
+       sudo cp -r /home/administrador/Downloads/paginainicial.desktop /home/$usuario/Área\ de\ trabalho/ 1>/dev/null 2>/dev/null
+       sudo chown root.root -R /home/$usuario/Área\ de\ trabalho/ 1>/dev/null 2>/dev/null
+       sudo chown -h $usuario /home/$usuario/Área\ de\ trabalho/*.desktop 1>/dev/null 2>/dev/null
+       chmod +x /home/$usuario/Área\ de\ trabalho/*.desktop 1>/dev/null 2>/dev/null
+       chmod 555 /home/$usuario/Área\ de\ trabalho/ 1>/dev/null 2>/dev/null
        ##sudo rm -Rf /home/$usuario/.config/google-chrome/
        ##sudo rm -Rf /home/$usuario/.mozilla/
        chmod -R 555 /home/$usuario/.config/xfce4/ 1>/dev/null 2>/dev/null
@@ -183,6 +183,5 @@ done
 #/etc/init.d/lightdm restart
 
 #reboot
-
 
 
