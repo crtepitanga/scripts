@@ -8,6 +8,7 @@
 # Versão 5 de 29/05/2023 - Script Icones-Area-de-Trabalho.sh - 29/05/2023 - Sequência Ícones Área de Trabalho
 # Versão 6 de 30/05/2023 - Script bloquearapps.sh Desativar acesso aos usuarios aos aplicativos desejados - 30/05/2023 - Colaboração: Jonilso - CRTE/NRE de Guarapuava
 # Versão 7 de 18/04/2024 - Script bloquearapps.sh Acrescentado usuário Pedagógico para não bloquear, Alterado as propriedades dos arquivos de bechup na pasta Documentos do usuário para o mesmo poder editar - 18/04/2024 - José Divonei Ribeiro CRTE/NRE PITANGA - Colaboração: Jonilso - CRTE/NRE de Guarapuava
+# Versão 8 de 18/04/2024 - Script bloquearapps.sh Bloqueado para usuários sem poder administrativo alterar de rede - 23/06/2024 - José Divonei Ribeiro CRTE/NRE PITANGA - Colaboração: Jonilso - CRTE/NRE de Guarapuava
 
 if [ ! $(/usr/bin/whoami) = 'root' ]; then
    echo "Por favor execute com SuperUsuário root!"
@@ -160,7 +161,7 @@ echo -e "\e[44m\nÍcones Área de Trabalho, defenidos com Sucesso!!!\e[0m\n "
 
 # Desativar acesso aos usuarios nos aplicativos a seguir:
 USUARIOS=( "professor" "escola" "Aluno" "aluno" "alunos" )
-APLICATIVOS=( "/usr/bin/xfce4-appearance-settings" "/usr/bin/users-admin" "/usr/bin/mugshot" "/usr/bin/mate-about-me" "/usr/bin/mintupdate" "/usr/bin/mintinstall" "/usr/bin/nm-connection-editor" )
+APLICATIVOS=( "/usr/bin/nm-applet" "/usr/bin/xfce4-appearance-settings" "/usr/bin/users-admin" "/usr/bin/mugshot" "/usr/bin/mate-about-me" "/usr/bin/mintupdate" "/usr/bin/mintinstall" "/usr/bin/nm-connection-editor" )
 
 for USUARIO in "${USUARIOS[@]}" ; do
    if [ $(grep "^${USUARIO}:" /etc/passwd | wc -l) -eq 0 ]; then
@@ -176,12 +177,32 @@ for USUARIO in "${USUARIOS[@]}" ; do
 echo "Aplicativo Aparencia bloqueado para $USUARIO"
 done
 
+
+if id "professor" >/dev/null 2>&1; then
+   chfn -f "Professor" professor
+fi
+
+if id "Professor" >/dev/null 2>&1; then
+   chfn -f "Professor" Professor
+fi
+
+if id "aluno" >/dev/null 2>&1; then
+   chfn -f "Aluno" aluno
+fi
+
+if id "Aluno" >/dev/null 2>&1; then
+   chfn -f "Aluno" Aluno
+fi
+
+if id "Escola" >/dev/null 2>&1; then
+   chfn -f "Escola" Escola
+fi
+
+if id "escola" >/dev/null 2>&1; then
+   chfn -f "Escola" escola
+fi
+
 #-----------------------------------------Fim Desativar acesso aos usuarios aos aplicativos desejados-----------------------------------#
 
-
-#---------------Habilitar arquivo para descanso de tela na tela de login---------------#
-#/etc/init.d/lightdm restart
-
-#reboot
 
 
