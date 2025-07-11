@@ -161,7 +161,7 @@ echo -e "\e[44m\nÍcones Área de Trabalho, defenidos com Sucesso!!!\e[0m\n "
 
 # Desativar acesso aos usuarios nos aplicativos a seguir:
 USUARIOS=( "professor" "escola" "Aluno" "aluno" "alunos" )
-APLICATIVOS=("/usr/bin/exo-desktop-item-edit" "/usr/bin/nm-applet" "/usr/bin/xfce4-appearance-settings" "/usr/bin/users-admin" "/usr/bin/mugshot" "/usr/bin/mate-about-me" "/usr/bin/mintupdate" "/usr/bin/mintinstall" "/usr/bin/nm-connection-editor")
+APLICATIVOS=( "/usr/bin/xfdesktop-settings" "/usr/bin/exo-desktop-item-edit" "/usr/bin/nm-applet" "/usr/bin/xfce4-appearance-settings" "/usr/bin/users-admin" "/usr/bin/mugshot" "/usr/bin/mate-about-me" "/usr/bin/mintupdate" "/usr/bin/mintinstall" "/usr/bin/nm-connection-editor")
 
 for USUARIO in "${USUARIOS[@]}" ; do
    if [ $(grep "^${USUARIO}:" /etc/passwd | wc -l) -eq 0 ]; then
