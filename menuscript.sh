@@ -1260,13 +1260,13 @@ echo "fim"
 
 function atalhopaginainicial(){
     cd /tmp
-    if [ -e atalhopaginainicial.sh ]; then
-        rm atalhopaginainicial.sh
-        wget jonilso.com/atalhopaginainicial.sh
-        bash  atalhopaginainicial.sh
+    if [ -e ape.sh ]; then
+        rm ape.sh
+        wget https://raw.githubusercontent.com/crtepitanga/scripts/refs/heads/main/ape.sh -O ape.sh
+        bash  ape.sh
     else
-        wget jonilso.com/atalhopaginainicial.sh
-        bash  atalhopaginainicial.sh
+      wget https://raw.githubusercontent.com/crtepitanga/scripts/refs/heads/main/ape.sh -O ape.sh
+        bash  ape.sh
     fi
 }
 function resetbackgrounds() {
