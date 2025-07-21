@@ -42,6 +42,7 @@ for usuario in *; do
        sudo cp /usr/share/applications/scratch-desktop.desktop /home/$usuario/Área\ de\ trabalho/ 1>/dev/null 2>/dev/null
 
        sudo cp /usr/share/applications/gimp.desktop /home/$usuario/Área\ de\ trabalho/ 1>/dev/null 2>/dev/null
+       sudo cp /usr/share/applications/orange.desktop /home/$usuario/Área\ de\ trabalho/ 1>/dev/null 2>/dev/null
        
        #sudo chown root.root -R /home/$usuario/Área\ de\ Trabalho/ 1>/dev/null 2>/dev/null
        sudo chown -h $usuario /home/$usuario/Área\ de\ trabalho/*.desktop 1>/dev/null 2>/dev/null
@@ -77,6 +78,7 @@ for usuario in *; do
        sudo cp /usr/share/applications/scratch-desktop.desktop /home/$usuario/Área\ de\ trabalho/ 1>/dev/null 2>/dev/null
 
        sudo cp /usr/share/applications/gimp.desktop /home/$usuario/Área\ de\ trabalho/ 1>/dev/null 2>/dev/null
+       sudo cp /usr/share/applications/orange.desktop /home/$usuario/Área\ de\ trabalho/ 1>/dev/null 2>/dev/null
       
        sudo cp -r /home/administrador/Downloads/paginainicial.desktop /home/$usuario/Área\ de\ trabalho/ 1>/dev/null 2>/dev/null
        sudo chown root.root -R /home/$usuario/Área\ de\ trabalho/ 1>/dev/null 2>/dev/null
