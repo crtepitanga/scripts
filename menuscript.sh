@@ -1864,6 +1864,12 @@ if [ "$OPCAO_M_ATUAL" -eq 1 ];then
 			cd /tmp
 			   	wget https://raw.githubusercontent.com/crtepitanga/scripts/refs/heads/main/p2-c4400.sh -O p2-c4400.sh && bash p2-c4400.sh $meuip_local/32 "$INEP_ESCOLA"
 			;;   
+#MODELO DESKTOP LENOVO
+   
+			13DXS00000)
+			cd /tmp
+			   	wget https://raw.githubusercontent.com/crtepitanga/scripts/refs/heads/main/p2-lenovo.sh -O p2-lenovo.sh && bash p2-lenovo.sh $meuip_local/32 "$INEP_ESCOLA"
+			;;      
 			
 			*)
      			 echo "Acesso Linux nao identificado ainda"
@@ -2219,6 +2225,12 @@ case $MODELO in
 			cd /tmp
 			   	wget https://raw.githubusercontent.com/crtepitanga/scripts/refs/heads/main/p2-c4400.sh -O p2-c4400.sh && bash p2-c4400.sh $meuip_rede "$INEP_ESCOLA"
 			;;  
+   #MODELO DESKTOP LENOVO
+   
+			13DXS00000)
+			cd /tmp
+			   	wget https://raw.githubusercontent.com/crtepitanga/scripts/refs/heads/main/p2-lenovo.sh -O p2-lenovo.sh && bash p2-lenovo.sh $meuip_rede "$INEP_ESCOLA"
+			;;      
 			
 			*)
      			 echo "Acesso Linux nao identificado ainda"
