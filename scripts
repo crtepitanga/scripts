@@ -1,60 +1,30 @@
 LISTA DE SCRIPTS DO GITHUB
 
+MENU PRINCIPAL DE SCRIPTS:
+https://raw.githubusercontent.com/crtepitanga/scripts/main/menuscript.sh
+https://seulink.net/menuv01
+https://seulink.net/menuscriptv01
+https://seulink.net/menuscriptV01
+
 AJUSTAR HORA E DATA:
 https://raw.githubusercontent.com/crtepitanga/scripts/main/ah.sh
 https://seulink.net/data-hora
-
-ATIVAR TOUCHPAD NOTEBOOKS POSITIVO INTEGRAL:
-https://raw.githubusercontent.com/crtepitanga/scripts/main/tap.sh
-https://seulink.net/ativar-touch
-
-BLOQUEAR OPÇÃO ALTERAR USUÁRIO/SENHA:
-https://raw.githubusercontent.com/crtepitanga/scripts/main/bloquearapps.sh
-https://seulink.net/bloquear-apps
-
-DESBLOQUEAR OPÇÃO ALTERAR USUÁRIO/SENHA:
-https://raw.githubusercontent.com/crtepitanga/scripts/main/desbloquearapps.sh
-https://seulink.net/desbloquear-apps
-
-DESATIVAR TOUCHSCREEN NETBOOKS VERDINHOS:
-https://raw.githubusercontent.com/crtepitanga/scripts/main/dt.sh
-https://seulink.net/desativar-touch
-
-DESATIVAR FN NETBOOKS VERDINHOS:
-https://raw.githubusercontent.com/crtepitanga/scripts/main/fn.sh
-https://seulink.net/fn-net
-
-ATIVAR REDE WIFI rede_escola:
-https://raw.githubusercontent.com/crtepitanga/scripts/main/re.sh
-https://seulink.net/re-sh
-
-DESABILITAR USUARIO CONVIDADO
-https://raw.githubusercontent.com/crtepitanga/scripts/main/semconvidado.sh
-https://seulink.net/excluir-convidado
-
-INSTALAR MODO KIOSK:
-https://raw.githubusercontent.com/crtepitanga/scripts/main/k.sh
-https://seulink.net/kiosk
 
 INSTALAR ATOM E VSCODE
 https://raw.githubusercontent.com/crtepitanga/scripts/main/av.sh
 https://seulink.net/atom-vscode
 
-INSTALAR SCRATCH
-https://raw.githubusercontent.com/crtepitanga/scripts/main/scratch.sh
-https://seulink.net/instalar-scratch
-
-INSTALAR MBLOCK
-https://raw.githubusercontent.com/crtepitanga/scripts/main/mlink.sh
-https://seulink.net/instalar-mblock
-
-INSTALAR MEDIDOR VELOCIDADE DE INTERNET
-https://raw.githubusercontent.com/crtepitanga/scripts/main/medidor.sh
-https://seulink.net/instalar-medidor
+BLOQUEAR OPÇÃO ALTERAR USUÁRIO/SENHA:
+https://raw.githubusercontent.com/crtepitanga/scripts/main/bloquearapps.sh
+https://seulink.net/bloquear-apps
 
 INSTALAR CERTIFICADO
 https://raw.githubusercontent.com/crtepitanga/scripts/main/cert.sh
 https://seulink.net/instalar-certificado
+
+DESATIVAR TOUCHSCREEN NETBOOKS VERDINHOS:
+https://raw.githubusercontent.com/crtepitanga/scripts/main/dt.sh
+https://seulink.net/desativar-touch
 
 LIMPANDO O APT-GET UPDATE:
 https://raw.githubusercontent.com/crtepitanga/scripts/main/j.sh
@@ -68,12 +38,6 @@ INSTALAR MEDIDOR MEC:
 https://raw.githubusercontent.com/crtepitanga/scripts/main/medidor.sh
 https://seulink.net/instalar-medidor
 
-MENU PRINCIPAL DE SCRIPTS:
-https://raw.githubusercontent.com/crtepitanga/scripts/main/menuscript.sh
-https://seulink.net/menuv01
-https://seulink.net/menuscriptv01
-https://seulink.net/menuscriptV01
-
 INSTALAR PLUGIN MBLOCK:
 https://raw.githubusercontent.com/crtepitanga/scripts/main/mlink.sh
 https://seulink.net/instalar-mblock
@@ -86,13 +50,17 @@ P2-COMPLETO:
 https://raw.githubusercontent.com/crtepitanga/scripts/main/p2-completo.sh
 https://seulink.net/p2-completo
 
+P2-DESKTOP ITAUTEC AMARELINHO :
+https://raw.githubusercontent.com/crtepitanga/scripts/main/p2-ST4266.sh
+https://seulink.net/p2-st4266
+
+P2-DESKTOP CCE PREGÃO 71/2010 :
+https://raw.githubusercontent.com/crtepitanga/scripts/main/p2-cce2010.sh
+https://seulink.net/p2-cce2010
+
 P2-DESKTOP POSITIVO D3400:
 https://raw.githubusercontent.com/crtepitanga/scripts/main/p2-d3400.sh
 https://seulink.net/p2-d3400
-
-P2-DESKTOP POSITIVO D3400:
-https://raw.githubusercontent.com/crtepitanga/scripts/main/p2-c4400.sh
-https://seulink.net/p2-c4400
 
 P2-DESKTOP POSITIVO D480:
 https://raw.githubusercontent.com/crtepitanga/scripts/main/p2-d480.sh
@@ -122,19 +90,13 @@ P2-NETBOOKS POSITIVO VERDINHO:
 https://raw.githubusercontent.com/crtepitanga/scripts/main/p2-verdinhos.sh
 https://seulink.net/p2-verdinhos
 
-P2-CCE 2010:
-https://raw.githubusercontent.com/crtepitanga/scripts/main/p2-cce2010.sh
-https://seulink.net/p2-cce2010
-
-P2-AMARELINHOS ITAUTEC:
-https://raw.githubusercontent.com/crtepitanga/scripts/main/p2-ST4266.sh
-https://seulink.net/p2-st4266
-
 P2-DESKTOPS POSITIVO C4400:
 https://raw.githubusercontent.com/crtepitanga/scripts/refs/heads/main/p2-c4400.sh
 https://seulink.net/p2-c4400
 
-https://raw.githubusercontent.com/crtepitanga/scripts/refs/heads/main/p2-c4400.sh
+P2-LENOVO:
+https://raw.githubusercontent.com/crtepitanga/scripts/refs/heads/main/p2-lenovo
+https://seulink.net/p2-lenovo
 
 DEVOLVER PÁGINA INICIAL DAS PLATAFORMAS NOS NAVEGADORES:
 https://raw.githubusercontent.com/crtepitanga/scripts/main/pi1.sh
@@ -144,9 +106,18 @@ RESETAR PLANO DE FUNDO DA TELA:
 https://raw.githubusercontent.com/crtepitanga/scripts/main/rb.sh
 https://seulink.net/resetar-planodefundo
 
+
+INSTALAR SCRATCH
+https://raw.githubusercontent.com/crtepitanga/scripts/main/scratch.sh
+https://seulink.net/instalar-scratch
+
 EXCLUIR USUÁRIO CONVIDADO:
 https://raw.githubusercontent.com/crtepitanga/scripts/main/semconvidado.sh
 https://seulink.net/excluir-convidado
+
+ATIVAR TOUCHPAD NOTEBOOKS POSITIVO INTEGRAL:
+https://raw.githubusercontent.com/crtepitanga/scripts/main/tap.sh
+https://seulink.net/ativar-touch
 
 TIRAR BLOQUEIO DE TELA DESKTOP
 https://raw.githubusercontent.com/crtepitanga/scripts/main/tb.sh
@@ -163,4 +134,8 @@ https://seulink.net/instalar-vnc
 CONFIGURAR PULSEAUDIO
 https://raw.githubusercontent.com/crtepitanga/scripts/refs/heads/main/pulseaudio.sh
 https://seulink.net/pulseaudio
+
+CONFIGURAR PULSEAUDIO
+https://raw.githubusercontent.com/crtepitanga/scripts/main/fn.sh
+https://seulink.net/fn-net
 
