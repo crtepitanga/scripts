@@ -286,6 +286,16 @@ troca_wifi_para_mint_21.3() {
 
 ################################################################################
 
+troca_wifi_para_mint_22.1() {
+
+   echo "Mint 22.1 - Adicionando rede_escola" >> "$arqLogDisto" 2>&1
+
+   troca_wifi
+
+}
+
+################################################################################
+
 troca_wifi_outro_mint() {
    echo "Nao foi testado pra essa versao do Mint... Saindo" >> "$arqLogDisto" 2>&1
    echo "Fim em [$(date +%d/%m/%Y_%H:%M:%S_%N)] ..." >> "$arqLogDisto" 2>&1
@@ -3215,6 +3225,9 @@ then
          ;;
       21.3)
          troca_wifi_para_mint_21.3
+         ;;
+      22.1)
+         troca_wifi_para_mint_22.1
          ;;
       *)
          troca_wifi_outro_mint
