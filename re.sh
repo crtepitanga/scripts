@@ -10,6 +10,12 @@ if [ ! $(/usr/bin/whoami) = 'root' ]; then
    exit 1
 fi
 
+export GREP_COLOR='0;31;42'
+export NC="\033[0m"
+export VERMELHO="\033[0;41m" # vermelho
+export VERDE="\033[0;42m" # Verde
+export AMARELO="\033[30;103m" # Amarelo
+
 
 echo "Iniciando, aguarde ..."
 
@@ -25,6 +31,11 @@ cria_perfil_rede_escola_1() {
       export deviceWifi="wlp1s0"
    else
       export deviceWifi="$(ls -1 /sys/class/net | grep ^[wW] | head -1)"
+   fi
+
+   if [ "$deviceWifi" = "" ]; then
+      echo -e "${VERMELHO} NENHUMA PLACA WIFI DETECTADA! saindo... ${NC} "
+      exit 1
    fi
 
    cat > "/etc/NetworkManager/system-connections/perfil.tmp" << EndOfThisFileIsExactHere
@@ -77,6 +88,10 @@ cria_perfil_rede_escola_2() {
       export deviceWifi="wlp1s0"
    else
       export deviceWifi="$(ls -1 /sys/class/net | grep ^[wW] | head -1)"
+   fi
+   if [ "$deviceWifi" = "" ]; then
+      echo -e "${VERMELHO} NENHUMA PLACA WIFI DETECTADA! saindo... ${NC} "
+      exit 1
    fi
 
    cat > "/etc/NetworkManager/system-connections/perfil.tmp" << EndOfThisFileIsExactHere
@@ -139,6 +154,11 @@ buscar_wifi() {
 
    echo "Procurando wifi [$(date +%d/%m/%Y_%H:%M:%S_%N)] ..." >> "$arqLogDisto" 2>&1
 
+   if [ "$deviceWifi" = "" ]; then
+      echo -e "${VERMELHO} NENHUMA PLACA WIFI DETECTADA! saindo... ${NC} "
+      exit 1
+   fi
+
    finded=0
    for i in {1..10}; do
       iwlist "$deviceWifi" scanning essid rede_escola >> "$arqLogDisto" 2>&1
@@ -193,6 +213,11 @@ troca_wifi() {
    if [ $? -eq 0 ]
    then
       echo "Conectou a rede_escola com SUCESSO!! $(date +%d/%m/%Y_%H:%M:%S_%N)" >> "$arqLogDisto"
+      nmcli connection delete escola_wifi
+      echo "removeu escola_wifi"
+      if [ -e /etc/NetworkManager/system-connections/escola_wifi.nmconnection ]; then
+         rm /etc/NetworkManager/system-connections/escola_wifi.nmconnection
+      fi
    else
       echo "Falhou a conexao da rede_escola ... $(date +%d/%m/%Y_%H:%M:%S_%N)" >> "$arqLogDisto"
       echo "Falhou! Por favor tente novamente!"
@@ -284,11 +309,9 @@ troca_wifi_para_mint_21.3() {
 
 }
 
-################################################################################
+troca_wifi_para_mint_22() {
 
-troca_wifi_para_mint_22.1() {
-
-   echo "Mint 22.1 - Adicionando rede_escola" >> "$arqLogDisto" 2>&1
+   echo "Mint 22 - Adicionando rede_escola" >> "$arqLogDisto" 2>&1
 
    troca_wifi
 
@@ -3196,6 +3219,16 @@ else
    echo "Iniciando em $(date +%d/%m/%Y_%H:%M:%S_%N)" >> "$arqLogDisto"
 fi
 
+if [ $(iwconfig | grep 'ESSID:"rede_escola"' | wc -l) -gt 0 ]; then
+    echo "Jah conectado na rede rede_escola"
+    nmcli connection delete escola_wifi
+    echo "removeu escola_wifi"
+    if [ -e /etc/NetworkManager/system-connections/escola_wifi.nmconnection ]; then
+       rm /etc/NetworkManager/system-connections/escola_wifi.nmconnection
+    fi
+    exit
+fi
+
 # Teste da versao do mint no educatron
 if [ -e "/etc/linuxmint/info" ]
 then
@@ -3226,8 +3259,8 @@ then
       21.3)
          troca_wifi_para_mint_21.3
          ;;
-      22.1)
-         troca_wifi_para_mint_22.1
+      22*)
+         troca_wifi_para_mint_22
          ;;
       *)
          troca_wifi_outro_mint
