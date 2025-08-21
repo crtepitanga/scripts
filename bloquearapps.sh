@@ -41,7 +41,8 @@ for usuario in *; do
        sudo cp /usr/share/applications/mysql-workbench.desktop /home/$usuario/Área\ de\ trabalho/ 1>/dev/null 2>/dev/null
        sudo cp /usr/share/applications/scratch-desktop.desktop /home/$usuario/Área\ de\ trabalho/ 1>/dev/null 2>/dev/null
        sudo cp /usr/share/applications/arduino232.desktop /home/$usuario/Área\ de\ trabalho/ 1>/dev/null 2>/dev/null
-       sudo cp $usuario/Área  arduino232.desktop /home/$usuario/Área\ de\ trabalho/ 1>/dev/null 2>/dev/null
+       sudo cp /usr/share/applications/mblock.desktop /home/$usuario/Área\ de\ trabalho/ 1>/dev/null 2>/dev/null
+      
 
        sudo cp /usr/share/applications/gimp.desktop /home/$usuario/Área\ de\ trabalho/ 1>/dev/null 2>/dev/null
        sudo cp /usr/share/applications/orange.desktop /home/$usuario/Área\ de\ trabalho/ 1>/dev/null 2>/dev/null
@@ -79,6 +80,7 @@ for usuario in *; do
        sudo cp /usr/share/applications/mysql-workbench.desktop /home/$usuario/Área\ de\ trabalho/ 1>/dev/null 2>/dev/null
        sudo cp /usr/share/applications/scratch-desktop.desktop /home/$usuario/Área\ de\ trabalho/ 1>/dev/null 2>/dev/null
        sudo cp /usr/share/applications/arduino232.desktop /home/$usuario/Área\ de\ trabalho/ 1>/dev/null 2>/dev/null
+       sudo cp /usr/share/applications/mblock.desktop /home/$usuario/Área\ de\ trabalho/ 1>/dev/null 2>/dev/null
 
        sudo cp /usr/share/applications/gimp.desktop /home/$usuario/Área\ de\ trabalho/ 1>/dev/null 2>/dev/null
        sudo cp /usr/share/applications/orange.desktop /home/$usuario/Área\ de\ trabalho/ 1>/dev/null 2>/dev/null
