@@ -2,7 +2,7 @@
 
 # Instalacao do programa Mlink pra Mblock com auto-startup
 
-USUARIOS=( "professor" "escola" "Aluno" "aluno" "alunos" )
+USUARIOS=( "pedagogico" "administrador" "professor" "escola" "Aluno" "aluno" "alunos" )
 
 if [ ! $(/usr/bin/whoami) = 'root' ]; then
    echo "Por favor execute com SuperUsuário root para daí instalar o pacote sshpass"
@@ -60,5 +60,39 @@ EndOfThisFileIsExactHere
 
 fi
 
-echo "Por favor reiniciar e tentar acessar site https://ide.mblock.cc/"
+
+APPNAME="mBlock IDE"
+EXECMD="google-chrome --app=https://ide.mblock.cc/"
+ICONURL="https://ide.mblock.cc/favicon.ico"
+
+ICON_PATH="/usr/share/pixmaps/mblock.png"
+DESKTOP_FILE="/usr/share/applications/mblock.desktop"
+
+echo "[+] Baixando ícone do mBlock..."
+sudo wget -q -O "$ICON_PATH" "$ICONURL"
+
+if [ ! -f "$ICON_PATH" ]; then
+    echo "[!] Erro: não foi possível baixar o ícone!"
+    exit 1
+fi
+
+echo "[+] Criando arquivo .desktop..."
+sudo bash -c "cat > $DESKTOP_FILE" <<EOL
+[Desktop Entry]
+Name=$APPNAME
+Comment=Ambiente de programação mBlock Online
+Exec=$EXECMD
+Icon=$ICON_PATH
+Terminal=false
+Type=Application
+Categories=Education;Development;
+EOL
+
+sudo chmod +x "$DESKTOP_FILE"
+
+echo "[✔] Atalho criado em: $DESKTOP_FILE"
+echo "[✔] Ícone salvo em: $ICON_PATH"
+echo "[✔] Agora procure por 'mBlock IDE' no menu e abra direto."
+
+# echo "Por favor reiniciar e tentar acessar site https://ide.mblock.cc/"
 
