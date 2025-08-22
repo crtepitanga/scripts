@@ -97,15 +97,15 @@ sudo chmod +x "$DESKTOP_FILE"
 echo "[+] Copiando atalho para a Área de trabalho de todos os usuários..."
 for user_home in /home/*; do
     if [ -d "\$user_home/Área de trabalho" ]; then
-        sudo cp "$DESKTOP_FILE" "\$user_home/Área de trabalho/"
-        sudo chown \$(basename "\$user_home"):\$(basename "\$user_home") "\$user_home/Área de trabalho/mblock.desktop"
+        sudo cp "$DESKTOP_FILE" "\$user_home/Área\ de\ trabalho/"
+        sudo chown \$(basename "\$user_home"):\$(basename "\$user_home") "\$user_home/Área\ de\ trabalho/mblock.desktop"
     fi
 done
 
 # Garantir que novos usuários também recebam o atalho
 echo "[+] Adicionando atalho ao /etc/skel/Área de trabalho..."
-sudo mkdir -p "/etc/skel/Área de trabalho"
-sudo cp "$DESKTOP_FILE" "/etc/skel/Área de trabalho/"
+sudo mkdir -p "/etc/skel/Área\ de\ trabalho"
+sudo cp "$DESKTOP_FILE" "/etc/skel/Área\ de\ trabalho/"
 
 echo "[✔] Instalação concluída!"
 echo "[✔] Atalho disponível no menu"
