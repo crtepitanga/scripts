@@ -1770,7 +1770,7 @@ function arduino(){
 		if [ -e "arduino232.sh" ];then
 	 		bash arduino232.sh
 		else  
-  			https://raw.githubusercontent.com/crtepitanga/scripts/refs/heads/main/arduino232.sh -O arduino232.sh
+  			wget https://raw.githubusercontent.com/crtepitanga/scripts/refs/heads/main/arduino232.sh -O arduino232.sh
 			bash arduino232.sh
 		
 		fi
