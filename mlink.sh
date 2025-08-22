@@ -60,10 +60,6 @@ EndOfThisFileIsExactHere
 
 fi
 
-
-#!/bin/bash
-# Criador de atalho do mBlock IDE para todos os usuários (força Área de trabalho)
-
 APPNAME="mBlock IDE"
 EXECMD="google-chrome --app=https://ide.mblock.cc/"
 ICONURL="https://ide.mblock.cc/favicon.ico"
@@ -96,8 +92,8 @@ sudo chmod +x "$DESKTOP_FILE"
 # Copiar para a Área de trabalho de todos os usuários já existentes
 echo "[+] Copiando atalho para a Área de trabalho de todos os usuários..."
 for user_home in /home/*; do
-    if [ -d "\$user_home/Área de trabalho" ]; then
-        sudo cp "$DESKTOP_FILE" "\$user_home/Área de trabalho/"
+    if [ -d "$user_home/Área de trabalho" ]; then
+        sudo cp "$DESKTOP_FILE" "$user_home/Área de trabalho/"
         sudo chown $(basename "$user_home"):$(basename "$user_home") "$user_home/Área de trabalho/mblock.desktop"
     fi
 done
@@ -108,8 +104,9 @@ sudo mkdir -p "/etc/skel/Área de trabalho"
 sudo cp "$DESKTOP_FILE" "/etc/skel/Área de trabalho/"
 
 echo "[✔] Instalação concluída!"
-echo "[✔] Atalho disponível no menu"
-echo "[✔] Atalho na Área de trabalho de todos os usuários"
+echo " - Atalho disponível no menu"
+echo " - Atalho na Área de trabalho de todos os usuários"
+
 
  echo "Por favor reiniciar e tentar acessar site https://ide.mblock.cc/"
 
