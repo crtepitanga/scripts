@@ -61,6 +61,9 @@ EndOfThisFileIsExactHere
 fi
 
 
+#!/bin/bash
+# Criador de atalho do mBlock IDE para todos os usuários (força Área de trabalho)
+
 APPNAME="mBlock IDE"
 EXECMD="google-chrome --app=https://ide.mblock.cc/"
 ICONURL="https://ide.mblock.cc/favicon.ico"
@@ -76,7 +79,7 @@ if [ ! -f "$ICON_PATH" ]; then
     exit 1
 fi
 
-echo "[+] Criando arquivo .desktop..."
+echo "[+] Criando arquivo .desktop em /usr/share/applications..."
 sudo bash -c "cat > $DESKTOP_FILE" <<EOL
 [Desktop Entry]
 Name=$APPNAME
@@ -90,9 +93,23 @@ EOL
 
 sudo chmod +x "$DESKTOP_FILE"
 
-echo "[✔] Atalho criado em: $DESKTOP_FILE"
-echo "[✔] Ícone salvo em: $ICON_PATH"
-echo "[✔] Agora procure por 'mBlock IDE' no menu e abra direto."
+# Copiar para a Área de trabalho de todos os usuários já existentes
+echo "[+] Copiando atalho para a Área de trabalho de todos os usuários..."
+for user_home in /home/*; do
+    if [ -d "\$user_home/Área de trabalho" ]; then
+        sudo cp "$DESKTOP_FILE" "\$user_home/Área de trabalho/"
+        sudo chown \$(basename "\$user_home"):\$(basename "\$user_home") "\$user_home/Área de trabalho/mblock.desktop"
+    fi
+done
 
-# echo "Por favor reiniciar e tentar acessar site https://ide.mblock.cc/"
+# Garantir que novos usuários também recebam o atalho
+echo "[+] Adicionando atalho ao /etc/skel/Área de trabalho..."
+sudo mkdir -p "/etc/skel/Área de trabalho"
+sudo cp "$DESKTOP_FILE" "/etc/skel/Área de trabalho/"
+
+echo "[✔] Instalação concluída!"
+echo "[✔] Atalho disponível no menu"
+echo "[✔] Atalho na Área de trabalho de todos os usuários"
+
+ echo "Por favor reiniciar e tentar acessar site https://ide.mblock.cc/"
 
