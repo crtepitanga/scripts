@@ -1769,7 +1769,7 @@ function arduino(){
 	
 		if [ -e "arduino232.sh" ];then
 	 		bash arduino232.sh
-		else  	
+		else  
   			https://raw.githubusercontent.com/crtepitanga/scripts/refs/heads/main/arduino232.sh -O arduino232.sh
 			bash arduino232.sh
 		
