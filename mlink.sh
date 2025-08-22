@@ -98,7 +98,7 @@ echo "[+] Copiando atalho para a Área de trabalho de todos os usuários..."
 for user_home in /home/*; do
     if [ -d "\$user_home/Área de trabalho" ]; then
         sudo cp "$DESKTOP_FILE" "\$user_home/Área\ de\ trabalho/"
-        sudo chown \$(basename "\$user_home"):\$(basename "\$user_home") "\$user_home/Área\ de\ trabalho/mblock.desktop"
+        sudo chown $(basename "\$user_home"):\$(basename "\$user_home") "\$user_home/Área\ de\ trabalho/mblock.desktop"
     fi
 done
 
