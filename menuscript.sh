@@ -1764,6 +1764,30 @@ function rede_escola (){
 wget https://raw.githubusercontent.com/crtepitanga/scripts/main/re.sh && bash re.sh
 
 }
+function arduino(){
+	cd /tmp
+	
+		if [ -e "arduino232.sh" ];then
+	 		bash arduino232.sh
+		else  	
+  			https://raw.githubusercontent.com/crtepitanga/scripts/refs/heads/main/arduino232.sh -O arduino232.sh
+			bash arduino232.sh
+		
+		fi
+			
+}
+function pulseaudio(){
+	cd /tmp
+	
+		if [ -e "pulseaudio.sh" ];then
+	 		bash pulseaudio.sh
+		else  	
+  			https://raw.githubusercontent.com/crtepitanga/scripts/refs/heads/main/pulseaudio.sh -O pulseaudio.sh
+			bash pulseaudio.sh
+		
+		fi
+			
+}
 
 function MENU(){
 OPCAO=$( dialog --stdout \
@@ -1914,7 +1938,9 @@ if [ "$OPCAO_M_ATUAL" -eq 2 ];then
     "21" "-->> Remover usuários Guest" off \
     "22" "-->> Remover/Resetar plano de fundo" off \
     "23" "-->> Instalar modo Kiosk para bloquear edição modo gráfico" off \
-    "24" "-->> Ativar rede_escola" off)
+    "24" "-->> Instalar Arduino" off \
+	"25" "-->> Instalar Pulseaudio" off \
+	"26" "-->> Ativar rede_escola" off)
     
     #dialog --msgbox "Opções Selecionadas: $CHECKLIST" 10 45
     
@@ -2122,15 +2148,31 @@ echo -e "\e[37;44;1m===========++=======MODO KIOSK BLOQUEAR EDIÇÃO GRÁFICA===
 					
 echo -e "\e[37;44;1m=====================FIM MODO KIOSK BLOQUEAR EDIÇÃO GRÁFICA======================== \e[m\n"
 
-		elif [ "$SELECIONADOS" -eq 24 ];then
+	elif [ "$SELECIONADOS" -eq 24 ];then
+
+echo -e "\e[37;44;1m==========================INSTALAR ARDUINO======================================= \e[m\n"
+
+			arduino;
+					
+echo -e "\e[37;44;1m==========================FIM INSTALAR ARDUINO================================== \e[m\n"
+
+	elif [ "$SELECIONADOS" -eq 25 ];then
+
+echo -e "\e[37;44;1m==========================INSTALAR PULSEAUDIO======================================= \e[m\n"
+
+			 pulseaudio;
+					
+echo -e "\e[37;44;1m==========================FIM INSTALAR PULSEAUDIO================================== \e[m\n"
+	
+ 	elif [ "$SELECIONADOS" -eq 26 ];then
 
 echo -e "\e[37;44;1m==========================ATIVAR REDE ESCOLA======================================= \e[m\n"
 
 			rede_escola;
 					
 echo -e "\e[37;44;1m==========================FIM ATIVAR REDE ESCOLA================================== \e[m\n"
-			
-		fi
+
+	fi
 	
 	done
 
