@@ -1762,7 +1762,7 @@ function modokiosk (){
 
 function rede_escola (){
 
-wget https://raw.githubusercontent.com/crtepitanga/scripts/main/re.sh && bash re.sh
+	wget https://raw.githubusercontent.com/crtepitanga/scripts/main/re.sh && bash re.sh
 
 }
 function arduino(){
@@ -1783,7 +1783,7 @@ function pulseaudio(){
 		if [ -e "pulseaudio.sh" ]; then
 	 		bash pulseaudio.sh
 		else  	
-  			https://raw.githubusercontent.com/crtepitanga/scripts/refs/heads/main/pulseaudio.sh -O pulseaudio.sh
+  			wget https://raw.githubusercontent.com/crtepitanga/scripts/refs/heads/main/pulseaudio.sh -O pulseaudio.sh
 			bash pulseaudio.sh
 		
 		fi
@@ -1795,7 +1795,7 @@ function cancelapulseaudio(){
 		if [ -e "cancelapulseaudio.sh" ]; then
 	 		bash cancelapulseaudio.sh
 		else  	
-  			https://raw.githubusercontent.com/crtepitanga/scripts/refs/heads/main/cancelapulseaudio.sh -O cancelapulseaudio.sh
+  			wget https://raw.githubusercontent.com/crtepitanga/scripts/refs/heads/main/cancelapulseaudio.sh -O cancelapulseaudio.sh
 			bash cancelapulseaudio.sh
 		
 		fi
