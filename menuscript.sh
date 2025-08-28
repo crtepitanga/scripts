@@ -1720,7 +1720,7 @@ echo -e "Vnc parece tudo ok.\e[1;92m Por favor testar!\e[0m"
 function limpar_update(){
 	cd /tmp
 	
-		if [ -e "j.sh" ];then
+		if [ -e "j.sh" ]; then
 	 		bash j.sh
 		else  	
 			wget https://raw.githubusercontent.com/crtepitanga/scripts/main/j.sh -O j.sh
@@ -1734,7 +1734,7 @@ function limpar_update(){
 function pagina_inicial_navegadores(){
 	cd /tmp
 	
-		if [ -e "pi1.sh" ];then
+		if [ -e "pi1.sh" ]; then
 	 		bash pi1.sh
 		else  	
 			wget https://raw.githubusercontent.com/crtepitanga/scripts/main/pi1.sh -O pi1.sh
@@ -1748,7 +1748,7 @@ function pagina_inicial_navegadores(){
 function modokiosk (){
 	cd /tmp
 	
-		if [ -e "k.sh" ];then
+		if [ -e "k.sh" ]; then
 	 		bash k.sh
 		else  	
 			wget https://raw.githubusercontent.com/crtepitanga/scripts/main/k.sh -O k.sh
@@ -1768,7 +1768,7 @@ wget https://raw.githubusercontent.com/crtepitanga/scripts/main/re.sh && bash re
 function arduino(){
 	cd /tmp
 	
-		if [ -e "arduino232.sh" ];then
+		if [ -e "arduino232.sh" ]; then
 	 		bash arduino232.sh
 		else  
   			wget https://raw.githubusercontent.com/crtepitanga/scripts/refs/heads/main/arduino232.sh -O arduino232.sh
@@ -1780,7 +1780,7 @@ function arduino(){
 function pulseaudio(){
 	cd /tmp
 	
-		if [ -e "pulseaudio.sh" ];then
+		if [ -e "pulseaudio.sh" ]; then
 	 		bash pulseaudio.sh
 		else  	
   			https://raw.githubusercontent.com/crtepitanga/scripts/refs/heads/main/pulseaudio.sh -O pulseaudio.sh
@@ -1792,7 +1792,7 @@ function pulseaudio(){
 function cancelapulseaudio(){
 	cd /tmp
 	
-		if [ -e "cancelapulseaudio.sh" ];then
+		if [ -e "cancelapulseaudio.sh" ]; then
 	 		bash cancelapulseaudio.sh
 		else  	
   			https://raw.githubusercontent.com/crtepitanga/scripts/refs/heads/main/cancelapulseaudio.sh -O cancelapulseaudio.sh
@@ -1829,7 +1829,7 @@ if [ "$OPCAO" -eq 1 ]; then
     
     maquina_atual
 #INICIO ATUALIZAÇÃO COMPLETA DA MÁQUINA DE ACORDO COM O MODELO
-if [ "$OPCAO_M_ATUAL" -eq 1 ];then
+if [ "$OPCAO_M_ATUAL" -eq 1 ]; then
 	
 	PREPARAR_MAQUINA
 	
@@ -1922,7 +1922,7 @@ if [ "$OPCAO_M_ATUAL" -eq 1 ];then
 
 fi
 
-if [ "$OPCAO_M_ATUAL" -eq 2 ];then	 	
+if [ "$OPCAO_M_ATUAL" -eq 2 ]; then	 	
 		
 	CHECKLIST=$(dialog --stdout \
 	--title "ATUALIZAÇÃO PARCIAL DA MÁQUINA" \
