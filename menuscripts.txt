@@ -143,6 +143,8 @@ case $MODELO in
 #MODELO EDUCATRON
                             *C1300*)
                          PREFIXO='t'
+
+                        cancelapulseaudio
                         ;;
 #MODELO NOTEBOOK EDUCAÇÃO INTEGRAL
                         N4340)
@@ -2519,4 +2521,5 @@ PREPARAR_MAQUINA
 
 
 fi
+
 #FIM ATUALIZAÇÃO COMPLETA DE TODAS AS MÁQUINAS DA ESCOLA
