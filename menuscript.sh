@@ -1788,6 +1788,18 @@ function pulseaudio(){
 		fi
 			
 }
+function cancelapulseaudio(){
+	cd /tmp
+	
+		if [ -e "cancelapulseaudio.sh" ];then
+	 		bash cancelapulseaudio.sh
+		else  	
+  			https://raw.githubusercontent.com/crtepitanga/scripts/refs/heads/main/cancelapulseaudio.sh -O cancelapulseaudio.sh
+			bash cancelapulseaudio.sh
+		
+		fi
+			
+}
 
 function MENU(){
 OPCAO=$( dialog --stdout \
@@ -1940,7 +1952,8 @@ if [ "$OPCAO_M_ATUAL" -eq 2 ];then
     "23" "-->> Instalar modo Kiosk para bloquear edição modo gráfico" off \
     "24" "-->> Instalar Arduino" off \
 	"25" "-->> Instalar Pulseaudio" off \
-	"26" "-->> Ativar rede_escola" off)
+ 	"26" "-->> Desinstalar Pulseaudio" off \ 
+	"27" "-->> Ativar rede_escola" off)
     
     #dialog --msgbox "Opções Selecionadas: $CHECKLIST" 10 45
     
@@ -2163,8 +2176,16 @@ echo -e "\e[37;44;1m==========================INSTALAR PULSEAUDIO===============
 			 pulseaudio;
 					
 echo -e "\e[37;44;1m==========================FIM INSTALAR PULSEAUDIO================================== \e[m\n"
+
+		elif [ "$SELECIONADOS" -eq 26 ];then
+
+echo -e "\e[37;44;1m==========================DESINSTALAR PULSEAUDIO======================================= \e[m\n"
+
+			 cancelapulseaudio;
+					
+echo -e "\e[37;44;1m==========================FIM DESINSTALAR PULSEAUDIO================================== \e[m\n"
 	
- 	elif [ "$SELECIONADOS" -eq 26 ];then
+ 	elif [ "$SELECIONADOS" -eq 27 ];then
 
 echo -e "\e[37;44;1m==========================ATIVAR REDE ESCOLA======================================= \e[m\n"
 
