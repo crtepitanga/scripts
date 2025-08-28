@@ -2198,6 +2198,8 @@ echo -e "\e[37;44;1m==========================FIM ATIVAR REDE ESCOLA============
 	
 	done
 
+ fi
+
  # ----REMOVER SCRIPT menuv01 FINALIZAR------------
 if [ -e /home/administrador ]; then
    cd /home/administrador && rm menuv01
