@@ -1975,7 +1975,7 @@ cat /tmp/itens1.txt | awk -F " " '{print "SELECIONADOS" $1 }' >/tmp/itens2.txt
 cat /tmp/itens2.txt | sed -r 's/(SELECIONADOS)//g'|
 while read  SELECIONADOS
 do
-    	   	if [ "$SELECIONADOS" -eq 1 ];then
+    	   	if [ "$SELECIONADOS" -eq 1 ]; then
 
 echo -e "\e[37;44;1m==============================AJUSTAR HORA E DATA=============================== \e[m\n"
 
@@ -1983,7 +1983,7 @@ echo -e "\e[37;44;1m==============================AJUSTAR HORA E DATA===========
 					
 echo -e "\e[37;44;1m============================FIM AJUSTAR HORA E DATA============================= \e[m\n"
 
-		elif [ "$SELECIONADOS" -eq 2 ];then
+		elif [ "$SELECIONADOS" -eq 2 ]; then
 
 echo -e "\e[37;44;1m====================ATIVAR PLANO DE FUNDO PADRÃO DO ESTADO===================== \e[m\n"
 		
@@ -1991,7 +1991,7 @@ echo -e "\e[37;44;1m====================ATIVAR PLANO DE FUNDO PADRÃO DO ESTADO=
 	
 echo -e "\e[37;44;1m==================FIM ATIVAR PLANO DE FUNDO PADRÃO DO ESTADO=================== \e[m\n"
 
-		elif [ "$SELECIONADOS" -eq 3 ];then
+		elif [ "$SELECIONADOS" -eq 3 ]; then
 
 echo -e "\e[37;44;1m====================ATIVAR TAP NOTEBOOKS ED. INTEGRAL===================== \e[m\n"
 		
@@ -1999,7 +1999,7 @@ echo -e "\e[37;44;1m====================ATIVAR TAP NOTEBOOKS ED. INTEGRAL=======
 	
 echo -e "\e[37;44;1m==================FIM ATIVAR TAP NOTEBOOKS ED. INTEGRAL=================== \e[m\n"
 
-		elif [ "$SELECIONADOS" -eq 4 ];then
+		elif [ "$SELECIONADOS" -eq 4 ]; then
 		
 echo -e "\e[37;44;1m===================ATUALIZAR NAVEGADORES CHROME E FIREFOX===================== \e[m\n"
 
@@ -2007,7 +2007,7 @@ echo -e "\e[37;44;1m===================ATUALIZAR NAVEGADORES CHROME E FIREFOX===
 
 echo -e "\e[37;44;1m=======================FIM ATUALIZAÇÃO DE NAVEGADORES========================== \e[m\n"
 
-		elif [ "$SELECIONADOS" -eq 5 ];then
+		elif [ "$SELECIONADOS" -eq 5 ]; then
 
 echo -e "\e[37;44;1m======================BLOQUEAR APLICATIVOS E ÁREA DE TRABALHO====================== \e[m\n"
 			
@@ -2015,7 +2015,7 @@ echo -e "\e[37;44;1m======================BLOQUEAR APLICATIVOS E ÁREA DE TRABAL
 
 echo -e "\e[37;44;1m====================FIM BLOQUEAR APLICATIVOS E ÁREA DE TRABALHO==================== \e[m\n"
 
-   		elif [ "$SELECIONADOS" -eq 6 ];then
+   		elif [ "$SELECIONADOS" -eq 6 ]; then
 
 echo -e "\e[37;44;1m======================DESBLOQUEAR APLICATIVOS E ÁREA DE TRABALHO====================== \e[m\n"
 			
@@ -2024,7 +2024,7 @@ echo -e "\e[37;44;1m======================DESBLOQUEAR APLICATIVOS E ÁREA DE TRA
 echo -e "\e[37;44;1m====================FIM DESBLOQUEAR APLICATIVOS E ÁREA DE TRABALHO==================== \e[m\n"	
 
 
-		elif [ "$SELECIONADOS" -eq 7 ];then
+		elif [ "$SELECIONADOS" -eq 7 ]; then
 		
 echo -e "\e[37;44;1m=================INSERIR ATALHO PLATAFORMAS NA AREA DE TRABALHO================= \e[m\n"
 
@@ -2032,7 +2032,7 @@ echo -e "\e[37;44;1m=================INSERIR ATALHO PLATAFORMAS NA AREA DE TRABA
 		
 echo -e "\e[37;44;1m===============FIM INSERIR ATALHO PLATAFORMAS NA AREA DE TRABALHO=============== \e[m\n"
 
-		elif [ "$SELECIONADOS" -eq 8 ];then
+		elif [ "$SELECIONADOS" -eq 8 ]; then
 
 echo -e "\e[37;44;1m======================DESABILITANDO PROXY NAVEGADORES=========================== \e[m\n"
 
@@ -2040,7 +2040,7 @@ echo -e "\e[37;44;1m======================DESABILITANDO PROXY NAVEGADORES=======
 					
 echo -e "\e[37;44;1m====================FIM DESABILITANDO PROXY NAVEGADORES========================== \e[m\n"
 		
-		elif [ "$SELECIONADOS" -eq 9 ];then
+		elif [ "$SELECIONADOS" -eq 9 ]; then
 
 echo -e "\e[37;44;1m============================DESATIVAR BLOQUEIO DE TELA============================ \e[m\n"
 
@@ -2048,7 +2048,7 @@ echo -e "\e[37;44;1m============================DESATIVAR BLOQUEIO DE TELA======
 					
 echo -e "\e[37;44;1m==========================FIM DESATIVAR BLOQUEIO DE TELA========================== \e[m\n"
 					
-		elif [ "$SELECIONADOS" -eq 10 ];then    		
+		elif [ "$SELECIONADOS" -eq 10 ]; then    		
 
 echo -e "\e[37;44;1m==================DESATIVAR TOUCHSCREEN NETBOOKS VERDINHOS====================== \e[m\n"
 		 	
@@ -2056,7 +2056,7 @@ echo -e "\e[37;44;1m==================DESATIVAR TOUCHSCREEN NETBOOKS VERDINHOS==
 		 	
 echo -e "\e[37;44;1m===============FIM DESATIVAR TOUCHSCREEN NETBOOKS VERDINHOS==================== \e[m\n"
 
-		elif [ "$SELECIONADOS" -eq 11 ];then    		
+		elif [ "$SELECIONADOS" -eq 11 ]; then    		
 
 echo -e "\e[37;44;1m==========================DESATIVAR USUÁRIO CONVIDADO========================== \e[m\n"
 		 	
@@ -2064,7 +2064,7 @@ echo -e "\e[37;44;1m==========================DESATIVAR USUÁRIO CONVIDADO======
 		 	
 echo -e "\e[37;44;1m=======================FIM DESATIVAR USUÁRIO CONVIDADO========================= \e[m\n"
 	
-		elif [ "$SELECIONADOS" -eq 12 ];then
+		elif [ "$SELECIONADOS" -eq 12 ]; then
 
 echo -e "\e[37;44;1m============================INSTALAR ATOM E VSCODE================================ \e[m\n"
 
@@ -2072,7 +2072,7 @@ echo -e "\e[37;44;1m============================INSTALAR ATOM E VSCODE==========
 
 echo -e "\e[37;44;1m==========================FIM INSTALAR ATOM E VSCODE============================== \e[m\n"
 
-		elif [ "$SELECIONADOS" -eq 13 ];then
+		elif [ "$SELECIONADOS" -eq 13 ]; then
 
 echo -e "\e[37;44;1m============================INSTALAR CERTIFICADO================================ \e[m\n"
 
@@ -2080,7 +2080,7 @@ echo -e "\e[37;44;1m============================INSTALAR CERTIFICADO============
 
 echo -e "\e[37;44;1m==========================FIM INSTALAR CERTIFICADO============================== \e[m\n"
 
-		elif [ "$SELECIONADOS" -eq 14 ];then
+		elif [ "$SELECIONADOS" -eq 14 ]; then
 
 echo -e "\e[37;44;1m============================INSTALAR DRIVER MBLOCK================================ \e[m\n"
 
@@ -2088,7 +2088,7 @@ echo -e "\e[37;44;1m============================INSTALAR DRIVER MBLOCK==========
 
 echo -e "\e[37;44;1m==========================FIM INSTALAR DRIVER MBLOCK============================== \e[m\n"
 
-		elif [ "$SELECIONADOS" -eq 15 ];then
+		elif [ "$SELECIONADOS" -eq 15 ]; then
 
 echo -e "\e[37;44;1m============================INSTALANDO MEDIDOR MEC================================ \e[m\n"
 
@@ -2097,7 +2097,7 @@ echo -e "\e[37;44;1m============================INSTALANDO MEDIDOR MEC==========
 echo -e "\e[37;44;1m==========================FIM INSTALANDO MEDIDOR MEC============================== \e[m\n"
 
 
-    		elif [ "$SELECIONADOS" -eq 16 ];then
+    		elif [ "$SELECIONADOS" -eq 16 ]; then
 
 echo -e "\e[37;44;1m==============================INSTALAR SCRATCH================================== \e[m\n"
 
@@ -2106,7 +2106,7 @@ echo -e "\e[37;44;1m==============================INSTALAR SCRATCH==============
 echo -e "\e[37;44;1m============================FIM INSTALAR SCRATCH================================ \e[m\n"
 
 
-		elif [ "$SELECIONADOS" -eq 17 ];then
+		elif [ "$SELECIONADOS" -eq 17 ]; then
 
 echo -e "\e[37;44;1m================================INSTALANDO VNC==================================== \e[m\n"
 
@@ -2114,7 +2114,7 @@ echo -e "\e[37;44;1m================================INSTALANDO VNC==============
 
 echo -e "\e[37;44;1m==============================FIM INSTALANDO VNC================================== \e[m\n"
     	
-    		elif [ "$SELECIONADOS" -eq 18 ];then
+    		elif [ "$SELECIONADOS" -eq 18 ]; then
 
 echo -e "\e[37;44;1m===========================LIMPANDO O APT-GET UPDATE============================== \e[m\n"
 
@@ -2122,7 +2122,7 @@ echo -e "\e[37;44;1m===========================LIMPANDO O APT-GET UPDATE========
 
 echo -e "\e[37;44;1m=========================FIM LIMPANDO O APT-GET UPDATE============================ \e[m\n"
 
-			elif [ "$SELECIONADOS" -eq 19 ];then
+			elif [ "$SELECIONADOS" -eq 19 ]; then
 
 echo -e "\e[37;44;1m==============ADICIONAR PAGINA INICIAL PLATAFORMAS NOS NAVEGADORES================ \e[m\n"
 
@@ -2130,7 +2130,7 @@ echo -e "\e[37;44;1m==============ADICIONAR PAGINA INICIAL PLATAFORMAS NOS NAVEG
 
 echo -e "\e[37;44;1m=============FIM ADICIONAR PAGINA INICIAL PLATAFORMAS NOS NAVEGADORES============= \e[m\n"
 
-			elif [ "$SELECIONADOS" -eq 20 ];then    		
+			elif [ "$SELECIONADOS" -eq 20 ]; then    		
 
 echo -e "\e[37;44;1m==============INSTALAR REPOSITÓRIO DA CELAPAR E ATUALIZAR PACOTES============== \e[m\n"
 		 	
@@ -2138,7 +2138,7 @@ echo -e "\e[37;44;1m==============INSTALAR REPOSITÓRIO DA CELAPAR E ATUALIZAR P
 		 	
 echo -e "\e[37;44;1m==========================FIM DA PREPARAÇÃO MÁQUINA============================ \e[m\n"					
 	
-			elif [ "$SELECIONADOS" -eq 21 ];then
+			elif [ "$SELECIONADOS" -eq 21 ]; then
 
 echo -e "\e[37;44;1m=============================EXCLUIR USUARIOS GUEST============================= \e[m\n"
 
@@ -2146,7 +2146,7 @@ echo -e "\e[37;44;1m=============================EXCLUIR USUARIOS GUEST=========
 			
 echo -e "\e[37;44;1m===========================FIM EXCLUIR USUARIOS GUEST=========================== \e[m\n"
 				
-		elif [ "$SELECIONADOS" -eq 22 ];then
+		elif [ "$SELECIONADOS" -eq 22 ]; then
 
 echo -e "\e[37;44;1m===========================RESTAURAR O PLANO DE FUNDO=========================== \e[m\n"
 
@@ -2154,7 +2154,7 @@ echo -e "\e[37;44;1m===========================RESTAURAR O PLANO DE FUNDO=======
 					
 echo -e "\e[37;44;1m=========================FIM RESTAURAR O PLANO DE FUNDO========================= \e[m\n"
 
-		elif [ "$SELECIONADOS" -eq 23 ];then
+		elif [ "$SELECIONADOS" -eq 23 ]; then
 
 echo -e "\e[37;44;1m===========++=======MODO KIOSK BLOQUEAR EDIÇÃO GRÁFICA=========================== \e[m\n"
 
@@ -2162,7 +2162,7 @@ echo -e "\e[37;44;1m===========++=======MODO KIOSK BLOQUEAR EDIÇÃO GRÁFICA===
 					
 echo -e "\e[37;44;1m=====================FIM MODO KIOSK BLOQUEAR EDIÇÃO GRÁFICA======================== \e[m\n"
 
-	elif [ "$SELECIONADOS" -eq 24 ];then
+	elif [ "$SELECIONADOS" -eq 24 ]; then
 
 echo -e "\e[37;44;1m==========================INSTALAR ARDUINO======================================= \e[m\n"
 
@@ -2170,7 +2170,7 @@ echo -e "\e[37;44;1m==========================INSTALAR ARDUINO==================
 					
 echo -e "\e[37;44;1m==========================FIM INSTALAR ARDUINO================================== \e[m\n"
 
-	elif [ "$SELECIONADOS" -eq 25 ];then
+	elif [ "$SELECIONADOS" -eq 25 ]; then
 
 echo -e "\e[37;44;1m==========================INSTALAR PULSEAUDIO======================================= \e[m\n"
 
@@ -2178,7 +2178,7 @@ echo -e "\e[37;44;1m==========================INSTALAR PULSEAUDIO===============
 					
 echo -e "\e[37;44;1m==========================FIM INSTALAR PULSEAUDIO================================== \e[m\n"
 
-		elif [ "$SELECIONADOS" -eq 26 ];then
+		elif [ "$SELECIONADOS" -eq 26 ]; then
 
 echo -e "\e[37;44;1m==========================DESINSTALAR PULSEAUDIO======================================= \e[m\n"
 
@@ -2186,7 +2186,7 @@ echo -e "\e[37;44;1m==========================DESINSTALAR PULSEAUDIO============
 					
 echo -e "\e[37;44;1m==========================FIM DESINSTALAR PULSEAUDIO================================== \e[m\n"
 	
- 	elif [ "$SELECIONADOS" -eq 27 ];then
+ 	elif [ "$SELECIONADOS" -eq 27 ]; then
 
 echo -e "\e[37;44;1m==========================ATIVAR REDE ESCOLA======================================= \e[m\n"
 
