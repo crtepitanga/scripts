@@ -2194,11 +2194,9 @@ echo -e "\e[37;44;1m==========================ATIVAR REDE ESCOLA================
 					
 echo -e "\e[37;44;1m==========================FIM ATIVAR REDE ESCOLA================================== \e[m\n"
 
-	fi
+		fi
 	
-	done
-
- fi
+	done 
 
  # ----REMOVER SCRIPT menuv01 FINALIZAR------------
 if [ -e /home/administrador ]; then
