@@ -151,6 +151,7 @@ case $MODELO in
 #MODELO EDUCATRON
 		    	*C1300*)
          		PREFIXO='t'
+		     cancelapulseaudio
 			;;
 #MODELO NOTEBOOK EDUCAÇÃO INTEGRAL
 			N4340)
