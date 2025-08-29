@@ -151,6 +151,7 @@ case $MODELO in
 #MODELO EDUCATRON
 		    	*C1300*)
          		PREFIXO='t'
+         		cancelapulseaudio
 		     	;;
 #MODELO NOTEBOOK EDUCAÇÃO INTEGRAL
 			N4340)
@@ -1808,99 +1809,99 @@ OPCAO=$( dialog --stdout \
 	2 "-->> Atualizar todas as maquinas desse modelo" \
 	3 "-->> Atualizar todas as maquinas da escola" )
 
-clear
+	clear
 }
+	#EXIBIR MENU OPÇÕES DE ATUALIZAÇÃO 
+	  MENU
 
-MENU
+        	function maquina_atual(){
+		OPCAO_M_ATUAL=" "
+		OPCAO_M_ATUAL=$( dialog --stdout \
+		--menu "QUAL FORMA DE ATUALIZAÇÃO?" 0 0 0 \
+		1 "-->> Atualização completa da máquina" \
+		2 "-->> Atualização/instalação de alguns programas" )
 
-function maquina_atual(){
-OPCAO_M_ATUAL=" "
-OPCAO_M_ATUAL=$( dialog --stdout \
-	--menu "QUAL FORMA DE ATUALIZAÇÃO?" 0 0 0 \
-	1 "-->> Atualização completa da máquina" \
-	2 "-->> Atualização/instalação de alguns programas" )
+		clear
+		} 
 
-clear
-} 
-
-if [ "$OPCAO" -eq 1 ]; then
-#CHAMA MENU DE OPÇÕES MAQUINA ATUAL 	
+	if [ "$OPCAO" -eq 1 ]; then
+	#CHAMA MENU DE OPÇÕES MAQUINA ATUAL 	
     
-    maquina_atual
-#INICIO ATUALIZAÇÃO COMPLETA DA MÁQUINA DE ACORDO COM O MODELO
-if [ "$OPCAO_M_ATUAL" -eq 1 ]; then
+    		maquina_atual
+		#INICIO ATUALIZAÇÃO COMPLETA DA MÁQUINA DE ACORDO COM O MODELO
+		if [ "$OPCAO_M_ATUAL" -eq 1 ]; then
 	
-	PREPARAR_MAQUINA
+		PREPARAR_MAQUINA
 	
-	case $MODELO in
+		case $MODELO in
 
-#MODELO NETBOOKS VERDINHOS			
-        Positivo_Duo_ZE3630)
-	cd /tmp
+		#MODELO NETBOOKS VERDINHOS			
+       		 Positivo_Duo_ZE3630)
+			cd /tmp
 		wget https://raw.githubusercontent.com/crtepitanga/scripts/main/p2-verdinhos.sh -O p2-verdinhos.sh && bash p2-verdinhos.sh $meuip_local/32 "$INEP_ESCOLA"                         
 	     	
-	;;
+		;;
 
-#MODELO DESKTOP POSITIVO D610
+		#MODELO DESKTOP POSITIVO D610
 			D610) 
-               cd /tmp
-		            wget https://raw.githubusercontent.com/crtepitanga/scripts/main/p2-d610.sh -O p2-d610.sh && bash p2-d610.sh $meuip_local/32 "$INEP_ESCOLA"
+              		 cd /tmp
+		 wget https://raw.githubusercontent.com/crtepitanga/scripts/main/p2-d610.sh -O p2-d610.sh && bash p2-d610.sh $meuip_local/32 "$INEP_ESCOLA"
 			    
-			         ativartrocafundodetela
+			ativartrocafundodetela
 			;;
-#MODELO DESKTOP POSITIVO D480
+		#MODELO DESKTOP POSITIVO D480
 			POS-EIB85CZ) 
             		cd /tmp
 		       	wget https://raw.githubusercontent.com/crtepitanga/scripts/main/p2-d480.sh -O p2-d480.sh && bash p2-d480.sh $meuip_local/32 "$INEP_ESCOLA"
-		;;
-#MODELO DESKTOP POSITIVO D3400
+			;;
+		#MODELO DESKTOP POSITIVO D3400
 			D3400) 
           		  cd /tmp
 
 			    wget https://raw.githubusercontent.com/crtepitanga/scripts/main/p2-d3400.sh -O p2-d3400.sh && bash p2-d3400.sh $meuip_local/32 "$INEP_ESCOLA"
 			;;
 			
-#MODELO DESKTOP POSITIVO D3400 (EXCESSÃO COM PLACA DIREFENTE)
+		#MODELO DESKTOP POSITIVO D3400 (EXCESSÃO COM PLACA DIREFENTE)
 			
 			POSITIVO_MASTER) 
           		  cd /tmp
 			    wget https://raw.githubusercontent.com/crtepitanga/scripts/main/p2-d3400.sh -O p2-d3400.sh && bash p2-d3400.sh $meuip_local/32 "$INEP_ESCOLA"
 			;;
-#MODELO DESKTOP ITAUTEC Infoway ST-4266
+		#MODELO DESKTOP ITAUTEC Infoway ST-4266
 			   Infoway_ST-4266) 
           		  cd /tmp
 
 			    wget https://raw.githubusercontent.com/crtepitanga/scripts/main/p2-ST4266.sh -O p2-ST4266.sh && bash p2-ST4266.sh $meuip_local/32 "$INEP_ESCOLA"
 			;;
-#MODELO DESKTOP CCE PREGÃO 71/2010 CU-7592
+		#MODELO DESKTOP CCE PREGÃO 71/2010 CU-7592
 			   CU-7592) 
           		  cd /tmp
 
 			    wget https://raw.githubusercontent.com/crtepitanga/scripts/main/p2-cce2010.sh -O p2-cce2010.sh && bash p2-cce2010.sh $meuip_local/32 "$INEP_ESCOLA"
 			;; 
- #MODELO DESKTOP DELL
+		 #MODELO DESKTOP DELL
 			OptiPlex*) 
            		 cd /tmp
 			    wget https://raw.githubusercontent.com/crtepitanga/scripts/main/p2-dell.sh -O p2-dell.sh && bash p2-dell.sh $meuip_local/32 "$INEP_ESCOLA"
 			;;
             
-#MODELO EDUCATRON
+		#MODELO EDUCATRON
 		    *C1300*)
          	cd /tmp
 		       	wget https://raw.githubusercontent.com/crtepitanga/scripts/main/p2-educatron.sh -O p2-educatron.sh && bash p2-educatron.sh $meuip_local/32 "$INEP_ESCOLA"
 			;;
-#MODELO NOTEBOOK EDUCAÇÃO INTEGRAL
+		#MODELO NOTEBOOK EDUCAÇÃO INTEGRAL
 			N4340)
 			cd /tmp
 			   	wget https://raw.githubusercontent.com/crtepitanga/scripts/main/p2-integral.sh -O p2-integral.sh && bash p2-integral.sh $meuip_local/32 "$INEP_ESCOLA"
 			;;
-#MODELO DESKTOP POSITIVO MASTER C4400 
+		#MODELO DESKTOP POSITIVO MASTER C4400 
    
 			C4400)
 			cd /tmp
 			   	wget https://raw.githubusercontent.com/crtepitanga/scripts/refs/heads/main/p2-c4400.sh -O p2-c4400.sh && bash p2-c4400.sh $meuip_local/32 "$INEP_ESCOLA"
 			;;   
-#MODELO DESKTOP LENOVO
+		#MODELO DESKTOP LENOVO
    
 			13DXS00000)
 			cd /tmp
@@ -1913,8 +1914,8 @@ if [ "$OPCAO_M_ATUAL" -eq 1 ]; then
 
   			;;	 		 	
 		
-        esac
-	fi		
+      		esac
+		fi		
 		
 #FIM ATUALIZAÇÃO COMPLETA DA MÁQUINA DE ACORDO COM O MODELO	
 	
@@ -1951,12 +1952,10 @@ if [ "$OPCAO_M_ATUAL" -eq 2 ]; then
     "22" "-->> Remover/Resetar plano de fundo" off \
     "23" "-->> Instalar modo Kiosk para bloquear edição modo gráfico" off \
     "24" "-->> Instalar Arduino" off \
-	"25" "-->> Instalar Pulseaudio" off \
- 	"26" "-->> Desinstalar Pulseaudio" off \ 
-	"27" "-->> Ativar rede_escola" off)
-    
-    #dialog --msgbox "Opções Selecionadas: $CHECKLIST" 10 45
-    
+    "25" "-->> Instalar Pulseaudio" off \
+    "26" "-->> Desinstalar Pulseaudio" off \
+    "27" "-->> Ativar rede_escola" off )    
+    #dialog --msgbox "Opções Selecionadas: $CHECKLIST" 10 45    
 clear
 
 echo -n >/tmp/itens.txt
@@ -2202,10 +2201,10 @@ if [ -e /home/administrador ]; then
    cd /home/administrador && rm menuv01
    echo -e "\e[46m============ Script menuv01 excluido, favor digitar o comando wget seulink.net/menuv01 caso precise baixar novamente ================= \e[0m "
 elif [ -e /home/admin ]; then
-cd /home/administrador && rm menuv01
+cd /home/admin && rm menuv01
 echo -e "\e[46m============ Script menuv01 excluido, favor digitar o comando wget seulink.net/menuv01 caso precise baixar novamente ================= \e[0m "
 elif [ -e /home/pedagogico ]; then
-cd /home/administrador && rm menuv01
+cd /home/pedagogico && rm menuv01
 echo -e "\e[46m============ Script menuv01 excluido, favor digitar o comando wget seulink.net/menuv01 caso precise baixar novamente ================= \e[0m "
 
 fi
@@ -2317,12 +2316,4 @@ PREPARAR_MAQUINA
 
 
 fi
-#FIM ATUALIZAÇÃO COMPLETA DE TODAS AS MÁQUINAS DA ESCOLA 
-
-
-
-
-
-
-
-
+#FIM ATUALIZAÇÃO COMPLETA DE TODAS AS MÁQUINAS DA ESCOLA
