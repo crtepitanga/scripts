@@ -9,6 +9,7 @@ if [ ! $(/usr/bin/whoami) = 'root' ]; then
    exit 1
 fi
 if [ -e "/etc/xdg/autostart/mblock-mlink.desktop" ]; then
+
    echo -e "\033[0;42m Jah tem Mblok Mlink instalado! \e[0m"
 else
    echo "Ainda sem Mblok Mlink Offline"
@@ -95,8 +96,18 @@ for user_home in /home/*; do
     if [ -d "$user_home/Área de trabalho" ]; then
         sudo cp "$DESKTOP_FILE" "$user_home/Área de trabalho/"
         sudo chown $(basename "$user_home"):$(basename "$user_home") "$user_home/Área de trabalho/mblock.desktop"
+        
     fi
 done
+
+for usuarios in "${USUARIOS[@]}" ; do
+      if id "$usuarios" >/dev/null 2>&1; then
+         usermod -aG plugdev,dialout,tty "$usuarios"
+         echo "Top ok ao user: $usuarios"
+      #else
+      #   echo "Nao existe usuario $usuario"
+      fi
+   done
 
 # Garantir que novos usuários também recebam o atalho
 echo "[+] Adicionando atalho ao /etc/skel/Área de trabalho..."
@@ -109,4 +120,3 @@ echo " - Atalho na Área de trabalho de todos os usuários"
 
 
  echo "Por favor reiniciar e tentar acessar site https://ide.mblock.cc/"
-
