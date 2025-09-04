@@ -43,11 +43,12 @@ if [ -x '/usr/bin/mokutil' ]; then
 fi
 
 
-if [ -e "/opt/arduino-2.3.2/AppRun" ] && [ -e "/opt/arduino-ide_2.3.2_Linux_64bit.AppImage.sha256sum" ] && [ -e "/usr/share/applications/arduino232.desktop" ] && [ -e "/home/escola/.arduino15" ]; then
+if [ -e "/opt/arduino-2.3.2/AppRun" ] && [ -e "/opt/arduino-ide_2.3.2_Linux_64bit.AppImage.sha256sum" ] && [ -e "/usr/share/applications/arduino232.desktop" ] && [ -e "/home/escola/.arduino15" ]; then	
    logMsg "Jah consta que tem o Arduino 2.3.3. saindo. Fim"
-   if [ -e "$LOCK" ]; then rm -f "$LOCK"; fi
-   echo "fim"
-   exit 0
+  if [ -e "$LOCK" ]; then rm -f "$LOCK"; 
+  fi
+  echo "fim"
+  exit 0
 fi
 
 
@@ -122,8 +123,8 @@ checarHash() {
 removerAtalhos() {
    # remover 221 atalho
    nomeAtalho="$1"
-   if [ -e "/etc/skel/Área de Trabalho/$nomeAtalho" ]; then
-       rm "/etc/skel/Área de Trabalho/$nomeAtalho"
+   if [ -e "/etc/skel/Área de trabalho/$nomeAtalho" ]; then
+       rm "/etc/skel/Área de trabalho/$nomeAtalho"
    fi
    cd /home
    for usuario in *; do
@@ -136,12 +137,12 @@ removerAtalhos() {
        else
            continue
        fi
-       if [[ ! -e 'Área de Trabalho' ]]; then
+       if [[ ! -e 'Área de trabalho' ]]; then
            continue
        fi
 
-       if [ -e "/home/${usuario}/Área de Trabalho/$nomeAtalho" ]; then
-           rm "/home/${usuario}/Área de Trabalho/$nomeAtalho" 
+       if [ -e "/home/${usuario}/Área de trabalho/$nomeAtalho" ]; then
+           rm "/home/${usuario}/Área de trabalho/$nomeAtalho" 
        fi
    done
 }
@@ -154,7 +155,7 @@ copiarAtalhos() {
    else
       enderecoAtalho="$2"
    fi
-   pastaT='Área de Trabalho'
+   pastaT='Área de trabalho'
    pastat='Área de trabalho'
    echo "Copiando atalhos do $nomeAtalho"
 
@@ -169,10 +170,10 @@ copiarAtalhos() {
        else
            continue
        fi
-       if [[ ! -e 'Área de Trabalho' ]]; then
+       if [[ ! -e 'Área de trabalho' ]]; then
            if [[ ! -e "$pastat" ]]; then
-              mkdir 'Área de Trabalho'
-              chown "${usuario}:${usuario}" 'Área de Trabalho'
+              mkdir 'Área de trabalho'
+              chown "${usuario}:${usuario}" 'Área de trabalho'
            fi
        fi
 
@@ -215,8 +216,8 @@ copiarAtalhos() {
       guest=$(echo "$x" | cut -d':' -f1)
       if [ -e "/tmp/$guest" ]; then
          #echo "Copiando para convidado $guest"
-         cp "$enderecoAtalho" "/tmp/${guest}/Área de Trabalho/" 1>/dev/null 2>/dev/null
-         chown "${guest}:${guest}" "/tmp/${guest}/Área de Trabalho/$nomeAtalho" 1>/dev/null 2>/dev/null
+         cp "$enderecoAtalho" "/tmp/${guest}/Área de trabalho/" 1>/dev/null 2>/dev/null
+         chown "${guest}:${guest}" "/tmp/${guest}/Área de trabalho/$nomeAtalho" 1>/dev/null 2>/dev/null
          chmod +x "/tmp/${guest}/Área de Trabalho/$nomeAtalho" 1>/dev/null 2>/dev/null
 
          cp "$enderecoAtalho" "/tmp/${guest}/Área de trabalho/" 1>/dev/null 2>/dev/null
@@ -625,23 +626,30 @@ else
    echo "falhou em $(date +%d/%m/%Y_%H:%M:%S_%N)" >> "$arqLogDisto"
 fi
 
-if id "escola" >/dev/null 2>&1; then
-   cd /home/escola
-   tar -xzf /opt/config-arduino221.tar.gz
-   chown -R escola:escola /home/escola
-   usermod -a -G plugdev,dialout,tty escola
-else
-   logMsg "Nao existe usuario escola "
-fi
-if id "administrador" >/dev/null 2>&1; then
-   cd /home/administrador
-   tar -xzf /opt/config-arduino221.tar.gz
-   chown -R administrador:administrador /home/administrador
-   usermod -a -G plugdev,dialout,tty sudo administrador
-else
-   logMsg "Nao existe usuario administrador "
-fi
+USUARIOS=( "pedagogico" "administrador" "professor" "escola" "Aluno" "aluno" "alunos" )
 
+
+ for usuarios in "${USUARIOS[@]}" ; do
+      if id "$usuarios" >/dev/null 2>&1; then
+      	 cd /home/"$usuarios"
+         tar -xzf /opt/config-arduino221.tar.gz
+         chown -R "$usuarios":"$usuarios" /home/"$usuarios"     
+         usermod -aG plugdev,dialout,tty "$usuarios"
+         
+         echo "Permissões atualizadas ao usuário: $usuarios"
+      else
+         echo "Nao existe usuario $usuario"
+      fi
+   done
+   
+#if id "escola" >/dev/null 2>&1; then
+ #  cd /home/escola
+  # tar -xzf /opt/config-arduino221.tar.gz
+   #chown -R escola:escola /home/escola
+   #usermod -a -G plugdev,dialout,tty escola
+#else
+ #  logMsg "Nao existe usuario escola "
+#fi
 
 
 echo "Fim em $(date +%d/%m/%Y_%H:%M:%S_%N)" >> "$arqLogDisto"
