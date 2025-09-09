@@ -279,7 +279,7 @@ bloquearaplicativos(){
 		if [ -e desativa_lens.sh ];then
 	 		bash desativa_lens.sh
 		else  	
-			wget https://raw.githubusercontent.com/crtepitanga/scripts/main/desativa_lens.sh -O desativa_lens.sh
+			wget https://raw.githubusercontent.com/crtepitanga/scripts/refs/heads/main/desativa_lens.sh -O desativa_lens.sh
 			bash desativa_lens.sh
 		
 		fi
