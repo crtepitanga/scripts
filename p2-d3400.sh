@@ -273,6 +273,20 @@ bloquearaplicativos(){
 		fi
 }
 
+ desativa_lens(){
+	cd /tmp
+	
+		if [ -e desativa_lens.sh ];then
+	 		bash desativa_lens.sh
+		else  	
+			wget https://raw.githubusercontent.com/crtepitanga/scripts/main/desativa_lens.sh -O desativa_lens.sh
+			bash desativa_lens.sh
+		
+		fi
+}
+
+
+
 PREFIXO='e'
 TIPO=\$( dmidecode -t system | grep 'Product Name: ' | cut -d':' -f2 | sed -e s/'^ '// -e s/' '/'_'/g )
 case "\$TIPO" in
@@ -306,6 +320,12 @@ case "\$TIPO" in
     PREFIXO='e'
     echo -e "\e[46m Positivo D3400 \e[0m "
     echo "encontrado Positivo D3400 aqui"
+
+	echo -e "\e[46m ***************************************************************************** \e[0m "
+    		echo -e "\e[46m DESATIVAR PESQUISA PELO GOOGLE LEANS  \e[0m "
+   		desativa_lens
+    echo -e "\e[46m ***************************************************************************** \e[0m "
+		 
     	echo -e "\e[46m ***************************************************************************** \e[0m "
     		echo -e "\e[46m INSTALAR MODO KIOSK \e[0m "
     modokiosk
