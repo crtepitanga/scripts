@@ -27,10 +27,10 @@ if [ -e "/opt/google/chrome/google-chrome" ]; then
       sed -i 's# https://www.educacao.*$# --password-store=basic https://www.educacao.pr.gov.br/iniciar#' /opt/google/chrome/google-chrome
    fi
 
-   sed -i 's# --password-store=basic# --disable-features=LensOverlay --password-store=basic#' /opt/google/chrome/google-chrome
+   sed -i 's# --password-store=basic# --disable-features=Lens --password-store=basic#' /opt/google/chrome/google-chrome
 
    if [ $(grep 'LensOverlay' /opt/google/chrome/google-chrome | wc -l) -ne 0 ]; then
-      echo "Desativado o LensOverlay do Google Chrome"
+      echo "Desativado o Lens do Google Chrome"
    else
       echo "Eita, sem desativar o Google Lens afff"
    fi
