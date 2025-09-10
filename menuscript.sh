@@ -261,6 +261,9 @@ function atualizaNavegadores() {
       rm pi1.sh 2>> /dev/null
       wget  jonilso.com/pi1.sh
       bash pi1.sh
+	  wget https://raw.githubusercontent.com/crtepitanga/scripts/refs/heads/main/desativa_lens.sh -O desativa_lens.sh
+	  rm esativa_lens.sh 2>> /dev/null  
+      bash desativa_lens.sh   
       rm confmozilla.tar.gz 2>> /dev/null
       wget  jonilso.com/confmozilla.tar.gz
       cd /etc/skel
