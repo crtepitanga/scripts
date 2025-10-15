@@ -1653,15 +1653,13 @@ fi
 echo -e -n "\e[44mQual a senha para o VNC:\e[0m "
 read -s SENHAVNC
 SENHAVNC=$(echo "$SENHAVNC" | sed 's/ //g')
-echo "A senha é: "
-
-if [ "$SENHAVNC" = " " ]; then
+if [ "$SENHAVNC" = "" ]; then
    echo -e "\e[1;31m Senha vazia detectada Saindo. Pfv tentar novamente! \e[0m "
    exit 1
 fi
 echo ""
 echo ""
-#echo -e -n "\e[44mPor favor digitar novamente a senha do VNC:\e[0m "
+echo -e -n "\e[44mPor favor digitar novamente a senha do VNC:\e[0m "
 read -s SENHAVNC1
 echo ""
 if [ "$SENHAVNC" = "$SENHAVNC1" ]; then
@@ -1675,6 +1673,7 @@ fi
 sudo x11vnc -storepasswd /root/.vncpasswd >> /dev/null 2>> /dev/null << ENDDOC
 $SENHAVNC
 $SENHAVNC
+y
 ENDDOC
 
 echo "..."
