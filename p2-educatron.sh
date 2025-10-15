@@ -40,7 +40,9 @@ echo -e "\e[44m Pra acessar máquinas da escola \e[0m "
 read -p " Qual senha do Administrador? " -s SENHA
 echo " "
 
-
+USUARIOS=( "administrador" "pedagogico" "admin" "admlocal" )
+# Listas das senhas para tentativas
+SENHAS=( "$SENHA0" )
 
 
 export GREP_COLOR='0;31;42'
