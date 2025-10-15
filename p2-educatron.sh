@@ -42,7 +42,7 @@ echo " "
 
 USUARIOS=( "administrador" "pedagogico" "admin" "admlocal" )
 # Listas das senhas para tentativas
-SENHAS=( "$SENHA0" )
+SENHAS=( "$SENHA" )
 
 
 export GREP_COLOR='0;31;42'
