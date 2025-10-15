@@ -34,16 +34,12 @@ if [ ! -x "/usr/bin/fping" ]; then
 fi
 
 SENHA=""
-SENHA1=""
-SENHA2=""
 
-echo -e "\e[44m Pra acessar máquinas lá dessa escola \e[0m "
-read -p " Qual senha do Administrador de lá? " -s SENHA
+
+echo -e "\e[44m Pra acessar máquinas da escola \e[0m "
+read -p " Qual senha do Administrador? " -s SENHA
 echo " "
-read -p " Qual senha do VNC dessa escola? " -s SENHA1
-echo " "
-read -p " Qual senha do Pedagogico? " -s SENHA2
-echo ""
+
 
 
 
