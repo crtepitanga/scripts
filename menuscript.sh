@@ -1653,9 +1653,9 @@ fi
 echo -e -n "\e[44mQual a senha para o VNC:\e[0m "
 read -s SENHAVNC
 SENHAVNC=$(echo "$SENHAVNC" | sed 's/ //g')
-echo "A senha é: Sc3l3p@r "
+echo "A senha é: "
 
-if [ "$SENHAVNC" = "Sc3l3p@r" ]; then
+if [ "$SENHAVNC" = " " ]; then
    echo -e "\e[1;31m Senha vazia detectada Saindo. Pfv tentar novamente! \e[0m "
    exit 1
 fi
