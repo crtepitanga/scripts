@@ -1619,10 +1619,7 @@ trocarRepositoriosSePrecisar() {
 	rm rs.sh 
 	wget https://raw.githubusercontent.com/crtepitanga/scripts/refs/heads/main/rs.sh -O rs.sh
 	if [ -e rs.sh ]; then
-		bash rs.sh
-		
-	fi
-		 
+		bash rs.sh		 
          sed -i -e 's/^deb/###deb/' /etc/apt/sources.list.d/official-package-repositories.list
          sed -i -e 's/^deb/###deb/' /etc/apt/sources.list
          apt-get  update
@@ -1637,6 +1634,7 @@ trocarRepositoriosSePrecisar() {
    else
       echo "Num tah na rede PRD"
    fi
+  
 }
 
 
