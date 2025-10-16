@@ -30,19 +30,19 @@ if [ ! -x "/usr/bin/fping" ]; then
     exit
 fi
 
-SENHA0="@dmin*c@o"
-SENHA1="Sc3l3p@r"
-SENHA2="p3d@gogic0"
+SENHA0=" "
+SENHA1=" " 
+SENHA2=" "
 
-#echo -e "\e[44m Pra acessar máquinas lá dessa escola \e[0m "
-#read -p " Qual senha do Administrador de lá? " -s SENHA
-#echo "e"
-#read -p " Qual senha do VNC dessa escola? " -s SENHA1
-#echo "e"
-#read -p " Qual senha do Pedagogico? " -s SENHA2
-#echo ""
+echo -e "\e[44m Pra acessar máquinas da escola \e[0m "
+read -p " Qual senha do Administrador? " -s SENHA
+echo "e"
+read -p " Qual senha do VNC? " -s SENHA1
+echo "e"
+read -p " Qual senha do Pedagogico? " -s SENHA2
+echo ""
 
-USUARIOS=( "admin" "pedagogico" "administrador" "admlocal" )
+USUARIOS=( "administrador" "pedagogico" "admin" "admlocal" )
 # Listas das senhas para tentativas
 SENHAS=( "$SENHA0" "$SENHA1" "$SENHA2" )
 
