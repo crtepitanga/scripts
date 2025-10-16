@@ -1615,9 +1615,10 @@ trocarRepositoriosSePrecisar() {
       #wget http://ubuntu.celepar.parana/repositorios.deb
       #if [ -e "repositorios.deb" ]; then
          #dpkg -i repositorios.deb
+		 #fi
 	rm rs.sh 
 	wget https://raw.githubusercontent.com/crtepitanga/scripts/refs/heads/main/rs.sh -O rs.sh
-	if [ -e rs.sh ];then
+	if [ -e rs.sh ]; then
 		bash rs.sh
 		
 	fi
