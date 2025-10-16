@@ -117,10 +117,17 @@ atualizaNavegadoresAtomVscodeEtc() {
       cd /tmp
       wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
       rm repositorios.deb 2>> /dev/null
-      wget http://ubuntu.celepar.parana/repositorios.deb
-      if [ -e repositorios.deb ]; then
-          dpkg -i repositorios.deb
-      fi
+	  
+      #wget http://ubuntu.celepar.parana/repositorios.deb
+      #if [ -e repositorios.deb ]; then
+          #dpkg -i repositorios.deb
+      #fi
+	rm rs.sh 
+	wget https://raw.githubusercontent.com/crtepitanga/scripts/refs/heads/main/rs.sh -O rs.sh
+	if [ -e rs.sh ];then
+		bash rs.sh
+		
+	fi
       apt-get  update
       apt-get -y install firefox firefox-locale-pt google-chrome-stable
       rm pi1.sh 2>> /dev/null
