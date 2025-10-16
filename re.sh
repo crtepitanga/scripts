@@ -37,6 +37,10 @@ cria_perfil_rede_escola_1() {
       echo -e "${VERMELHO} NENHUMA PLACA WIFI DETECTADA! saindo... ${NC} "
       exit 1
    fi
+   if [[ "$TIPO" = "Positivo_Duo_ZE3630" ]]; then
+      U1=$U2
+      S1=$S2
+   fi
 
    cat > "/etc/NetworkManager/system-connections/perfil.tmp" << EndOfThisFileIsExactHere
 [connection]
@@ -54,8 +58,8 @@ key-mgmt=wpa-eap
 
 [802-1x]
 eap=peap;
-identity=wifi_temp
-password=Aut3ntic@wifitemp
+identity=$U1
+password=$S1
 phase2-auth=mschapv2
 
 [ipv4]
@@ -110,8 +114,8 @@ key-mgmt=wpa-eap
 
 [802-1x]
 eap=peap;
-identity=netgreenseed
-password=Net_P0s_Du0ZE3630S33D_w1f1
+identity=$U2
+password=$S2
 phase2-auth=mschapv2
 
 [ipv4]
@@ -153,6 +157,7 @@ reiniciar_network_manager() {
 buscar_wifi() {
 
    echo "Procurando wifi [$(date +%d/%m/%Y_%H:%M:%S_%N)] ..." >> "$arqLogDisto" 2>&1
+   echo "Procurando rede rede_escola ..."
 
    if [ "$deviceWifi" = "" ]; then
       echo -e "${VERMELHO} NENHUMA PLACA WIFI DETECTADA! saindo... ${NC} "
@@ -213,11 +218,6 @@ troca_wifi() {
    if [ $? -eq 0 ]
    then
       echo "Conectou a rede_escola com SUCESSO!! $(date +%d/%m/%Y_%H:%M:%S_%N)" >> "$arqLogDisto"
-      nmcli connection delete escola_wifi
-      echo "removeu escola_wifi"
-      if [ -e /etc/NetworkManager/system-connections/escola_wifi.nmconnection ]; then
-         rm /etc/NetworkManager/system-connections/escola_wifi.nmconnection
-      fi
    else
       echo "Falhou a conexao da rede_escola ... $(date +%d/%m/%Y_%H:%M:%S_%N)" >> "$arqLogDisto"
       echo "Falhou! Por favor tente novamente!"
@@ -3201,6 +3201,41 @@ remover_script_do_home() {
 
 }
 
+ENCRYPTED_FILE="arquivo_conteudo_criptografado.gpg"
+DECRYPTED_FILE="decrypted_file.txt"
+
+SHA_GPG_undo="c3NoLXJzYSBBQUFBQjNOemFDMXljMkVBQUFBREFRQUJBQUFCZ1FDYmdaNmZGT0xXVTJCbFJQcDZT
+bjREM0h5ajhMNUpaVmhjdkJSSVZnUVpBbWxzeFFCRS8yY3Bka2djbHcyMW92bjhmd3Noam5lZnVr
+NmE3ZGV6eHp2d29kNmlhazdmZ3lpY3g3cnA3Ymt5aGN1d3k3ZS9NZ2RFaUhwZlJWaHZ2SG83RC96
+VHc5L1Vod2FaVHFxYTVGQWZRZTlFSURzUjZSOWVxNjhkZHV1REsvSEtKclN6cUVHUCtBYng1Vzh0
+eHo4NW1SSHAydFYwRGpDSzNiTERYRkVFQUNONkprTW1ZVENjN05sTFNUVE4="
+
+cat > "${ENCRYPTED_FILE}.b64" << EndOfThisFileIsHere
+jA0ECQMC/ivJ9vL32hPq0pkBBoUgT7J9M2vxQh3XPXNaPM2pJe+M9AYEIEFShHb624RQSBZZRdiZ
+Aw4ACaFF9NWej3k2fmitNgExlN3SxeLEbfhe5KpPr4biC34zz0FzQfnsUiKYWDStZh7ejozsOsKf
+XLR1ylCSbS265yFrf4WLLYk0xLzQKNpBN8r59Jk0zPVLxm9qp8ogFdlUQBOe0HEvs4EuW+79zx0=
+EndOfThisFileIsHere
+
+base64 -d "${ENCRYPTED_FILE}.b64" > "${ENCRYPTED_FILE}"
+
+if [ -e "$DECRYPTED_FILE" ]; then
+   rm "$DECRYPTED_FILE"
+fi
+
+gpg --batch --yes --passphrase-fd 0 --output "$DECRYPTED_FILE" "$ENCRYPTED_FILE" <<< $(echo "$SHA_GPG_undo" | base64 -d | cut -d'/' -f2) 2>> /dev/null
+
+chmod 600 "$DECRYPTED_FILE"
+
+export U1=$(head -n 1 $DECRYPTED_FILE | tail -1 )
+export S1=$(head -n 2 $DECRYPTED_FILE | tail -1 )
+export U2=$(head -n 3 $DECRYPTED_FILE | tail -1 )
+export S2=$(head -n 4 $DECRYPTED_FILE | tail -1 )
+
+shred -u "$DECRYPTED_FILE"
+shred -u "$ENCRYPTED_FILE"
+shred -u "${ENCRYPTED_FILE}.b64"
+
+
 ################################################################################
 # Principal
 ################################################################################
@@ -3219,14 +3254,18 @@ else
    echo "Iniciando em $(date +%d/%m/%Y_%H:%M:%S_%N)" >> "$arqLogDisto"
 fi
 
-if [ $(iwconfig | grep 'ESSID:"rede_escola"' | wc -l) -gt 0 ]; then
-    echo "Jah conectado na rede rede_escola"
-    nmcli connection delete escola_wifi
-    echo "removeu escola_wifi"
-    if [ -e /etc/NetworkManager/system-connections/escola_wifi.nmconnection ]; then
-       rm /etc/NetworkManager/system-connections/escola_wifi.nmconnection
-    fi
-    exit
+export TIPO=$( dmidecode -t system | grep 'Product Name: ' | cut -d':' -f2 | sed -e s/'^ '// -e s/' '/'_'/g )
+if [[ "$TIPO" = "Positivo_Master_D3400" ]]; then
+     export TIPO="D3400"
+fi
+if [[ "$TIPO" = "10A4S03D00" ]]; then
+     export TIPO="D3400"
+fi
+if [[ "$TIPO" = "10A4S03G00" ]]; then
+     export TIPO="D3400"
+fi
+if [[ "$TIPO" = "Smart_Client_4K" ]]; then
+     export TIPO="C1300"
 fi
 
 # Teste da versao do mint no educatron
@@ -3286,4 +3325,3 @@ else
 fi
 
 echo "fim"
-
