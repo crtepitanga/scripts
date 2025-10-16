@@ -29,11 +29,9 @@ if [ ! -x "/usr/bin/fping" ]; then
     echo "sudo apt-get  install -y fping"
     exit
 fi
-
 SENHA0=" "
 SENHA1=" " 
 SENHA2=" "
-
 echo -e "\e[44m Pra acessar máquinas da escola \e[0m "
 read -p " Qual senha do Administrador? " -s SENHA
 echo "e"
@@ -45,6 +43,7 @@ echo ""
 USUARIOS=( "administrador" "pedagogico" "admin" "admlocal" )
 # Listas das senhas para tentativas
 SENHAS=( "$SENHA0" "$SENHA1" "$SENHA2" )
+
 
 export GREP_COLOR='0;31;42'
 
