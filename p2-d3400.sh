@@ -29,7 +29,6 @@ if [ ! -x "/usr/bin/fping" ]; then
     echo "sudo apt-get  install -y fping"
     exit
 fi
-
 SENHA0=" "
 SENHA1=" " 
 SENHA2=" "
