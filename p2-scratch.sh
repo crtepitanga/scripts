@@ -7,7 +7,6 @@ if [ "$1" = "" ]; then
    echo -e "\e[33m bash $0  10.20.30.0/23  <inep>\e[0m "
    exit
 fi
-
 if [ "$2" = "" ]; then
    echo "sem inep informado, sem mudarmos hostname daeh"
    inep=''
@@ -15,6 +14,7 @@ if [ "$2" = "" ]; then
 else
    inep="$2"
 fi
+
 
 # Testar se tem sshpass
 if [ ! -x "/usr/bin/sshpass" ]; then
@@ -29,6 +29,7 @@ if [ ! -x "/usr/bin/fping" ]; then
     echo "sudo apt-get  install -y fping"
     exit
 fi
+
 
 SENHA0=" "
 SENHA1=" " 
@@ -45,7 +46,6 @@ echo ""
 USUARIOS=( "administrador" "pedagogico" "admin" "admlocal" )
 # Listas das senhas para tentativas
 SENHAS=( "$SENHA0" "$SENHA1" "$SENHA2" )
-
 
 export GREP_COLOR='0;31;42'
 
