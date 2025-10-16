@@ -65,10 +65,10 @@ function PREPARAR_MAQUINA(){
 	
 echo -e "\e[37;44;1m INSTALANDO REPOSITÓRIO DA CELEPAR \e[m\n"
 
-	rm repositorios.deb 
-	wget http://ubuntu.celepar.parana/repositorios.deb
-	if [ -e repositorios.deb ];then
-		dpkg -i repositorios.deb
+	rm rs.sh 
+	wget https://raw.githubusercontent.com/crtepitanga/scripts/refs/heads/main/rs.sh -O rs.sh
+	if [ -e rs.sh ];then
+		bash rs.sh
 		
 	fi
 
@@ -247,11 +247,16 @@ function atualizaNavegadores() {
       #!/bin/bash
       cd /tmp
       wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-      rm repositorios.deb 2>> /dev/null
-      wget http://ubuntu.celepar.parana/repositorios.deb
-      if [ -e repositorios.deb ]; then
-          dpkg -i repositorios.deb
-      fi
+     #wget http://ubuntu.celepar.parana/repositorios.deb
+      #if [ -e repositorios.deb ]; then
+         #dpkg -i repositorios.deb
+      #fi
+	  rm rs.sh 
+	wget https://raw.githubusercontent.com/crtepitanga/scripts/refs/heads/main/rs.sh -O rs.sh
+	if [ -e rs.sh ];then
+		bash rs.sh
+		
+	fi
    	rm -r /var/lib/apt/
  	
  	apt-get clean
@@ -1607,9 +1612,16 @@ trocarRepositoriosSePrecisar() {
       echo "Rede Estado, trocando repositorios daeh .."
       cd /tmp
       rm repositorios.deb 2>> /dev/null
-      wget http://ubuntu.celepar.parana/repositorios.deb
-      if [ -e "repositorios.deb" ]; then
-         dpkg -i repositorios.deb
+      #wget http://ubuntu.celepar.parana/repositorios.deb
+      #if [ -e "repositorios.deb" ]; then
+         #dpkg -i repositorios.deb
+	rm rs.sh 
+	wget https://raw.githubusercontent.com/crtepitanga/scripts/refs/heads/main/rs.sh -O rs.sh
+	if [ -e rs.sh ];then
+		bash rs.sh
+		
+	fi
+		 
          sed -i -e 's/^deb/###deb/' /etc/apt/sources.list.d/official-package-repositories.list
          sed -i -e 's/^deb/###deb/' /etc/apt/sources.list
          apt-get  update
