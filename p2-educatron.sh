@@ -1,14 +1,11 @@
 #!/bin/bash
 
+# Script com atualização dos navegadores, com instalação do av.sh e que funcione para PC com usuario
+
 if [ "$1" = "" ]; then
    echo "faltou informar ip do colegio, tipo"
    echo -e "\e[33m bash $0  10.20.30.0/23  <inep>\e[0m "
    exit
-fi
-rede=$(echo "$1" | sed 's#/2[012]#/23#'| sed 's#/1[0-9]#/23#' | sed 's#/[0-9]$#/23#' | sed 's#/$#/24#')
-tmpRede=$(echo "$rede" | sed 's#/##')
-if [[ "$rede" = "$tmpRede" ]]; then
-   rede="${rede}/32"
 fi
 
 if [ "$2" = "" ]; then
@@ -33,43 +30,24 @@ if [ ! -x "/usr/bin/fping" ]; then
     exit
 fi
 
-SENHA=""
-SENHA1=""
-SENHA2=""
+SENHA0=" "
+SENHA1=" " 
+SENHA2=" "
 
-echo -e "\e[44m Pra acessar máquinas lá dessa escola \e[0m "
-read -p " Qual senha do Administrador de lá? " -s SENHA
-echo " "
-read -p " Qual senha do VNC dessa escola? " -s SENHA1
-echo " "
+echo -e "\e[44m Pra acessar máquinas da escola \e[0m "
+read -p " Qual senha do Administrador? " -s SENHA
+echo "e"
+read -p " Qual senha do VNC? " -s SENHA1
+echo "e"
 read -p " Qual senha do Pedagogico? " -s SENHA2
 echo ""
 
+USUARIOS=( "administrador" "pedagogico" "admin" "admlocal" )
+# Listas das senhas para tentativas
+SENHAS=( "$SENHA0" "$SENHA1" "$SENHA2" )
 
 
 export GREP_COLOR='0;31;42'
-export NC="\033[0m"  # Nenhuma Cor
-export VERMELHO="\033[0;41m" # vermelho
-export VERDE="\033[0;42m" # Verde
-export AMARELO="\033[0;43m" # Amarelo
-export AZUL="\033[37;44m" # Azul
-export MAGENTA="\033[0;45m" # Qse Magenta
-export CYAN="\033[0;46m" # Qse Cyan
-export BRANCO="\033[34;47m" # Qde Branco, fonte azul
-export AZULCLARO="\033[106m" # Azul Claro
-export INVERSO="\033[7m" # Reverso
-
-export GREP_COLOR='0;31;42'
-export NC="\033[0m"  # Nenhuma Cor
-export VERMELHO="\033[0;41m" # vermelho
-export VERDE="\033[0;42m" # Verde
-export AMARELO="\033[0;43m" # Amarelo
-export AZUL="\033[37;44m" # Azul
-export MAGENTA="\033[0;45m" # Qse Magenta
-export CYAN="\033[0;46m" # Qse Cyan
-export BRANCO="\033[34;47m" # Qde Branco, fonte azul
-export AZULCLARO="\033[106m" # Azul Claro
-export INVERSO="\033[7m" # Reverso
 
 # Criando script.sh com outro nome no /tmp
 script="/tmp/.script-rodar-cada-maquina.sh$$"
