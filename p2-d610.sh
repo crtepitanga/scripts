@@ -46,7 +46,6 @@ USUARIOS=( "administrador" "pedagogico" "admin" "admlocal" )
 # Listas das senhas para tentativas
 SENHAS=( "$SENHA0" "$SENHA1" "$SENHA2" )
 
-
 export GREP_COLOR='0;31;42'
 
 # Criando script.sh com outro nome no /tmp
