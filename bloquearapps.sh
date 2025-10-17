@@ -212,6 +212,25 @@ if id "escola" >/dev/null 2>&1; then
    chfn -f "Escola" escola
 fi
 
+echo -e "\e[44m\nOcultar ícone de conexão de rede para usuário Convidado também\e[0m\n "
+
+if [ "$(whoami)" != "root" ] ; then
+   echo " !! Precisa executar como super-usuario !! Por favor executar como super-usuario."
+   exit
+fi
+
+if [[ $(sed -n '74p' /usr/sbin/guest-account | grep 'useradd --system' | wc -l ) -gt 0 ]]; then
+   if [[ $(grep 'setfacl' /usr/sbin/guest-account | grep 'nm-applet' | wc -l ) -eq 0 ]]; then
+      sed -i '78 i /bin/setfacl -m u:"${GUEST_USER}":--- "/usr/bin/nm-applet"' /usr/sbin/guest-account
+   else
+      echo "jah tinha bloqueio"
+   fi
+else
+   echo "fora do padrao"
+fi
+
+echo -e "\e[44m\nFim Ocultar ícone de conexão de rede para usuário Convidado também\e[0m\n "
+
 #-----------------------------------------Fim Desativar acesso aos usuarios aos aplicativos desejados-----------------------------------#
 
 
