@@ -183,5 +183,27 @@ for USUARIO in "${USUARIOS[@]}" ; do
 echo "Aplicativo Aparencia desbloqueado para $USUARIO"
 done
 
+echo -e "\e[44m\nMostrar ícone de conexão de rede para usuário Convidado também\e[0m\n "
+
+if [ "$(whoami)" != "root" ] ; then
+   echo " !! Precisa executar como super-usuario !! Por favor executar como super-usuario."
+   exit
+fi
+
+if [[ $(sed -n '74p' /usr/sbin/guest-account | grep 'useradd --system' | wc -l ) -gt 0 ]]; then
+   if [[ $(grep 'setfacl' /usr/sbin/guest-account | grep 'nm-applet' | wc -l ) -eq 0 ]]; then
+      sed -i '78 i /bin/setfacl -b u:"${GUEST_USER}":--- "/usr/bin/nm-applet"' /usr/sbin/guest-account
+   else
+      echo "jah tinha desbloqueio"
+   fi
+else
+   echo "fora do padrao"
+fi
+
+echo -e "\e[44m\nFim Mostrar ícone de conexão de rede para usuário Convidado também\e[0m\n "
+
+
+
+
 #-----------------------------------------Fim Ativar acesso aos usuarios aos aplicativos desejados-----------------------------------#
 
