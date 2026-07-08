@@ -1996,7 +1996,7 @@ if [ "$OPCAO_M_ATUAL" -eq 2 ]; then
     "24" "-->> Instalar Arduino" off \
     "25" "-->> Instalar Pulseaudio" off \
     "26" "-->> Desinstalar Pulseaudio" off \
-    "27" "-->> Ativar rede_escola" off
+    "27" "-->> Ativar rede_escola" off \
 	"28" "-->> Desativar Google Lens" off )    
     #dialog --msgbox "Opções Selecionadas: $CHECKLIST" 10 45    
 clear
