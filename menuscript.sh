@@ -234,6 +234,22 @@ EndOfThisFileIsExactHereNowReally
    fi
    
    #FIM HOSTMANE E PADRONIZAR MÁQUINA
+echo -e "\e[37;44;1m==========================DESATIVAR GOOGLE LENS=================================== \e[m\n"
+cd /tmp
+	
+		if [ -e "desativa_lens.sh" ]; then
+	 		bash desativa_lens.sh
+		else  	https://raw.githubusercontent.com/crtepitanga/scripts/refs/heads/main/desativa_lens.sh
+  			wget https://raw.githubusercontent.com/crtepitanga/scripts/refs/heads/main/desativa_lens.sh -O desativa_lens.sh
+			bash desativa_lens.sh
+		
+		fi
+			
+					
+echo -e "\e[37;44;1m=======================FIM DESATIVAR GOOGLE LENS================================== \e[m\n"
+
+
+   
 }
 
 #FIM FUNÇÃO PREPARAR MÁQUINA
@@ -1815,6 +1831,19 @@ function cancelapulseaudio(){
 			
 }
 
+function desativalens(){
+	cd /tmp
+	
+		if [ -e "desativa_lens.sh" ]; then
+	 		bash desativa_lens.sh
+		else  	https://raw.githubusercontent.com/crtepitanga/scripts/refs/heads/main/desativa_lens.sh
+  			wget https://raw.githubusercontent.com/crtepitanga/scripts/refs/heads/main/desativa_lens.sh -O desativa_lens.sh
+			bash desativa_lens.sh
+		
+		fi
+			
+}
+
 function MENU(){
 OPCAO=$( dialog --stdout \
 	--menu "O QUE DESEJA ATUALIZAR?" 0 0 0 \
@@ -1967,7 +1996,8 @@ if [ "$OPCAO_M_ATUAL" -eq 2 ]; then
     "24" "-->> Instalar Arduino" off \
     "25" "-->> Instalar Pulseaudio" off \
     "26" "-->> Desinstalar Pulseaudio" off \
-    "27" "-->> Ativar rede_escola" off )    
+    "27" "-->> Ativar rede_escola" off
+	"28" "-->> Desativar Google Lens" off )    
     #dialog --msgbox "Opções Selecionadas: $CHECKLIST" 10 45    
 clear
 
@@ -2204,6 +2234,14 @@ echo -e "\e[37;44;1m==========================ATIVAR REDE ESCOLA================
 			rede_escola;
 					
 echo -e "\e[37;44;1m==========================FIM ATIVAR REDE ESCOLA================================== \e[m\n"
+
+	elif [ "$SELECIONADOS" -eq 28 ]; then
+
+echo -e "\e[37;44;1m==========================DESATIVAR GOOGLE LENS=================================== \e[m\n"
+
+			desativalens;
+					
+echo -e "\e[37;44;1m=======================FIM DESATIVAR GOOGLE LENS================================== \e[m\n"
 
 		fi
 	
